@@ -1,0 +1,18 @@
+{
+  "projectId": "excp-time",
+  "displayName": "EXCP Time",
+  "keyPrefix": "EXCP",
+  "testCasesRoot": "test-cases",
+  "testRunsRoot": "test-runs",
+  "defaultRunId": "current",
+  "linkedRepos": [
+    {
+      "role": "frontend",
+      "path": "../EXCP_ANGULAR"
+    },
+    {
+      "role": "backend",
+      "path": "../../HRSystem/ABP-Basic/Excp.HRSystem"
+    }
+  ]
+}

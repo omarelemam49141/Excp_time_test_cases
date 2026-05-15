@@ -1,0 +1,22 @@
+---
+description: Test cases location (excp-time)
+alwaysApply: true
+---
+
+# Test Cases (EXCP Time)
+
+All `*-test-cases.md` files for this product live in **this TestCases repo**:
+
+- `test-cases/<feature>/frontend/*.md`
+- `test-cases/<feature>/backend/*.md`
+
+Format: Testing-feature `docs/standards/test-case-format.md` (canonical).
+
+Run status CLI from this repo root:
+
+```bash
+npm run tc -- t "test-cases/<feature>/<layer>/<file>.md"
+npm run tc -- s <KEY> ok
+```
+
+Use stable `Key` values (prefix `EXCP`) for status updates, not `TC-01` alone.

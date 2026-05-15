@@ -1,0 +1,68 @@
+# Overtime review readiness guard - Frontend Test Cases
+
+## Metadata
+
+- Project: `excp-time`
+- Feature: `overtime`
+- Layer: `frontend`
+- Routes: `"/admin-leader/list-requests"`, `"/attendance/quick-entry"`, `"/my-requests"`
+- APIs: `"POST /api/attendance-overtime/Check-overtime-review-readiness"`
+- Related code: _Map concrete files during feature updates._
+- Related docs: _See the project documentation indexes for the owning feature._
+
+## Scope
+
+This document covers the leader-facing readiness behavior on `"/admin-leader/list-requests"` for overtime details, pending leave blockers, refused leave exceptions, queue refresh after correction, employee Quick Entry refresh after system correction, employee-fix notification, and employee-period validation.
+
+## Test pages
+
+- `"/admin-leader/list-requests"`
+- `"/attendance/quick-entry"`
+
+## Test scenarios
+
+- Opening a clean pending overtime shows it is ready and keeps `"Accept"` and `"Refuse"` available.
+- Opening an overtime that correction changes refreshes the leader list before the leader can decide and updates the employee in Quick Entry.
+- Opening a problem day shows localized issue messages once and hides `"Accept"` and `"Refuse"`.
+- Opening an overtime covered by a pending leave request lets the reviewer decide the leave request inside the modal before overtime actions are shown.
+- A refused leave request covering the overtime day lets the reviewer decide the overtime normally when there are no other problems.
+- A normal working day with overtime but no attendance record and no refused leave request is blocked for employee action.
+- The leader can notify the employee to fix the day, and the employee notification opens Quick Entry on the affected day with the issue highlighted.
+- If the employee fixes a day while the leader still has its blocked overtime modal open, the leader sees a blocking revalidation popup before deciding.
+- The leader can validate an employee period and see summary counts, including days that need reviewer action.
+- Team leader overtime decisions force blocking refresh popups in employee Quick Entry and My Requests sessions.
+- Bulk overtime decisions also notify affected employee sessions.
+- Bulk overtime decisions run readiness once for selected overtime entries on the same employee/date.
+
+## Test cases
+
+### Modal readiness
+
+| ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
+|----|-----|------|------|---------------|-------|----------|-----------|
+| TC-01 | EXCP-OT-REVIEW-READINESS-001 | Verify a clean overtime is ready for leader decision | Main | A team leader has a direct report with one clean pending overtime. | 1. Sign in as the team leader.<br>2. Open `"/admin-leader/list-requests"`.<br>3. Open the `"Overtime"` tab.<br>4. Open the pending overtime details. | 1. The modal shows `"Ready for leader decision"`.<br>2. `"Accept"` is enabled.<br>3. `"Refuse"` is enabled. | - |
+| TC-02 | EXCP-OT-REVIEW-READINESS-002 | Verify queue-changed correction refreshes the Overtime tab and employee Quick Entry | Regression | A direct report has pending overtime that becomes within-gap after readiness correction.<br>The employee has `"/attendance/quick-entry"` open for the affected date. | 1. Sign in as the team leader.<br>2. Open `"/admin-leader/list-requests"`.<br>3. Open the `"Overtime"` tab.<br>4. Open the pending overtime details.<br>5. Switch to the employee Quick Entry page. | 1. The modal closes after the readiness check.<br>2. The page shows the queue refresh message.<br>3. The corrected overtime is no longer visible as pending after reload.<br>4. The employee receives a notification for the corrected day.<br>5. Quick Entry shows a blocking popup that says the day was modified by the system.<br>6. After confirming the popup, Quick Entry reloads and highlights the affected day. | Date: `"2026-05-07"` |
+| TC-03 | EXCP-OT-REVIEW-READINESS-003 | Verify queue-changed correction refreshes the All tab | Regression | A direct report has pending overtime visible on the `"All"` tab and correction changes the day. | 1. Sign in as the team leader.<br>2. Open `"/admin-leader/list-requests"`.<br>3. Stay on the `"All"` tab with status `"Pending"`.<br>4. Open the overtime details. | 1. The modal closes after the readiness check.<br>2. The `"All"` tab reloads.<br>3. The updated pending overtime list is shown before the leader decides. | Status: `"Pending"` |
+| TC-04 | EXCP-OT-REVIEW-READINESS-004 | Verify employee-action-required hides leader decisions | Main | A direct report has pending overtime on a day with missing attendance or break information. | 1. Sign in as the team leader.<br>2. Open the pending overtime details from the `"Overtime"` tab or `"All"` tab.<br>3. Read the readiness panel. | 1. The modal shows `"Employee action required"`.<br>2. The issue message is localized and visible once.<br>3. `"Accept"` is not visible.<br>4. `"Refuse"` is not visible.<br>5. `"Notify employee to fix"` is visible. | - |
+| TC-05 | EXCP-OT-REVIEW-READINESS-005 | Verify pending leave can be decided inside the overtime modal | Main | A direct report has pending overtime on `"2026-05-11"`.<br>The same employee has a pending leave request that covers `"2026-05-11"`. | 1. Sign in as the team leader or admin.<br>2. Open the pending overtime details from the `"Overtime"` tab or `"All"` tab.<br>3. Read the readiness panel.<br>4. Click `"Accept"` or `"Refuse"` in the `"Pending leave request"` card inside the modal.<br>5. Wait for the modal to recheck overtime readiness. | 1. The modal shows `"Leave request needs review"` once before the leave is decided.<br>2. The `"Pending leave request"` card shows the leave request number and date range.<br>3. Overtime `"Accept"` is not visible before the leave is decided.<br>4. Overtime `"Refuse"` is not visible before the leave is decided.<br>5. `"Notify employee to fix"` is not visible.<br>6. After the leave is accepted or refused, the same modal stays open and rechecks overtime readiness.<br>7. The overtime details can show `"Ready for leader decision"` when no other readiness issue exists. | Date: `"2026-05-11"` |
+| TC-06 | EXCP-OT-REVIEW-READINESS-010 | Verify refused leave day allows overtime decision | Main | A direct report has pending overtime on `"2026-05-12"`.<br>The same employee has a refused leave request that covers `"2026-05-12"`.<br>No other attendance, overtime, or break issue exists. | 1. Sign in as the team leader.<br>2. Open the pending overtime details from the `"Overtime"` tab or `"All"` tab.<br>3. Read the readiness panel. | 1. The modal shows `"Ready for leader decision"`.<br>2. `"Accept"` is visible.<br>3. `"Refuse"` is visible.<br>4. The modal does not show `"Employee action required"` for the missing attendance record. | Date: `"2026-05-12"` |
+| TC-07 | EXCP-OT-REVIEW-READINESS-011 | Verify missing attendance without refused leave blocks overtime decision | Main | A direct report has pending overtime on a normal working day.<br>The same date has no attendance record and no refused leave request. | 1. Sign in as the team leader.<br>2. Open the pending overtime details from the `"Overtime"` tab or `"All"` tab.<br>3. Read the readiness panel. | 1. The modal shows `"Employee action required"`.<br>2. The issue message explains that the work day has no attendance information.<br>3. `"Accept"` is not visible.<br>4. `"Refuse"` is not visible.<br>5. `"Notify employee to fix"` is visible. | Date: `"2026-05-13"` |
+| TC-08 | EXCP-OT-REVIEW-READINESS-006 | Verify employee Quick Entry fix revalidates an open leader overtime modal | Main | Same blocked overtime as TC-04.<br>The leader keeps the blocked overtime details modal open.<br>The employee can access notifications and Quick Entry. | 1. As the leader, click `"Notify employee to fix"`.<br>2. Wait for the success message and keep the overtime details modal open.<br>3. Sign in as the employee in another session.<br>4. Open the notification list.<br>5. Click the correction notification.<br>6. Fix the highlighted day in `"/attendance/quick-entry"` and save. | 1. A success message appears for the leader.<br>2. The employee notification text follows the selected language.<br>3. Clicking the notification opens `"/attendance/quick-entry"` for the affected date.<br>4. The affected day is expanded and highlighted.<br>5. After the employee saves, the leader sees a blocking popup saying the attendance day was updated.<br>6. After the leader confirms `"Revalidate overtime"`, the modal runs readiness again.<br>7. The modal shows the corrected readiness state and `"Accept"` and `"Refuse"` only appear when the state is `"Ready"`. | Date: `"2026-05-09"` |
+
+### Batch validation
+
+| ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
+|----|-----|------|------|---------------|-------|----------|-----------|
+| TC-09 | EXCP-OT-REVIEW-READINESS-007 | Verify the leader can validate one employee period | Main | A team leader knows the account id for a direct report with mixed clean, corrected, problem, refused-leave, and pending-leave days. | 1. Sign in as the team leader.<br>2. Open `"/admin-leader/list-requests"`.<br>3. In `"Validate employee overtime period"`, enter the employee account id.<br>4. Select `"2026-05-06"` as the from date.<br>5. Select `"2026-05-13"` as the to date.<br>6. Click `"Validate period"`. | 1. A success message appears.<br>2. The summary shows `"Clean days"`.<br>3. The summary shows `"Corrected days"` when any day changed the queue.<br>4. The summary shows `"Days needing employee action"` when any day has a problem.<br>5. The summary shows `"Days needing reviewer action"` when any day has a pending leave request.<br>6. A refused-leave overtime day is counted with clean days when it has no other issue.<br>7. The request list refreshes. | From: `"2026-05-06"`<br>To: `"2026-05-13"` |
+| TC-10 | EXCP-OT-REVIEW-READINESS-008 | Verify missing batch fields are rejected in the UI | Edge | The leader is on `"/admin-leader/list-requests"`. | 1. Leave the employee account id empty.<br>2. Click `"Validate period"`. | 1. A validation message appears.<br>2. No network request is sent for period validation. | - |
+| TC-11 | EXCP-OT-REVIEW-READINESS-009 | Verify bulk approve shows readiness failures | Regression | The leader selected one clean overtime and one overtime on a problem day. | 1. Select both overtime items.<br>2. Click the bulk approve action.<br>3. Read the messages and list after reload. | 1. The clean overtime can be approved.<br>2. The problem overtime remains pending.<br>3. The leader sees an error message for the blocked item.<br>4. The list reloads after the bulk action finishes. | - |
+
+### Employee realtime refresh
+
+| ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
+|----|-----|------|------|---------------|-------|----------|-----------|
+| TC-12 | EXCP-OT-REVIEW-READINESS-012 | Verify overtime approval refreshes employee Quick Entry | Regression | A direct report has a clean pending overtime on `"2026-05-14"`.<br>The employee keeps `"/attendance/quick-entry"` open for a range containing `"2026-05-14"`. | 1. Sign in as the team leader.<br>2. Open the pending overtime details from `"/admin-leader/list-requests"`.<br>3. Click `"Accept"`.<br>4. Return to the employee Quick Entry page.<br>5. Click `"Refresh Quick Entry"` in the blocking popup. | 1. The employee sees a blocking popup explaining that the overtime request was updated.<br>2. Quick Entry reloads after confirmation.<br>3. The overtime on `"2026-05-14"` no longer appears as pending.<br>4. The day totals reflect the latest overtime status. | Date: `"2026-05-14"` |
+| TC-13 | EXCP-OT-REVIEW-READINESS-013 | Verify overtime refusal refreshes employee My Requests | Regression | A direct report has a clean pending overtime request visible in `"/my-requests"`.<br>The employee keeps the overtime details modal open. | 1. Sign in as the team leader.<br>2. Open the pending overtime details from `"/admin-leader/list-requests"`.<br>3. Click `"Refuse"`.<br>4. Return to the employee My Requests page.<br>5. Click `"Refresh My Requests"` in the blocking popup. | 1. The employee sees a blocking popup explaining that the overtime request was updated.<br>2. The stale overtime details modal closes.<br>3. The request list refreshes after confirmation.<br>4. The overtime request shows the latest refused status when the rejected filter is opened. | Date: `"2026-05-15"` |
+| TC-14 | EXCP-OT-REVIEW-READINESS-014 | Verify bulk overtime decision groups same-day overtime readiness | Regression | The leader selected two clean pending overtime entries for the same direct report on `"2026-05-16"`.<br>The affected employee keeps Quick Entry or My Requests open for the affected date/request. | 1. Sign in as the team leader.<br>2. Select both pending overtime entries for `"2026-05-16"` in the `"Overtime"` tab or `"All"` tab.<br>3. Click the bulk approve or refuse action.<br>4. Review the bulk result.<br>5. Open each selected overtime details after the action.<br>6. Return to the affected employee page and click the refresh action in the blocking popup. | 1. The bulk result shows both selected entries with the same outcome for `"2026-05-16"`.<br>2. Both clean overtime entries succeed together, or both fail together with the same readiness message if the day changed.<br>3. The second selected overtime does not fail with `"This day was corrected and the leader queue changed"` while opening its details immediately returns `"Ready"`.<br>4. Successful overtime entries no longer appear as pending after reload.<br>5. The affected employee receives a blocking refresh popup. | Date: `"2026-05-16"` |
+
+
