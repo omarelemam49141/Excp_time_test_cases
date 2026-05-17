@@ -1,0 +1,26 @@
+---
+description: Test cases location (EXCP Time product TestCases repo)
+alwaysApply: true
+---
+
+# Test Cases (EXCP Time)
+
+All `*-test-cases.md` files for this product live in **this TestCases repo**:
+
+- `test-cases/<feature>/frontend/*.md`
+- `test-cases/<feature>/backend/*.md`
+
+Format: `o:/Company work/Company projects/ExcpTime/Testing-feature/docs/standards/test-case-format.md`
+
+Run the status CLI from this repo root:
+
+```bash
+tc project doctor
+tc t "test-cases/<feature>/<layer>/<file>.md"
+tc s <KEY> ok
+tc next "test-cases/<feature>/<layer>/<file>.md"
+```
+
+Use stable `Key` values (prefix `EXCP`) for status updates, not `TC-01` alone.
+
+When linked app repos change behavior, update matching `*-test-cases.md` here in the same task.

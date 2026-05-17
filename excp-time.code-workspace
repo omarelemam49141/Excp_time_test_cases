@@ -1,0 +1,21 @@
+{
+  "folders": [
+    {
+      "name": "EXCP Angular (frontend)",
+      "path": "../EXCP_ANGULAR"
+    },
+    {
+      "name": "Excp.HRSystem (backend)",
+      "path": "../../HRSystem/ABP-Basic/Excp.HRSystem"
+    },
+    {
+      "name": "ExcpTime.TestCases",
+      "path": "."
+    },
+    {
+      "name": "Testing-feature (tc CLI)",
+      "path": "../Testing-feature"
+    }
+  ],
+  "settings": {}
+}

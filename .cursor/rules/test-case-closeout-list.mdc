@@ -1,0 +1,28 @@
+---
+description: Require final test-case run lists after feature changes (canonical)
+alwaysApply: true
+---
+
+# Test Case Closeout List
+
+Canonical copy: `Testing-feature/templates/cursor-rules/test-case-closeout-list.mdc`.  
+Every product **app repo** and **TestCases repo** that uses `tc` must include this rule under `.cursor/rules/`.
+
+For every feature/task that adds, changes, or removes behavior, the final response must include the relevant manual test cases for QA.
+
+## Required Closeout
+
+Before marking the task complete, identify the test-case docs updated or affected by the work.
+
+In the final answer, include:
+
+1. **Test What Changed**: the specific new or updated `TC-xx` rows QA should run to validate the change.
+2. **Regression Re-Run**: nearby existing `TC-xx` rows that should be re-run because the change touches shared flows, adjacent statuses, or existing behavior.
+
+Each item must include:
+
+- Test-case file path.
+- `TC-xx` id and stable `Key` when available.
+- A short reason why it should be run.
+
+Keep the list concise and tied to the actual behavior changed. If no product behavior changed, say that no QA test-case run list is needed.

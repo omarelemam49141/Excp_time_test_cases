@@ -1,0 +1,18 @@
+---
+description: Link SQL seed/verify/cleanup scripts to manual test cases under test-data/
+globs:
+  - test-cases/**/*.md
+  - test-data/**/*.sql
+alwaysApply: false
+---
+
+# Test data SQL (product TestCases repo)
+
+When a manual test case needs a **known database state** (seed), **post-check queries** (verify), or **teardown** (cleanup):
+
+1. **Folder:** Mirror the feature/layer path under `test-data/`.
+2. **Files:** `tc-NN-seed.sql`, `tc-NN-verify.sql`, `tc-NN-cleanup.sql` (NN matches `TC-NN`).
+3. **Markdown:** After all tables under `## Test cases`, add optional `## Test data scripts`.
+4. **Verify scripts:** Assert every outcome in `Expected` with fail-fast `THROW`s.
+
+See `Testing-feature/docs/standards/test-case-format.md` and this repo's `test-data/README.md`.

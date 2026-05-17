@@ -4,7 +4,7 @@
 
 This index lists the private test-case definitions organized by project, feature, and layer.
 
-**Every file must follow the canonical format:** [`../docs/standards/test-case-format.md`](../docs/standards/test-case-format.md)
+**Every file must follow the canonical format:** [Testing-feature standard](O:/Company work/Company projects/ExcpTime/Testing-feature/docs/standards/test-case-format.md)
 
 ### Authentication / backend
 

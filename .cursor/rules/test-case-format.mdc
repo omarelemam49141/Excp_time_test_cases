@@ -1,0 +1,26 @@
+---
+description: Mandatory unified test-case markdown format (product TestCases repo)
+globs:
+  - test-cases/**/*.md
+alwaysApply: true
+---
+
+# Unified test-case format (VIP)
+
+When creating or editing any file under `test-cases/**/*.md`, follow the canonical spec:
+
+- `o:/Company work/Company projects/ExcpTime/Testing-feature/docs/standards/test-case-format.md`
+
+## Hard requirements
+
+1. **Structure:** `#` title, `## Metadata` before `## Scope`, `## Test cases`, one markdown table per `###` group.
+2. **Columns:** Required `ID`, `Key`, `Case`, `Steps`, `Expected`. Optional `Type`, `Preconditions`, `Requires`, `Test data`.
+3. **Language:** Every `Case` starts with **Verify**; plain English; exact UI copy in double quotes.
+4. **Status:** Never move markdown into status folders; use `test-runs/current/status.json` and `tc s <KEY> ok`. Prerequisites in **`Requires`** must be **`succeeded`** before `ok` unless you pass **`--force`**.
+5. **SQL fixtures:** See `test-data-sql.mdc` and `test-data/README.md` when applicable.
+6. **Metadata — Related code:** Every file must include a `- Related code:` line under `## Metadata`. When this agent task adds or edits application code in linked app repos (same session), populate **comma-separated paths in backticks**, **repo-relative** to the linked repo for `Layer:` (`frontend` or `backend`). Prefer **directory prefixes without a file extension** for broad matching (see canonical doc *Related code (for tc impact)*). Use the `_Map concrete files...` placeholder **only** when paths are genuinely unknown; replace in a follow-up.
+7. **Metadata — Related docs:** Every file must include a `- Related docs:` line. Point to the **technical or feature markdown** under the app repo (e.g. `docs/technical/...`, `docs/explanation/...`) that describes this behavior; use `_See..._` only when no doc exists yet.
+
+Real **Related code** paths enable **`tc impact`** (mark cases `needs-update` when linked files change) and clear **`tc project doctor`** warnings for placeholders.
+
+Update `*-test-cases.md` in the **same task** as related product code changes in linked app repos.
