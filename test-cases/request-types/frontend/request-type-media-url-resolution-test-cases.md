@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `//`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/pages/my-requests/my-requests.component.ts`, `src/app/pages/my-requests/components/generic-request-dialog/generic-request-dialog.component.ts`, `src/app/features/admin-leader/admin/modules/Request types/services/request-types.service.ts`
+- Related docs: `docs/frontend/technical/request-type-media-url-resolution.md`
 
 ## Scope
 

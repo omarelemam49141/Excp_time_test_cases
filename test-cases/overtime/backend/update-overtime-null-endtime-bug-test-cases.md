@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `(Add the primary screen route or API path here.)`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.Application/Builders/Controllers/Attendance OverTimes/UpdateAttendanceOverTimeWithBreaksBuilder.cs`, `src/Excp.HRSystem.HttpApi/Controllers/AttendanceOverTimes/AttendanceOverTimeController.cs`, `src/Excp.HRSystem.Application/Services/AttendanceBulk/AttendanceBulkQuickEntryAppService.cs`, `src/Excp.HRSystem.Application/Services/Attendance Overtime App/AttendanceOvertimeService.cs`
+- Related docs: `docs/backend/technical/get-overtime-by-id-partial-times.md`
 
 ## Scope
 

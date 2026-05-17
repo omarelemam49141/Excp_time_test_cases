@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `POST /api/request-review-locks/states`, `POST /api/request-review-locks/lock-items`, `POST /api/request-review-locks/unlock-items`, `POST /api/request-review-locks/renew-items`, `POST /api/request-review-locks/lock-current-view`, `Generic request update/cancel APIs`, `Overtime update/delete APIs`, `Quick entry save API`, `Request and overtime approve/refuse APIs`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.Application/Services/Requests/RequestReviewLockService.cs`, `src/Excp.HRSystem.Domain/Entities/RequestReviewLocks/RequestReviewLock.cs`, `src/Excp.HRSystem.Application/Builders/Services/Requests/ChangeRequestStatusBuilder.cs`, `src/Excp.HRSystem.Application/Builders/Shared/ChangeOverTimeStatusBuilder.cs`
+- Related docs: `docs/backend/technical/request-review-locking.md`
 
 ## Scope
 

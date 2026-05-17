@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `(Add the primary screen route or API path here.)`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.Application/Services/Account/CustomAccountAppService.cs`, `src/Excp.HRSystem.Application/Builders/Services/Custom Account/AddNewUserBuilder.cs`, `src/Excp.HRSystem.Application/Builders/Services/Custom Account/GetUserForAdminEditBuilder.cs`, `src/Excp.HRSystem.Application/Builders/Services/Custom Account/UpdateUserByAdminBuilder.cs`, `src/Excp.HRSystem.Application/Builders/Services/Custom Account/SetUserPasswordByAdminBuilder.cs`
+- Related docs: `docs/backend/technical/admin-user-by-admin-api.md`
 
 ## Scope
 

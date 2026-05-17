@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `/attendance/quick-entry`
 - APIs: `GET /api/leave-requests/pending-in-range`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/features/attendance/components/attendance-quick-entry`, `src/app/core/services/leave-management.service.ts`, `src/app/core/services/attendance.service.ts`
+- Related docs: `docs/frontend/technical/quick-entry-pending-leave-request-guard.md`
 
 ## Scope
 

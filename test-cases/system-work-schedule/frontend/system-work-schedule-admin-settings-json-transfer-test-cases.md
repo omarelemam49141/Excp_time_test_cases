@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `/admin/system-work-schedule`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/features/admin-leader/admin/components/system-work-schedule/system-work-schedule.component.ts`, `src/app/core/services/system-work-schedule.service.ts`
+- Related docs: `docs/frontend/technical/system-work-schedule-admin-settings-json-transfer.md`
 
 ## Scope
 

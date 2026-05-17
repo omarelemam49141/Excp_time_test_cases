@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `POST /api/attendance-overtime/Get-overtimes-By-LeaderId-and-status`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.Application/Builders/Controllers/Attendance OverTimes/GetOverTimesByLeaderIdAndStatusBuilder.cs`, `src/Excp.HRSystem.EntityFrameworkCore/AttendanceOverTimes/Repositories/AttendanceOverTimeRepository.cs`, `src/Excp.HRSystem.HttpApi/Controllers/AttendanceOverTimes/AttendanceOverTimeController.cs`
+- Related docs: `docs/backend/technical/get-overtimes-by-leader-id-and-status-scope.md`
 
 ## Scope
 

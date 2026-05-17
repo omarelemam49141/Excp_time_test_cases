@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `API base (for example `https://localhost:44384/api/attendance-record/...`).`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.HttpApi/Controllers/AttendanceRecords/AttendanceRecordAPIController.cs`, `src/Excp.HRSystem.Domain.Shared/Filters/Authentication/JwtBearerRoleHelper.cs`, `src/Excp.HRSystem.Application/Services/AttendanceBulk/AttendanceBulkQuickEntryAppService.cs`, `src/Excp.HRSystem.Application.Contracts/Services/AttendanceBulk/IAttendanceBulkQuickEntryAppService.cs`
+- Related docs: `docs/backend/technical/attendance-record-quick-entry-admin-jwt-roles.md`
 
 ## Scope
 

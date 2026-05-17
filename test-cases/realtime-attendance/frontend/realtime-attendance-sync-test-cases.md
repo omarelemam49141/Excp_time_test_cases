@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `/home`, `/attendance/working-time`, `/attendance/overtime-timer`, `/admin-leader/list-requests`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/core/services/Signal-R/attendance-hub.service.ts`, `src/app/core/services/attendance-realtime-sync.service.ts`, `src/app/core/models/attendance-state-changed.model.ts`, `src/app/pages/home/home.component.ts`, `src/app/features/attendance/components/working-timer/working-timer.component.ts`, `src/app/features/attendance/components/overtime-timer/overtime-timer.component.ts`
+- Related docs: `docs/frontend/technical/realtime-attendance-sync.md`
 
 ## Scope
 

@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `/admin/reports/employee-hours-report`, `/attendance/quick-entry`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/features/attendance/components/attendance-quick-entry`, `src/app/features/admin-leader/admin/components/reports/employee-hours-report`, `src/app/features/admin-leader/admin/models/employee-hours-tour-snapshot.model.ts`, `src/app/core/services/attendance.service.ts`
+- Related docs: `docs/frontend/technical/employee-hours-tour-guide.md`, `docs/frontend/technical/quick-entry-problem-days-navigator.md`
 
 ## Scope
 

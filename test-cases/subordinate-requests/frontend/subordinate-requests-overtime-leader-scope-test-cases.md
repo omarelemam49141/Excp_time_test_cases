@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `/admin-leader/list-requests`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/features/admin-leader/shared/components/subordinate-requests/`, `src/app/features/admin-leader/shared/components/over-time-list/`, `src/app/auth/services/auth.service.ts`
+- Related docs: `docs/frontend/technical/subordinate-requests-overtime-leader-scope.md`
 
 ## Scope
 

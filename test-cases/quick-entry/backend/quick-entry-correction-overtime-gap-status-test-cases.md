@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `POST /api/attendance-record/Apply-quick-entry-range-correction`, `POST /api/attendance-record/Bulk-apply-attendance-changes`, `POST /api/attendance-overtime/Get-overtimes-By-LeaderId-and-status`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.Application/Services/AttendanceBulk/AttendanceBulkQuickEntryAppService.cs`, `src/Excp.HRSystem.HttpApi/Controllers/AttendanceRecords/AttendanceRecordAPIController.cs`, `src/Excp.HRSystem.EntityFrameworkCore/Scripts/FixAttendanceOver8Hours_CreateOvertime_ByDateRange.sql`, `src/Excp.HRSystem.Application.Contracts/Entities/Attendance Record App Contracts/Dtos/APIs/BulkApplyAttendanceChangesInputDto.cs`
+- Related docs: `docs/backend/technical/quick-entry-correction-overtime-gap-preservation.md`, `docs/backend/technical/quick-entry-correction-diff-cumulative-totals.md`
 
 ## Scope
 

@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `(Add the primary screen route or API path here.)`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/core/components/bug-report-fab`, `src/app/features/admin-leader/admin/components/bug-report-allowlist`, `src/app/features/Azure/services/azure-work-items.service.ts`
+- Related docs: `docs/frontend/technical/admin-bug-report-fab-azure-devops.md`
 
 ## Scope
 

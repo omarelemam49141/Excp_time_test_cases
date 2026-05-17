@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `(Add the primary screen route or API path here.)`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.Application/Services/AttendanceBulk/AttendanceBulkQuickEntryAppService.cs`, `src/Excp.HRSystem.HttpApi/Controllers/AttendanceRecords/AttendanceRecordAPIController.cs`, `src/Excp.HRSystem.EntityFrameworkCore/Scripts/FixAttendanceOver8Hours_CreateOvertime_ByDateRange.sql`, `src/Excp.HRSystem.EntityFrameworkCore/AttendanceQuickEntry/QuickEntryCorrectionRepository.cs`, `src/Excp.HRSystem.Domain/Entities/AttendanceQuickEntry`, `src/Excp.HRSystem.Application.Contracts/Entities/Attendance Record App Contracts/Dtos/APIs/CorrectionDiffResultDto.cs`, `src/Excp.HRSystem.Application/Services/Reports/EmployeeHoursReports/EmployeeHoursPaidDayCreditCalculator.cs`
+- Related docs: `docs/backend/technical/quick-entry-correction-diff-cumulative-totals.md`, `docs/backend/technical/quick-entry-copy-import-api.md`
 
 ## Scope
 

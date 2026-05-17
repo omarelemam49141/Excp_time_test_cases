@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `/admin/public-holidays`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/features/admin-leader/admin/components/system-work-schedule`, `src/app/features/admin-leader/admin/components/public-holidays-redirect/public-holidays-redirect.component.ts`, `src/app/core/services/leave-management.service.ts`
+- Related docs: `docs/frontend/technical/public-holidays-admin-page.md`
 
 ## Scope
 

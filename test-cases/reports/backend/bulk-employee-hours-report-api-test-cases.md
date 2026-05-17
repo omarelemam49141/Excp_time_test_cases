@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `POST /api/Reports/employee-hours-report/bulk`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.Application/Services/Reports/EmployeeHoursReports/EmployeeHoursReportService.cs`, `src/Excp.HRSystem.Application/Builders/Services/Reports/EmployeeHoursReports/GenerateEmployeeHoursReportBuilder.cs`, `src/Excp.HRSystem.Application.Contracts/Entities/Reports/EmployeeHoursReports/Fluent Validations/BulkEmployeeHoursReportInputValidation.cs`
+- Related docs: `docs/backend/technical/bulk-employee-hours-report-api.md`
 
 ## Scope
 

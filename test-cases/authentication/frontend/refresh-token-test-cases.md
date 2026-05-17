@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `/auth/login`, `Any authenticated page (e.g. `/attendance`, `/admin`)`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/core/interceptors/auth.interceptor.ts`, `src/app/auth/services/auth.service.ts`
+- Related docs: `docs/frontend/technical/refresh-token-auth-flow.md`
 
 ## Scope
 

@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `API base: attendance overtime controller (same host as other attendance APIs).`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.Application/Builders/Controllers/Attendance OverTimes/GetOverTimeByIdBuilder.cs`, `src/Excp.HRSystem.Application/Services/Attendance Overtime App/AttendanceOvertimeService.cs`, `src/Excp.HRSystem.HttpApi/Controllers/AttendanceOverTimes/AttendanceOverTimeController.cs`, `src/Excp.HRSystem.Application.Contracts/Entities/Attendance Overtime App Contracts/Dtos/AttendanceOverTimeLightDto.cs`
+- Related docs: `docs/backend/technical/get-overtime-by-id-partial-times.md`
 
 ## Scope
 

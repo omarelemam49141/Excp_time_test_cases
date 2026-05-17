@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `/admin/reports/bulk-employee-hours-report`, `/admin/reports/employee-hours-report`, `/admin/reports/users-attendance-report`, `/admin/reports/budget-report`, `/admin/reports/payroll-report`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/features/admin-leader/admin/components/reports/reports-layout/`
+- Related docs: `docs/frontend/technical/admin-reports-layout-navigation.md`
 
 ## Scope
 

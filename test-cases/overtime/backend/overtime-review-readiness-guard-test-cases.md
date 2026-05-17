@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `"POST /api/attendance-overtime/Check-overtime-review-readiness"`, `"GET /api/attendance-overtime/Accept-overtime"`, `"GET /api/attendance-overtime/Refuse-overtime"`, `"POST /api/Requests/change-reqeust-status"`, `"POST /api/Requests/bulk-change-request-status"`, `"POST /api/attendance-overtime/Validate-employee-overtime-period-readiness"`, `"POST /api/attendance-overtime/Notify-employee-overtime-day-fix-required"`, `"POST /api/attendance-record/Bulk-apply-attendance-changes"`, `"POST /api/attendance-record/Apply-quick-entry-range-correction"`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.Application/Services/Attendance Overtime App/OvertimeReviewReadinessAppService.cs`, `src/Excp.HRSystem.HttpApi/Controllers/AttendanceOverTimes/AttendanceOverTimeController.cs`, `src/Excp.HRSystem.Application/Builders/Shared/ChangeOverTimeStatusBuilder.cs`, `src/Excp.HRSystem.Application/Builders/Services/Requests/ChangeRequestStatusBuilder.cs`, `src/Excp.HRSystem.Application/Services/Requests/RequestsService.cs`, `src/Excp.HRSystem.Application/Services/AttendanceBulk/AttendanceBulkQuickEntryAppService.cs`, `src/Excp.HRSystem.Application/Services/Requests/RequestReviewLockService.cs`
+- Related docs: `docs/backend/technical/overtime-review-readiness-guard.md`
 
 ## Scope
 

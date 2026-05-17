@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `/admin-leader/users/create`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/features/admin-leader/admin/components/admin-user-wizard/`, `src/app/core/services/custom-account.service.ts`
+- Related docs: `docs/frontend/technical/admin-user-wizard.md`
 
 ## Scope
 

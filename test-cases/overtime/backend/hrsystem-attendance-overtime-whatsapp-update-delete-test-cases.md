@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `(Add the primary screen route or API path here.)`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.HttpApi/Controllers/AttendanceOverTimes/AttendanceOverTimeController.cs`, `src/Excp.HRSystem.HttpApi/Controllers/AttendanceRecords/AttendanceRecordAPIController.cs`, `src/Excp.HRSystem.HttpApi/Controllers/OverTimeBreaks/OverTimeBreakController.cs`, `src/Excp.HRSystem.Web/Services/WhatsAppAttendanceNotificationService.cs`, `src/Excp.HRSystem.Application.Contracts/Entities/SystemWorkSchedule/Dtos/SystemWorkScheduleDto.cs`
+- Related docs: `docs/backend/technical/whatsapp-attendance-notification-language.md`
 
 ## Scope
 

@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `/admin-leader/list-requests`, `/my-requests`, `/attendance/modify-overtime`, `/attendance/quick-entry`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/core/models/request-review-lock.model.ts`, `src/app/core/services/request-review-lock.service.ts`, `src/app/core/services/Signal-R/attendance-hub.service.ts`, `src/app/features/admin-leader/shared/components/subordinate-requests/`, `src/app/features/admin-leader/shared/components/over-time-list/`, `src/app/pages/my-requests/`, `src/app/pages/my-requests/components/generic-request-dialog/`, `src/app/pages/my-requests/components/leave-request-dialog/`, `src/app/features/attendance/components/modify-overtime/`, `src/app/features/attendance/components/attendance-quick-entry/`
+- Related docs: `docs/frontend/technical/request-review-locking.md`
 
 ## Scope
 

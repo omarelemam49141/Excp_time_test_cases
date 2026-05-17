@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `POST /api/Requests/get-requests-paged-filtered-list`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.Application/Builders/Services/Requests/GetRequestPagedFilteredListBuilder.cs`, `src/Excp.HRSystem.EntityFrameworkCore/Requests/Repositories/RequestRepository.cs`, `src/Excp.HRSystem.Application/Services/Requests/RequestsService.cs`
+- Related docs: `docs/backend/technical/get-requests-paged-filtered-list-leader-inbox.md`
 
 ## Scope
 

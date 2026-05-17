@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `/admin/reports/bulk-employee-hours-report`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/features/admin-leader/admin/components/reports/bulk-employee-hours-report/`, `src/app/features/admin-leader/admin/services/user-attendance-report.service.ts`
+- Related docs: `docs/frontend/technical/bulk-employee-hours-report-page.md`
 
 ## Scope
 

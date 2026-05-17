@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `(Add the primary screen route or API path here.)`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/features/attendance/components/modify-attendance/`, `src/app/features/attendance/components/modify-overtime/`, `src/app/features/attendance/components/request-overtime-dialog/`, `src/app/pages/home/home.component.ts`, `src/app/core/services/attendance.service.ts`, `src/app/features/admin-leader/admin/components/system-work-schedule/`, `src/app/core/models/system-work-schedule.model.ts`
+- Related docs: `docs/early-attendance-preshift-overtime.md`, `docs/frontend/technical/system-work-schedule-whatsapp-language.md`
 
 ## Scope
 

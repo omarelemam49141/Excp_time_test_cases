@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `(Add the primary screen route or API path here.)`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/features/attendance/utils/overtime-split.util.ts`, `src/app/pages/home/home.component.ts`, `src/app/features/attendance/components/overtime-timer/overtime-timer.component.ts`, `src/app/features/attendance/components/request-overtime-dialog/request-overtime-dialog.component.ts`, `src/app/features/attendance/components/modify-overtime/modify-overtime.component.ts`, `src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts`
+- Related docs: `docs/frontend/technical/cross-midnight-overtime-splitting.md`
 
 ## Scope
 

@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `/api/Requests`, `GET /api/leave-requests/preview-empty-chargeable-daystc`
-- Related code: *Map concrete files during feature updates.*
-- Related docs: *See the project documentation indexes for the owning feature.*
+- Related code: `src/Excp.HRSystem.Application/Builders/Services/Requests/CreateRequestBuilder.cs`, `src/Excp.HRSystem.Application/Builders/Services/Requests/UpdateRequestBuilder.cs`, `src/Excp.HRSystem.Application/Builders/Services/Requests/ChangeRequestStatusBuilder.cs`, `src/Excp.HRSystem.Application/Services/Leave/LeaveRequestMutationValidationService.cs`, `src/Excp.HRSystem.Application/Services/Leave/LeaveRequestEmptyDayEligibilityService.cs`, `src/Excp.HRSystem.Application/Services/Leave/LeaveRequestEligibilityAppService.cs`, `src/Excp.HRSystem.Application/Services/SystemWorkSchedule/SystemWorkScheduleAppService.cs`
+- Related docs: `docs/backend/technical/regular-leave-advance-notice-policy.md`, `docs/backend/technical/regular-leave-empty-chargeable-days-notice-bypass.md`
 
 ## Scope
 

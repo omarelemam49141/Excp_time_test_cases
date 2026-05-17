@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `/api/account/login`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.Web/Areas/Account/Controllers/CustomAccountController.cs`, `src/Excp.HRSystem.Application/Services/Users/RefreshTokens/Services/RefreshTokenService.cs`
+- Related docs: `docs/backend/technical/refresh-token-auth-flow.md`
 
 ## Scope
 

@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `POST /api/attendance-record/Bulk-apply-attendance-changes`, `POST /api/attendance-over-time/Request-overtime`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.Application/Services/Attendance Overtime App/RequestOvertimeWorkflowAppService.cs`, `src/Excp.HRSystem.Domain.Shared/WorkSchedule/OvertimeRequestPreShiftEvaluator.cs`, `src/Excp.HRSystem.Application/Services/AttendanceBulk/AttendanceBulkQuickEntryAppService.cs`, `src/Excp.HRSystem.HttpApi/Controllers/AttendanceOverTimes/AttendanceOverTimeController.cs`
+- Related docs: `docs/backend/technical/pre-shift-overtime-request-validation.md`
 
 ## Scope
 

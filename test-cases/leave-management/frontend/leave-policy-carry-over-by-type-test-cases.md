@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `/admin/leave-policy`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/features/admin-leader/admin/components/leave-management/leave-policy/`, `src/app/core/services/leave-management.service.ts`, `src/app/core/models/leave.model.ts`
+- Related docs: `docs/frontend/technical/leave-policy-carry-over-by-type.md`
 
 ## Scope
 

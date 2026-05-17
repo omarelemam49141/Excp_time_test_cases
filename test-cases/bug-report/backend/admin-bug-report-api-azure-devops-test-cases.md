@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `/{project}/_apis/wit/attachments?...&api-version=...`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.Application/Services/AzureDevOps/AzureWorkItems/AzureWorkItemsService.cs`, `src/Excp.HRSystem.Domain/Entities/AzureDevOps/BugReports/BugReportAllowedTester.cs`, `src/Excp.HRSystem.EntityFrameworkCore/AzureDevOps/AzureWorkItems/WorkItemsRepository.cs`
+- Related docs: `docs/backend/technical/admin-bug-report-api-azure-devops.md`
 
 ## Scope
 

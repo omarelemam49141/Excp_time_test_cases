@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `/attendance/quick-entry`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/features/attendance/components/attendance-quick-entry`, `src/app/core/services/attendance.service.ts`
+- Related docs: `docs/frontend/technical/quick-entry-correction-diff-cumulative-totals.md`
 
 ## Scope
 

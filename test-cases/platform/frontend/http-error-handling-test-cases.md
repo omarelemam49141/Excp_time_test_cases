@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `/home`, `Any authenticated page that loads several APIs on first paint (for example `/home` after login)`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/core/interceptors/error.interceptor.ts`, `src/app/shared/services/swal.service.ts`, `src/app/core/http/http-context-tokens.ts`
+- Related docs: `docs/frontend/technical/http-error-messages-and-swal.md`
 
 ## Scope
 

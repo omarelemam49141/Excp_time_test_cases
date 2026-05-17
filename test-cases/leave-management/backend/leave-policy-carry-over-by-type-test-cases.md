@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `(Add the primary screen route or API path here.)`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.Application/Services/Leave/LeavePolicyAppService.cs`, `src/Excp.HRSystem.Application.Contracts/Entities/Leave/Dtos/LeavePolicyDto.cs`, `src/Excp.HRSystem.Domain/Entities/Leave/LeavePolicy.cs`, `src/Excp.HRSystem.Application/Services/Leave/LeaveTypesAppService.cs`
+- Related docs: `docs/backend/technical/leave-policy-carry-over-by-type.md`
 
 ## Scope
 

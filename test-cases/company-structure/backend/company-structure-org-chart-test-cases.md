@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `(Add the primary screen route or API path here.)`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.Application/Services/CompanyStructure/CompanyStructureAppService.cs`, `src/Excp.HRSystem.HttpApi/Controllers/CompanyStructure/CompanyStructureController.cs`, `src/Excp.HRSystem.Application.Contracts/Services/CompanyStructure/FluentValidations/SaveOrgStructureInputValidation.cs`
+- Related docs: `docs/backend/technical/company-structure-org-chart.md`, `docs/backend/technical/company-structure-read-vs-save-authorization.md`
 
 ## Scope
 

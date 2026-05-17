@@ -20,8 +20,17 @@ Linked application repos (see `linkedRepos` in config):
 | Stable identity | **`Key`** column (`EXCP-...`), not `TC-01` alone |
 | Tooling | [`tc` CLI](../Testing-feature) from **this repo root** |
 
-Status values: `new`, `in-progress`, `succeeded`, `failed`, `blocked`, `needs-update`.  
-`tc project doctor --strict` is **not** required yet — map **Related code** in Metadata when you touch a feature.
+Status values: `new`, `in-progress`, `succeeded`, `failed`, `blocked`, `needs-update`.
+
+### Quality gate (before merge)
+
+All `*-test-cases.md` files have **Related code** mapped to real paths in linked app repos. Run:
+
+```powershell
+tc project doctor --strict
+```
+
+Exit code **0** is required (no unmapped Related code, no stale paths). When you add or change a feature, update **Related code** and **Related docs** in the same task.
 
 ## Install `tc`
 

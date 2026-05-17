@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `HR API **8031** (TestOnLive) and **8043** (production).`, `EXCP Angular on **8018** when used as the test-on-live SPA host.`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.Web/appsettings.json`, `src/Excp.HRSystem.Web/Program.cs`
+- Related docs: `docs/backend/technical/testonlive-environment-deployment.md`
 
 ## Scope
 

@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `"/admin-leader/list-requests"`, `"/attendance/quick-entry"`, `"/my-requests"`
 - APIs: `"POST /api/attendance-overtime/Check-overtime-review-readiness"`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/features/admin-leader/shared/components/subordinate-requests/`, `src/app/features/admin-leader/shared/components/over-time-list/`, `src/app/pages/my-requests/components/request-details-modal/`, `src/app/features/admin-leader/shared/services/over-time.service.ts`, `src/app/features/admin-leader/shared/models/overtime-review-readiness.model.ts`, `src/app/features/attendance/components/attendance-quick-entry/`, `src/app/core/services/Signal-R/attendance-hub.service.ts`, `src/app/pages/my-requests/my-requests.component.ts`
+- Related docs: `docs/frontend/technical/overtime-review-readiness-guard.md`
 
 ## Scope
 

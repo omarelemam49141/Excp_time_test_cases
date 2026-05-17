@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `/admin/**`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/features/admin-leader/admin/components/company-structure`, `src/app/features/admin-leader/admin/services/company-structure.service.ts`, `src/app/core/guards/core/guards/admin-section.guard.ts`
+- Related docs: `docs/frontend/technical/company-structure-org-chart.md`
 
 ## Scope
 

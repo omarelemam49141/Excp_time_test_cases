@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `Quick Entry page with the **"From"** and **"To"** date pickers and the **"Apply quick entry range correction"** button.`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.Application/Services/AttendanceBulk/AttendanceBulkQuickEntryAppService.cs`, `src/Excp.HRSystem.EntityFrameworkCore/Scripts/FixAttendanceOver8Hours_CreateOvertime_ByDateRange.sql`, `src/Excp.HRSystem.HttpApi/Controllers/AttendanceRecords/AttendanceRecordAPIController.cs`
+- Related docs: `docs/backend/technical/quick-entry-correction-cross-midnight-overtime.md`, `docs/backend/technical/quick-entry-correction-overtime-gap-preservation.md`
 
 ## Scope
 

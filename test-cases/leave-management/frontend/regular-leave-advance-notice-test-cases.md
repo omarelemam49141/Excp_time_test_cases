@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `/my-requests`, `/admin/system-work-schedule`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/pages/my-requests/components/leave-request-dialog/`, `src/app/core/services/leave-management.service.ts`, `src/app/core/models/system-work-schedule.model.ts`, `src/app/features/admin-leader/admin/components/system-work-schedule/`, `src/app/pages/my-requests/my-requests.component.ts`, `src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts`
+- Related docs: `docs/frontend/technical/regular-leave-advance-notice-policy.md`, `docs/frontend/technical/my-requests-leave-realtime-refresh.md`, `docs/frontend/technical/quick-entry-pending-leave-request-guard.md`
 
 ## Scope
 

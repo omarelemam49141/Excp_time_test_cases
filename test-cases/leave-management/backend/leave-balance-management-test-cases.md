@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `/api/leave-balances`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.Application/Services/Leave/EmployeeLeaveBalancesAppService.cs`, `src/Excp.HRSystem.Application/Services/Leave/LeaveBalanceService.cs`, `src/Excp.HRSystem.Application.Contracts/Entities/Leave/Dtos/BalanceManagementDtos.cs`, `src/Excp.HRSystem.Domain/Entities/Leave/EmployeeLeaveBalance.cs`, `src/Excp.HRSystem.Domain/Entities/Leave/LeaveBalanceChangeLog.cs`
+- Related docs: `docs/backend/technical/leave-policy-carry-over-by-type.md`
 
 ## Scope
 

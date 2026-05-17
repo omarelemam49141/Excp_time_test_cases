@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `/admin/employee-leave-balances`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/app/features/admin-leader/admin/components/leave-management/employee-leave-balances/`, `src/app/core/services/leave-management.service.ts`, `src/app/core/models/leave.model.ts`, `src/app/features/admin-leader/admin/components/employee-leave-balances-redirect/employee-leave-balances-redirect.component.ts`
+- Related docs: `docs/frontend/technical/leave-balance-management-page.md`
 
 ## Scope
 

@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `The same employee actions the web app uses under paths like `"attendance-record"`, `"attendance-break"`, overtime, and (where your environment allows it) bulk quick entry import or apply.`
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/Excp.HRSystem.Application/Services/Attendance/Realtime/AttendanceStateRealtimePublisher.cs`, `src/Excp.HRSystem.HttpApi/Helpers/AttendanceRealtimePublishHelper.cs`, `src/Excp.HRSystem.HttpApi/Controllers/AttendanceRecords/AttendanceRecordAPIController.cs`, `src/Excp.HRSystem.HttpApi/Controllers/AttendanceBreaks/AttendanceBreakController.cs`, `src/Excp.HRSystem.HttpApi/Controllers/AttendanceOverTimes/AttendanceOverTimeController.cs`, `src/Excp.HRSystem.Application/Services/AttendanceBulk/AttendanceBulkQuickEntryAppService.cs`
+- Related docs: `docs/backend/technical/attendance-realtime-signalr.md`
 
 ## Scope
 

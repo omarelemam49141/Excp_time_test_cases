@@ -7,8 +7,8 @@
 - Layer: `frontend`
 - Routes: `Any screen that calls the HR API (for example **"/attendance/working-time"**).`
 - APIs: -
-- Related code: _Map concrete files during feature updates._
-- Related docs: _See the project documentation indexes for the owning feature._
+- Related code: `src/environments/environment.testonlive.ts`, `angular.json`
+- Related docs: `docs/frontend/technical/testonlive-angular-environment.md`
 
 ## Scope
 
