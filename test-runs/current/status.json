@@ -2,7 +2,7 @@
   "version": 1,
   "project": "excp-time",
   "runId": "current",
-  "updatedAtUtc": "2026-05-17T07:04:42.028Z",
+  "updatedAtUtc": "2026-05-17T08:18:32.910Z",
   "cases": {
     "EXCP-AUTH-HRS-REFRESH-TOKEN-001": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-001",
@@ -15,11 +15,11 @@
     },
     "EXCP-AUTH-ANG-REFRESH-TOKEN-001": {
       "key": "EXCP-AUTH-ANG-REFRESH-TOKEN-001",
-      "status": "new",
+      "status": "in-progress",
       "sourceFile": "test-cases/authentication/backend/refresh-token-test-cases.md",
       "caseId": "TC-01",
       "caseTitle": "TC-01 — Verify Valid refresh token rotation",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-17T08:18:32.910Z",
       "runId": "current"
     },
     "EXCP-AUTH-REFRESH-TOKEN-001": {
@@ -564,11 +564,11 @@
     },
     "EXCP-AUTH-ANG-REFRESH-TOKEN-002": {
       "key": "EXCP-AUTH-ANG-REFRESH-TOKEN-002",
-      "status": "new",
+      "status": "in-progress",
       "sourceFile": "test-cases/authentication/backend/refresh-token-test-cases.md",
       "caseId": "TC-02",
       "caseTitle": "TC-02 — Verify Old refresh token cannot be reused",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-17T08:18:32.910Z",
       "runId": "current"
     },
     "EXCP-AUTH-REFRESH-TOKEN-002": {
@@ -1095,11 +1095,11 @@
     },
     "EXCP-AUTH-ANG-REFRESH-TOKEN-003": {
       "key": "EXCP-AUTH-ANG-REFRESH-TOKEN-003",
-      "status": "new",
+      "status": "in-progress",
       "sourceFile": "test-cases/authentication/backend/refresh-token-test-cases.md",
       "caseId": "TC-03",
       "caseTitle": "TC-03 — Verify Expired refresh token",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-17T08:18:32.910Z",
       "runId": "current"
     },
     "EXCP-AUTH-REFRESH-TOKEN-003": {
@@ -1608,11 +1608,11 @@
     },
     "EXCP-AUTH-ANG-REFRESH-TOKEN-004": {
       "key": "EXCP-AUTH-ANG-REFRESH-TOKEN-004",
-      "status": "new",
+      "status": "in-progress",
       "sourceFile": "test-cases/authentication/backend/refresh-token-test-cases.md",
       "caseId": "TC-04",
       "caseTitle": "TC-04 — Verify Revoked refresh token",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-17T08:18:32.910Z",
       "runId": "current"
     },
     "EXCP-AUTH-REFRESH-TOKEN-004": {
@@ -2103,11 +2103,11 @@
     },
     "EXCP-AUTH-ANG-REFRESH-TOKEN-005": {
       "key": "EXCP-AUTH-ANG-REFRESH-TOKEN-005",
-      "status": "new",
+      "status": "in-progress",
       "sourceFile": "test-cases/authentication/backend/refresh-token-test-cases.md",
       "caseId": "TC-05",
       "caseTitle": "TC-05 — Verify Missing/empty payload",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-17T08:18:32.910Z",
       "runId": "current"
     },
     "EXCP-AUTH-REFRESH-TOKEN-005": {
@@ -2562,11 +2562,11 @@
     },
     "EXCP-AUTH-ANG-REFRESH-TOKEN-006": {
       "key": "EXCP-AUTH-ANG-REFRESH-TOKEN-006",
-      "status": "new",
+      "status": "in-progress",
       "sourceFile": "test-cases/authentication/backend/refresh-token-test-cases.md",
       "caseId": "TC-06",
       "caseTitle": "TC-06 — Verify Logout revocation",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-17T08:18:32.910Z",
       "runId": "current"
     },
     "EXCP-AUTH-REFRESH-TOKEN-006": {
@@ -2967,11 +2967,11 @@
     },
     "EXCP-AUTH-ANG-REFRESH-TOKEN-007": {
       "key": "EXCP-AUTH-ANG-REFRESH-TOKEN-007",
-      "status": "new",
+      "status": "in-progress",
       "sourceFile": "test-cases/authentication/backend/refresh-token-test-cases.md",
       "caseId": "TC-07",
       "caseTitle": "TC-07 — Verify Refreshed JWT contains claims",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-17T08:18:32.910Z",
       "runId": "current"
     },
     "EXCP-AUTH-REFRESH-TOKEN-007": {
