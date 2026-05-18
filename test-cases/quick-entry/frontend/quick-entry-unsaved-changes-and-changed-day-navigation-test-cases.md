@@ -28,6 +28,7 @@ Covers `/attendance/quick-entry` save controls, unsaved-change prompts, editable
 - Existing editable overtime with `"Within overtime gap"` status shows the within-gap label/color, not the pending label/color.
 - A selected `"From day to day"` period remains selected after browser refresh.
 - Returning to quick entry from another page restores the last selected period.
+- **Apply schedule correction** is hidden while unsaved edits exist and returns after save.
 
 ## Test cases
 
@@ -39,6 +40,7 @@ Covers `/attendance/quick-entry` save controls, unsaved-change prompts, editable
 | TC-02 | EXCP-QE-UNSAVED-CHANGES-002 | Verify saving a within-gap overtime time edit does not show the no-changes message | Regression | The `/attendance/quick-entry` page is loaded for an employee who has an editable overtime entry on `"2026-02-01"` with status `"Within overtime gap"`.<br>The overtime end time is `"05:50 PM"`. | 1. Change the overtime end time from `"05:50 PM"` to `"05:51 PM"`.<br>2. Click `"Save changes"`.<br>3. Reload the same period. | 1. The page does not show `"No changes to save."`.<br>2. A success message appears.<br>3. The overtime entry shows end time `"05:51 PM"` after reload. | Date: `"2026-02-01"`<br>End time before edit: `"05:50 PM"`<br>End time after edit: `"05:51 PM"` |
 | TC-03 | EXCP-QE-UNSAVED-CHANGES-003 | Verify within-gap overtime shows within-gap status while remaining editable | Regression | The `/attendance/quick-entry` page is loaded for an employee who has an editable overtime entry on `"2026-02-01"` with status `"Within overtime gap"`. | 1. Open the day `"2026-02-01"`.<br>2. Look at the overtime entry title and card color.<br>3. Confirm the time inputs and delete button are still available. | 1. The overtime entry title shows `"Within overtime gap"` or the localized equivalent.<br>2. The title does not show `"Pending overtime (editable)"` or the localized pending equivalent.<br>3. The card uses the within-gap/teal visual style instead of the pending/amber style.<br>4. The overtime remains editable. | Date: `"2026-02-01"` |
 | TC-04 | EXCP-QE-UNSAVED-CHANGES-004 | Verify no save control appears when the quick-entry page has no edits | Edge | The `/attendance/quick-entry` page is loaded with no unsaved edits. | 1. Do not change any values.<br>2. Check the top and floating save controls.<br>3. Navigate to another page. | 1. The floating `"Save changes"` button is not visible.<br>2. No unsaved-change prompt appears.<br>3. Navigation continues normally. | - |
+| TC-09 | EXCP-QE-UNSAVED-CHANGES-009 | Verify **Apply schedule correction** is hidden until unsaved edits are saved | Main | Quick Entry is loaded with no unsaved edits; **Apply schedule correction** is visible. | 1. Change any attendance or overtime field.<br>2. Observe the correction action row.<br>3. Click **Save changes** and wait for success.<br>4. Observe the correction action row again. | 1. After the edit, **Apply schedule correction** is not shown; floating **Save changes** is shown.<br>2. **Correction history** remains visible.<br>3. After save, **Apply schedule correction** appears again. | - |
 
 ### Leave protection
 

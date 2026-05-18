@@ -2,7 +2,7 @@
   "version": 1,
   "project": "excp-time",
   "runId": "current",
-  "updatedAtUtc": "2026-05-18T11:41:43.450Z",
+  "updatedAtUtc": "2026-05-18T12:06:27.338Z",
   "cases": {
     "EXCP-AUTH-HRS-REFRESH-TOKEN-001": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-001",
@@ -5601,6 +5601,15 @@
       "caseId": "TC-19",
       "caseTitle": "TC-19 — Verify Dropdown clear button: visible but does not overlap the selected text label.",
       "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "runId": "current"
+    },
+    "EXCP-QE-PROBLEM-DAYS-019": {
+      "key": "EXCP-QE-PROBLEM-DAYS-019",
+      "status": "succeeded",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-problem-days-navigator-test-cases.md",
+      "caseId": "TC-19",
+      "caseTitle": "TC-19 — Verify **Apply schedule correction** is blocked on the client when problem days exist",
+      "updatedAtUtc": "2026-05-18T12:06:27.338Z",
       "runId": "current"
     },
     "EXCP-BUG-ADMIN-FAB-AZURE-020": {
