@@ -118,6 +118,7 @@ This index lists the private test-case definitions organized by project, feature
 
 - `reports/frontend/admin-reports-layout-test-cases.md`
 - `reports/frontend/bulk-employee-hours-report-test-cases.md`
+- `reports/frontend/employee-hours-report-refused-ot-shortage-test-cases.md`
 - `reports/frontend/employee-hours-tour-guide-test-cases.md`
 
 ### Request Types / frontend
