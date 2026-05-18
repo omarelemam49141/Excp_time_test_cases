@@ -16,6 +16,9 @@
 - Show problem-day warning badges on day cards.
 - Provide floating previous/next navigation for problem days.
 - Validate detection for attendance, break, overtime, and overtime-break time issues.
+- Validate duplicate or overlapping work breaks, overtime segments, and overtime breaks on load.
+- Validate save is blocked and scrolls to the first problem day when duplicates remain in the loaded range.
+- Validate **Apply schedule correction** shows an info alert when no schedule fix is required.
 
 ## Test pages
 
@@ -64,3 +67,12 @@
 | TC-12 | EXCP-QE-PROBLEM-DAYS-012 | Verify midnight overtime start (00:00) is NOT flagged as missing | Edge | A saved row has overtime starting at midnight (00:00). | 1. Open `/attendance/quick-entry` for the target range.<br>2. Locate the day containing overtime starting at 00:00. | The day is NOT flagged as a problem day because 00:00 is a valid midnight time for overtime. | OT sample: "start 00:00, end 01:00" |
 | TC-13 | EXCP-QE-PROBLEM-DAYS-013 | Verify midnight overtime-break start (00:00) is NOT flagged as missing | Edge | A saved row has an overtime break with start at 00:00 and valid end time. | 1. Open `/attendance/quick-entry` for the target range.<br>2. Locate the day containing overtime break starting at 00:00.<br>3. Hover the warning badge if present. | The day is not flagged for "missing break start time" when the break starts at 00:00. | OT break sample: "start 00:00, end 00:30" |
 | TC-14 | EXCP-QE-PROBLEM-DAYS-014 | Verify weekend/public-holiday attendance checks are ignored while overtime checks still apply | Edge | At least one weekend/public-holiday row contains attendance anomalies and a separate row contains overtime anomalies. | 1. Open `/attendance/quick-entry for a range that includes weekend/public-holiday rows.<br>2. Compare a weekend/public-holiday attendance anomaly row and an overtime anomaly row. | Weekend/public-holiday attendance-only anomalies do not create a problem flag, but overtime anomalies still create problem flags. | Day type: "weekend/public holiday" |
+
+### Duplicate and overlapping records
+
+| ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
+|----|-----|------|------|---------------|-------|----------|-----------|
+| TC-15 | EXCP-QE-PROBLEM-DAYS-015 | Verify duplicate pending overtime segments are detected on load | Main | One working day has two pending overtime rows with the same or overlapping times (for example both `17:00`–`20:00`). | 1. Open `/attendance/quick-entry` for the range containing that day.<br>2. Wait for loading to finish.<br>3. Locate the day card. | 1. The floating problem-day navigator shows a non-zero count.<br>2. The day card shows a warning badge.<br>3. The badge tooltip includes text about overlapping overtime segments. | Date with duplicate pending OT |
+| TC-16 | EXCP-QE-PROBLEM-DAYS-016 | Verify duplicate overlapping work breaks are detected on load | Main | One working day has two work breaks with overlapping times (for example `10:00`–`10:30` twice). | 1. Open `/attendance/quick-entry` for the range containing that day.<br>2. Wait for loading to finish. | The day is counted as a problem day and the tooltip mentions overlapping work breaks. | Date with duplicate work breaks |
+| TC-17 | EXCP-QE-PROBLEM-DAYS-017 | Verify save is blocked and scrolls to the first problem day when duplicates remain | Main | Loaded range includes at least one problem day from TC-15 or TC-16. | 1. Open `/attendance/quick-entry` on that range.<br>2. Optionally edit a different clean day.<br>3. Click the floating **Save** control. | 1. Save does not complete.<br>2. The first problem day card expands and scrolls into view.<br>3. Overlapping overtime or break fields are highlighted. | - |
+| TC-18 | EXCP-QE-PROBLEM-DAYS-018 | Verify **Apply schedule correction** shows an info alert when no schedule fix is needed | Edge | Range contains duplicate records but attendance/overtime already matches schedule rules (correction would return zero days). | 1. Open `/attendance/quick-entry` on that range.<br>2. Click **"Apply schedule correction"** (or the localized equivalent).<br>3. Confirm the warning dialog.<br>4. Read the result popup. | 1. An **info**-style alert appears (not an error).<br>2. Title text explains that no days require schedule correction.<br>3. Body text explains duplicates must be removed or edited manually. | Duplicate-only day |

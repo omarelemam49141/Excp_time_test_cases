@@ -2,7 +2,7 @@
   "version": 1,
   "project": "excp-time",
   "runId": "current",
-  "updatedAtUtc": "2026-05-18T10:58:38.663Z",
+  "updatedAtUtc": "2026-05-18T11:41:43.450Z",
   "cases": {
     "EXCP-AUTH-HRS-REFRESH-TOKEN-001": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-001",
@@ -5117,6 +5117,15 @@
       "updatedAtUtc": "2026-05-14T15:04:56.364Z",
       "runId": "current"
     },
+    "EXCP-QE-PROBLEM-DAYS-015": {
+      "key": "EXCP-QE-PROBLEM-DAYS-015",
+      "status": "succeeded",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-problem-days-navigator-test-cases.md",
+      "caseId": "TC-15",
+      "caseTitle": "TC-15 — Verify duplicate pending overtime segments are detected on load",
+      "updatedAtUtc": "2026-05-18T11:38:40.009Z",
+      "runId": "current"
+    },
     "EXCP-BUG-HRS-ADMIN-AZURE-016": {
       "key": "EXCP-BUG-HRS-ADMIN-AZURE-016",
       "status": "new",
@@ -5234,6 +5243,15 @@
       "updatedAtUtc": "2026-05-13T20:11:09.247Z",
       "runId": "current"
     },
+    "EXCP-QE-PROBLEM-DAYS-016": {
+      "key": "EXCP-QE-PROBLEM-DAYS-016",
+      "status": "succeeded",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-problem-days-navigator-test-cases.md",
+      "caseId": "TC-16",
+      "caseTitle": "TC-16 — Verify duplicate overlapping work breaks are detected on load",
+      "updatedAtUtc": "2026-05-18T11:41:43.450Z",
+      "runId": "current"
+    },
     "EXCP-BUG-HRS-ADMIN-AZURE-017": {
       "key": "EXCP-BUG-HRS-ADMIN-AZURE-017",
       "status": "new",
@@ -5349,6 +5367,15 @@
       "caseId": "TC-17",
       "caseTitle": "TC-17 — Verify refused leave day loads with a refused marker",
       "updatedAtUtc": "2026-05-14T14:31:14.742Z",
+      "runId": "current"
+    },
+    "EXCP-QE-PROBLEM-DAYS-017": {
+      "key": "EXCP-QE-PROBLEM-DAYS-017",
+      "status": "succeeded",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-problem-days-navigator-test-cases.md",
+      "caseId": "TC-17",
+      "caseTitle": "TC-17 — Verify save is blocked and scrolls to the first problem day when duplicates remain",
+      "updatedAtUtc": "2026-05-18T11:41:37.430Z",
       "runId": "current"
     },
     "EXCP-BUG-HRS-ADMIN-AZURE-018": {
