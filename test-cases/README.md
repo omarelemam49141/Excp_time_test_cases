@@ -101,6 +101,7 @@ This index lists the private test-case definitions organized by project, feature
 - `quick-entry/frontend/quick-entry-range-correction-test-cases.md`
 - `quick-entry/frontend/quick-entry-tour-gregorian-test-cases.md`
 - `quick-entry/frontend/quick-entry-unsaved-changes-and-changed-day-navigation-test-cases.md`
+- `quick-entry/frontend/quick-entry-overtime-delete-test-cases.md`
 
 ### Realtime Attendance / backend
 

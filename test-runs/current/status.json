@@ -2,7 +2,7 @@
   "version": 1,
   "project": "excp-time",
   "runId": "current",
-  "updatedAtUtc": "2026-05-18T09:52:24.196Z",
+  "updatedAtUtc": "2026-05-18T10:58:38.663Z",
   "cases": {
     "EXCP-AUTH-HRS-REFRESH-TOKEN-001": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-001",
@@ -562,6 +562,15 @@
       "updatedAtUtc": "2026-05-18T09:51:49.070Z",
       "runId": "current"
     },
+    "EXCP-QE-OT-DELETE-001": {
+      "key": "EXCP-QE-OT-DELETE-001",
+      "status": "succeeded",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-overtime-delete-test-cases.md",
+      "caseId": "TC-01",
+      "caseTitle": "TC-01 — Verify single overtime delete shows confirmation and updates net overtime",
+      "updatedAtUtc": "2026-05-18T10:55:18.743Z",
+      "runId": "current"
+    },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-002": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-002",
       "status": "new",
@@ -1102,6 +1111,15 @@
       "updatedAtUtc": "2026-05-18T09:51:49.070Z",
       "runId": "current"
     },
+    "EXCP-QE-OT-DELETE-002": {
+      "key": "EXCP-QE-OT-DELETE-002",
+      "status": "succeeded",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-overtime-delete-test-cases.md",
+      "caseId": "TC-02",
+      "caseTitle": "TC-02 — Verify bulk delete removes multiple selected overtime entries after one confirmation",
+      "updatedAtUtc": "2026-05-18T10:56:20.430Z",
+      "runId": "current"
+    },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-003": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-003",
       "status": "new",
@@ -1615,6 +1633,15 @@
       "updatedAtUtc": "2026-05-13T20:11:09.247Z",
       "runId": "current"
     },
+    "EXCP-QE-OT-DELETE-003": {
+      "key": "EXCP-QE-OT-DELETE-003",
+      "status": "succeeded",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-overtime-delete-test-cases.md",
+      "caseId": "TC-03",
+      "caseTitle": "TC-03 — Verify select all deletable ignores approved overtime",
+      "updatedAtUtc": "2026-05-18T10:57:47.754Z",
+      "runId": "current"
+    },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-004": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-004",
       "status": "new",
@@ -2108,6 +2135,15 @@
       "caseId": "TC-04",
       "caseTitle": "TC-04 — Verify Details opens the same dialog from either tab",
       "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "runId": "current"
+    },
+    "EXCP-QE-OT-DELETE-004": {
+      "key": "EXCP-QE-OT-DELETE-004",
+      "status": "succeeded",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-overtime-delete-test-cases.md",
+      "caseId": "TC-04",
+      "caseTitle": "TC-04 — Verify unsaved overtime draft discard uses draft confirmation",
+      "updatedAtUtc": "2026-05-18T10:58:38.663Z",
       "runId": "current"
     },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-005": {
