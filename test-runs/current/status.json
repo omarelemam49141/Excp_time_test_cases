@@ -2,7 +2,7 @@
   "version": 1,
   "project": "excp-time",
   "runId": "current",
-  "updatedAtUtc": "2026-05-17T08:18:32.910Z",
+  "updatedAtUtc": "2026-05-18T09:52:24.196Z",
   "cases": {
     "EXCP-AUTH-HRS-REFRESH-TOKEN-001": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-001",
@@ -420,11 +420,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-001": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-001",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-01",
       "caseTitle": "TC-01 — Verify the admin can generate a bulk report for all employees in a date range",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-001": {
@@ -551,6 +551,15 @@
       "caseId": "TC-01",
       "caseTitle": "TC-01 — Verify the Today & attendance tab shows the legacy table columns",
       "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "runId": "current"
+    },
+    "EXCP-REPORT-EH-REFUSED-OT-001": {
+      "key": "EXCP-REPORT-EH-REFUSED-OT-001",
+      "status": "succeeded",
+      "sourceFile": "test-cases/reports/frontend/employee-hours-report-refused-ot-shortage-test-cases.md",
+      "caseId": "TC-01",
+      "caseTitle": "TC-01 — Verify the refused-OT shortage section appears after generate on the admin report",
+      "updatedAtUtc": "2026-05-18T09:51:49.070Z",
       "runId": "current"
     },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-002": {
@@ -951,11 +960,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-002": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-002",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-02",
       "caseTitle": "TC-02 — Verify the admin can generate a bulk report for selected employees only",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-002": {
@@ -1082,6 +1091,15 @@
       "caseId": "TC-02",
       "caseTitle": "TC-02 — Verify the Profile & roles tab shows profile and role fields",
       "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "runId": "current"
+    },
+    "EXCP-REPORT-EH-REFUSED-OT-002": {
+      "key": "EXCP-REPORT-EH-REFUSED-OT-002",
+      "status": "succeeded",
+      "sourceFile": "test-cases/reports/frontend/employee-hours-report-refused-ot-shortage-test-cases.md",
+      "caseId": "TC-02",
+      "caseTitle": "TC-02 — Verify applying the refused-OT checkbox sends the flag and updates shortage outcomes",
+      "updatedAtUtc": "2026-05-18T09:51:49.070Z",
       "runId": "current"
     },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-003": {
@@ -1464,11 +1482,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-003": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-003",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-03",
       "caseTitle": "TC-03 — Verify turning salary off keeps the report in hours-only mode",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-003": {
@@ -1968,11 +1986,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-004": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-004",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-04",
       "caseTitle": "TC-04 — Verify salary value of zero is treated as hours-only for that employee",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-004": {
@@ -2445,11 +2463,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-005": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-005",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-05",
       "caseTitle": "TC-05 — Verify the shortage mode selector lists the three bulk options",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-005": {
@@ -2850,11 +2868,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-006": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-006",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-06",
       "caseTitle": "TC-06 — Verify changing shortage mode can change summary results for the same inputs",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-006": {
@@ -3192,11 +3210,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-007": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-007",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-07",
       "caseTitle": "TC-07 — Verify KPI cards summarize the generated report values",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-007": {
@@ -3498,11 +3516,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-008": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-008",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-08",
       "caseTitle": "TC-08 — Verify table header remains sticky while scrolling bulk report rows",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-008": {
@@ -3795,11 +3813,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-009": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-009",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-09",
       "caseTitle": "TC-09 — Verify the bulk report uses the same calendar dates the user picked in the date pickers",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-009": {
@@ -4074,11 +4092,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-010": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-010",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-10",
       "caseTitle": "TC-10 — Verify the what-if control appears after generate when any row shows pending overtime",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-010": {
@@ -4281,11 +4299,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-011": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-011",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-11",
       "caseTitle": "TC-11 — Verify turning the preview on sends simulatePendingAsAccepted true and updates the table",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-011": {
@@ -4498,11 +4516,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-012": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-012",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-12",
       "caseTitle": "TC-12 — Verify changing filters after generate hides the preview until a new generate",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-012": {
@@ -4696,11 +4714,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-013": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-013",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-13",
       "caseTitle": "TC-13 — Verify turning the preview off restores baseline numbers without a new network call",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-013": {
@@ -4867,11 +4885,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-014": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-014",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-14",
       "caseTitle": "TC-14 — Verify the report table title icon spacing and salary column header in Arabic",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-014": {
@@ -5002,11 +5020,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-015": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-015",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-15",
       "caseTitle": "TC-15 — Verify the Arabic \"simulation on\" badge only appears together with updated Pending OT and Accepted OT on the chosen row",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-015": {
@@ -5137,11 +5155,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-016": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-016",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-16",
       "caseTitle": "TC-16 — Verify turning on overtime-only hides employees with zero in every overtime column",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-016": {
@@ -5245,11 +5263,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-017": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-017",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-17",
       "caseTitle": "TC-17 — Verify KPI totals match visible table rows when overtime-only is on",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-017": {
@@ -5362,11 +5380,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-018": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-018",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-18",
       "caseTitle": "TC-18 — Verify overtime-only hides an employee who has shortage but no overtime hours",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-018": {
@@ -5479,11 +5497,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-019": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-019",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-19",
       "caseTitle": "TC-19 — Verify overtime-only works for all employees and for selected employees",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-019": {
@@ -5569,11 +5587,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-020": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-020",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-20",
       "caseTitle": "TC-20 — Verify a message appears when overtime-only removes every employee row",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-020": {
@@ -5659,11 +5677,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-021": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-021",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-21",
       "caseTitle": "TC-21 — Verify overtime-only stays on after clicking Generate report again",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-021": {
@@ -5749,11 +5767,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-022": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-022",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-22",
       "caseTitle": "TC-22 — Verify the salary entry list shows only selected employees when both salary and selected mode are on",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-022": {
@@ -5830,11 +5848,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-023": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-023",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-23",
       "caseTitle": "TC-23 — Verify advanced shortage lists show for Default and Accepted only, and hide for Full waive",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-023": {
@@ -5911,11 +5929,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-024": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-024",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-24",
       "caseTitle": "TC-24 — Verify generate sends chosen shortage multiplier and order fields",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-REPORT-EMPLOYEE-HOURS-024": {
@@ -5983,11 +6001,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-025": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-025",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-25",
       "caseTitle": "TC-25 — Verify changing advanced shortage options hides the pending preview until a new generate",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-BUG-ADMIN-FAB-AZURE-026": {
@@ -6037,11 +6055,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-026": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-026",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-26",
       "caseTitle": "TC-26 — Verify an information notice appears when request filters change after generate until Generate report runs again",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-BUG-ADMIN-FAB-AZURE-027": {
@@ -6091,11 +6109,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-027": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-027",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-27",
       "caseTitle": "TC-27 — Verify deduction order affects payable split even when weekday and weekend shortage-capacity settings are mixed",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-BUG-ADMIN-FAB-AZURE-028": {
@@ -6145,11 +6163,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-028": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-028",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-28",
       "caseTitle": "TC-28 — Verify the filter panel can be hidden and shown again without losing the primary action",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-BUG-ADMIN-FAB-AZURE-029": {
@@ -6190,11 +6208,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-029": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-029",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-29",
       "caseTitle": "TC-29 — Verify a successful generate hides filter details and moves the view toward the KPI summary",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-BUG-ADMIN-FAB-AZURE-030": {
@@ -6235,11 +6253,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-030": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-030",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-30",
       "caseTitle": "TC-30 — Verify a one-line summary appears when the filter panel is hidden",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-BUG-ADMIN-FAB-AZURE-031": {
@@ -6280,11 +6298,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-031": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-031",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-31",
       "caseTitle": "TC-31 — Verify excluding one employee removes them from the main table and lowers the summary numbers",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-BUG-ADMIN-FAB-AZURE-032": {
@@ -6325,11 +6343,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-032": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-032",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-32",
       "caseTitle": "TC-32 — Verify **Include again** puts the employee back in the table and restores KPI totals",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-BUG-ADMIN-FAB-AZURE-033": {
@@ -6361,11 +6379,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-033": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-033",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-33",
       "caseTitle": "TC-33 — Verify someone excluded stays listed under **Excluded from summary** when **Overtime only** hides them from the main table",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-BUG-ADMIN-FAB-AZURE-034": {
@@ -6397,11 +6415,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-034": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-034",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-34",
       "caseTitle": "TC-34 — Verify a new **Generate report** clears who was excluded",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-BUG-ADMIN-FAB-AZURE-035": {
@@ -6433,11 +6451,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-035": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-035",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-35",
       "caseTitle": "TC-35 — Verify excluding someone does not by itself show the stale information notice",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-QE-HRS-RANGE-CORRECTION-036": {
@@ -6460,11 +6478,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-036": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-036",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-36",
       "caseTitle": "TC-36 — Verify **What if pending overtime was accepted?** still works when someone is excluded from the summary",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-QE-HRS-RANGE-CORRECTION-037": {
@@ -6487,11 +6505,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-037": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-037",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-37",
       "caseTitle": "TC-37 — Verify **Open single report** from the bulk table opens the employee hours report in a new tab for the same dates and employee",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-QE-HRS-RANGE-CORRECTION-038": {
@@ -6514,11 +6532,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-038": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-038",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-38",
       "caseTitle": "TC-38 — Verify **Open single report** from the **Excluded from summary** list opens a new tab",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-QE-HRS-RANGE-CORRECTION-039": {
@@ -6541,11 +6559,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-039": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-039",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-39",
       "caseTitle": "TC-39 — Verify the **Employees** pick list stays fully visible and stays next to the field",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-QE-HRS-RANGE-CORRECTION-040": {
@@ -6568,11 +6586,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-040": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-040",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-40",
       "caseTitle": "TC-40 — Verify a failed **Generate report** shows the server message in the **Fail** dialog",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-QE-HRS-RANGE-CORRECTION-041": {
@@ -6595,11 +6613,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-041": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-041",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-41",
       "caseTitle": "TC-41 — Verify a connection-style failure does not show browser or URL jargon in the **Fail** dialog",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-QE-HRS-RANGE-CORRECTION-042": {
@@ -6622,11 +6640,11 @@
     },
     "EXCP-REPORT-BULK-EMPLOYEE-042": {
       "key": "EXCP-REPORT-BULK-EMPLOYEE-042",
-      "status": "new",
+      "status": "succeeded",
       "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
       "caseId": "TC-42",
       "caseTitle": "TC-42 — Verify the **Actions** column stays pinned on the left in Arabic when you scroll the table sideways",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-QE-HRS-RANGE-CORRECTION-043": {
@@ -6647,6 +6665,15 @@
       "updatedAtUtc": "2026-05-13T20:11:09.247Z",
       "runId": "current"
     },
+    "EXCP-REPORT-BULK-EMPLOYEE-043": {
+      "key": "EXCP-REPORT-BULK-EMPLOYEE-043",
+      "status": "succeeded",
+      "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
+      "caseId": "TC-43",
+      "caseTitle": "TC-43 — Verify the refused-OT shortage checkbox is hidden for Full waive and visible for Default",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
+      "runId": "current"
+    },
     "EXCP-QE-HRS-RANGE-CORRECTION-044": {
       "key": "EXCP-QE-HRS-RANGE-CORRECTION-044",
       "status": "new",
@@ -6663,6 +6690,15 @@
       "caseId": "TC-44",
       "caseTitle": "TC-44 — Verify Employee hours report parity — TC-44 — Verify Employee hours report parity — Open `/my-reports/employee-hours` for that employee and range.",
       "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "runId": "current"
+    },
+    "EXCP-REPORT-BULK-EMPLOYEE-044": {
+      "key": "EXCP-REPORT-BULK-EMPLOYEE-044",
+      "status": "succeeded",
+      "sourceFile": "test-cases/reports/frontend/bulk-employee-hours-report-test-cases.md",
+      "caseId": "TC-44",
+      "caseTitle": "TC-44 — Verify checking refused-OT shortage sends useRefusedOvertimeForShortage and increases payable OT when refused OT and shortage exist",
+      "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current"
     },
     "EXCP-QE-RANGE-CORRECTION-045": {
