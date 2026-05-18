@@ -8,7 +8,7 @@
 - Routes: `/admin/**`
 - APIs: -
 - Related code: `src/app/features/admin-leader/admin/components/company-structure`, `src/app/features/admin-leader/admin/services/company-structure.service.ts`, `src/app/core/guards/core/guards/admin-section.guard.ts`
-- Related docs: `docs/frontend/technical/company-structure-org-chart.md`
+- Related docs: `docs/frontend/technical/company-structure-org-chart.md`, `docs/backend/technical/company-structure-data-protection.md` (HRSystem)
 
 ## Scope
 
@@ -29,6 +29,7 @@
 - User picker loads users once and caches them; subsequent searches filter client-side without API calls.
 - Background attendance refresh does not force navigation away from `/admin/company-structure`.
 - When there are unsaved structure edits, leaving the page shows a three-option confirmation: save and leave, leave without saving, or stay.
+- Save is blocked until the graph has loaded once; destructive saves require explicit confirmation; restore-from-backup is available for Admin/HR.
 
 
 ## Test cases
@@ -224,3 +225,12 @@
 | ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
 |----|-----|------|------|---------------|-------|----------|-----------|
 | TC-31 | EXCP-ORG-ORG-CHART-032 | Verify unsaved changes prompt saves then navigates | Main | User has unsaved structure edits on "/admin/company-structure". | 1. Make a visible edit in the org chart.<br>2. Try to navigate to another page.<br>3. In the prompt, click "Save and leave". | 1. Save completes successfully with the normal success feedback.<br>2. Navigation proceeds to the selected page after save.<br>3. Returning to "/admin/company-structure" shows the saved edit. | - |
+
+### CS-FE-29 — Data protection
+
+| ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
+|----|-----|------|------|---------------|-------|----------|-----------|
+| TC-32 | EXCP-ORG-ORG-CHART-033 | Verify Save disabled until graph loaded | Main | Admin opens company structure. | 1. Observe toolbar before load finishes.<br>2. After load completes. | "Save structure" disabled until load done; then enabled. | - |
+| TC-33 | EXCP-ORG-ORG-CHART-034 | Verify people-in-chart count visible | Main | Graph loaded with N people. | 1. Read subtitle under page title. | Text shows current count and server-loaded count (e.g. "N people in chart (loaded from server: N)"). | - |
+| TC-34 | EXCP-ORG-ORG-CHART-035 | Verify destructive save confirmation | Main | Loaded graph with **10+** people. | 1. Remove most nodes locally (fewer than half remain).<br>2. Click "Save structure". | Danger dialog warns about saving fewer people than server; cancel keeps edits; confirm proceeds with save. | - |
+| TC-35 | EXCP-ORG-ORG-CHART-036 | Verify Restore backup | Main | At least one snapshot exists (after a prior save). | 1. Click "Restore backup".<br>2. Pick a snapshot with more people than current chart.<br>3. Confirm restore. | Chart reloads with restored people; success message shown. | - |

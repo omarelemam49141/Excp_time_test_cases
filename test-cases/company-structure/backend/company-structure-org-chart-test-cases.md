@@ -7,8 +7,8 @@
 - Layer: `backend`
 - Routes: -
 - APIs: `(Add the primary screen route or API path here.)`
-- Related code: `src/Excp.HRSystem.Application/Services/CompanyStructure/CompanyStructureAppService.cs`, `src/Excp.HRSystem.HttpApi/Controllers/CompanyStructure/CompanyStructureController.cs`, `src/Excp.HRSystem.Application.Contracts/Services/CompanyStructure/FluentValidations/SaveOrgStructureInputValidation.cs`
-- Related docs: `docs/backend/technical/company-structure-org-chart.md`, `docs/backend/technical/company-structure-read-vs-save-authorization.md`
+- Related code: `src/Excp.HRSystem.Application/Services/CompanyStructure/`, `src/Excp.HRSystem.HttpApi/Controllers/CompanyStructure/`, `src/Excp.HRSystem.Domain/Entities/CompanyStructure/`
+- Related docs: `docs/backend/technical/company-structure-org-chart.md`, `docs/backend/technical/company-structure-read-vs-save-authorization.md`, `docs/backend/technical/company-structure-data-protection.md`
 
 ## Scope
 
@@ -25,6 +25,7 @@
 - Any authenticated user may **read** the active graph (`POST Get-active-graph`); only **Admin** or **HR** may **save** (`POST Save-graph`).
 - Save graph synchronizes Identity role with node `StructureKind`.
 - Role change triggers forced logout (refresh tokens revoked, SignalR notification sent).
+- HR-only JWT (`roles` contains `"HR"`) can use standard workforce APIs (for example notification unread count) without **403**.
 - Primary reporting line drives `LeaderId`; secondary lines do not.
 - Validation rejects invalid graphs (cycle, employee as manager, duplicate user, bad primary flags).
 
@@ -48,6 +49,12 @@
 | ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
 |----|-----|------|------|---------------|-------|----------|-----------|
 | TC-03 | EXCP-ORG-HRS-ORG-CHART-003 | Verify HR allowed | Main | - | 1. User with Identity role `HR` and valid Bearer token calls `Get-active-graph` | 200 | - |
+
+### CS-BE-02c
+
+| ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
+|----|-----|------|------|---------------|-------|----------|-----------|
+| TC-03b | EXCP-ORG-HRS-ORG-CHART-035 | Verify HR user can load notification unread count | Main | User has Identity role **HR** only; JWT `roles` claim is `["HR"]`. | 1. `GET /api/Notifications/unread-count` with Bearer token | **200** with numeric `data` (not **403** `/Error?httpStatusCode=403`) | - |
 
 ### CS-BE-02b
 
@@ -198,3 +205,14 @@
 | ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
 |----|-----|------|------|---------------|-------|----------|-----------|
 | TC-28 | EXCP-ORG-HRS-ORG-CHART-028 | Verify Save-graph forbidden for Employee or Leader | Edge | Valid Bearer for **Employee** or **Leader** (not Admin/HR).<br>A valid saved graph exists (use Admin once to obtain **`versionId`**, **`nodes`**, **`edges`** if needed). | 1. Call **`POST /api/company-structure/Save-graph** with the employee or leader token and a body that would be valid for an admin (same shape as a normal save). | **403** Forbidden.<br>No graph change is applied. | - |
+
+### CS-BE-24 — Data protection
+
+| ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
+|----|-----|------|------|---------------|-------|----------|-----------|
+| TC-29 | EXCP-ORG-HRS-ORG-CHART-029 | Verify destructive save blocked without confirm | Main | DB has **10+** active nodes for the version. | 1. Admin `POST Save-graph` with only **2** nodes and **no** `confirmDestructiveChange`. | **400** user-friendly error; DB still has original node count. | - |
+| TC-30 | EXCP-ORG-HRS-ORG-CHART-030 | Verify destructive save allowed with confirm | Main | Same as TC-29. | 1. Repeat with `confirmDestructiveChange: true`. | **200**; DB node count matches payload; a new row exists in `OrgStructureGraphSnapshots`. | - |
+| TC-31 | EXCP-ORG-HRS-ORG-CHART-031 | Verify expected node count mismatch | Edge | DB has N nodes; client sends `expectedExistingNodeCount` not equal to N. | 1. Admin save with valid graph but wrong `expectedExistingNodeCount`. | **400** reload message; no graph change. | - |
+| TC-32 | EXCP-ORG-HRS-ORG-CHART-032 | Verify pre-save snapshot and restore | Main | Graph with at least 5 nodes saved once (creates snapshot). | 1. `POST Get-snapshots` for version.<br>2. Save a smaller graph with confirm.<br>3. `POST Restore-from-snapshot` with prior snapshot id. | Snapshots list non-empty; after restore, node count matches snapshot `nodeCount`. | - |
+| TC-33 | EXCP-ORG-HRS-ORG-CHART-033 | Verify removed nodes are soft-deleted | Main | Graph had user U; save graph without U (with confirm if mass shrink). | 1. Query `OrgStructureNodes` for U's row. | Row exists with `IsDeleted = 1` (not physically deleted). | - |
+| TC-34 | EXCP-ORG-HRS-ORG-CHART-034 | Verify Save-graph audited | Main | Auditing enabled on environment. | 1. Admin save graph.<br>2. Query `AbpAuditLogs` for `Save-graph`. | Row exists with `UserId` of admin and recent `ExecutionTime`. | - |
