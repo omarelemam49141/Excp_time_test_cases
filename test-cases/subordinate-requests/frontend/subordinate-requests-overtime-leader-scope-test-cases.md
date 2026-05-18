@@ -24,7 +24,8 @@
 - A user with **Leader** only gets a scoped overtime list and the outgoing request includes their account id.
 - A user with **Admin** (with or without Leader) sees unscoped overtime on that tab.
 - After an employee is reassigned on the company structure page, the **new** team lead sees that employee’s **pending** overtime on the Overtime tab; the **previous** team lead does not.
-- On the **All** tab, a team lead sees **overtime-only** pending items together with other request types (not only rows from the generic requests API).
+- On the **All** tab, team leads and **admins** see **overtime-only** pending items together with other request types (merged list, not only rows from the generic requests API).
+- On the **All** tab, search by employee name or email filters the merged list client-side (same as leader behavior); admins are not limited to server request-type name search on that tab.
 - Generic request tabs on the same page (**All**, leave, etc.) show only employees who **currently** report to that leader when the signed-in user is **Leader** without **Admin**; **Admin** users see the broader queues.
 - The date header on generic request tabs and the overtime date header on the **Overtime** tab can be clicked to sort oldest-first or newest-first.
 - Overtime corrected to `"WithinOvertimeGap"` is not shown in the leader pending list.
@@ -59,6 +60,8 @@
 | ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
 |----|-----|------|------|---------------|-------|----------|-----------|
 | TC-09 | EXCP-SUBREQ-OVERTIME-LEADER-009 | Verify the All tab lists pending overtime that has no separate request record | Main | A team lead has **only** pending overtime from direct reports and no other pending request types (overtime entries do not appear in the generic requests list for that lead). | 1. Sign in as the team lead.<br>2. Open /admin-leader/list-requests.<br>3. Stay on or open the **All** tab with status **Pending**. | At least one row appears for overtime (type label matches your overtime wording, for example **"Overtime"** or your Arabic equivalent).<br>The **All** tab is not empty while the **Overtime** tab still shows pending rows. | - |
+| TC-16 | EXCP-SUBREQ-OVERTIME-LEADER-016 | Verify an admin sees pending overtime-only rows on the All tab like the Overtime tab | Main | Admin account.<br>At least one pending overtime exists that does not appear in **get-requests-paged-filtered-list** alone (or org has pending overtime visible on **Overtime**). | 1. Sign in as admin.<br>2. Open /admin-leader/list-requests.<br>3. Open **Overtime** tab with **Pending** and note a visible employee name (for example part of **"bakr"**).<br>4. Open the **All** tab with **Pending**.<br>5. Search the same name on **All**. | 1. **All** shows the same pending overtime row(s) as **Overtime** (not an empty list).<br>2. Network shows **get-requests-paged-filtered-list** and **Get-overtimes-By-LeaderId-and-status** with large **pageSize** (merge fetch), and **no** **leaderId** on the overtime call.<br>3. Search on **All** finds the employee by name or email without sending that text to the requests API as the only filter. | - |
+| TC-17 | EXCP-SUBREQ-OVERTIME-LEADER-017 | Verify admin All tab merge does not send receiverId on the generic requests call | Regression | Admin account on **All** tab. | 1. Sign in as admin.<br>2. Open /admin-leader/list-requests and the **All** tab.<br>3. In the network log, open **POST** **get-requests-paged-filtered-list** used for the merge (large **pageSize**). | The body does **not** include **receiverId** (org-wide requests slice for merge). | - |
 
 ### Date sorting
 

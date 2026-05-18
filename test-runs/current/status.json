@@ -2,7 +2,7 @@
   "version": 1,
   "project": "excp-time",
   "runId": "current",
-  "updatedAtUtc": "2026-05-18T12:06:27.338Z",
+  "updatedAtUtc": "2026-05-18T13:07:53.009Z",
   "cases": {
     "EXCP-AUTH-HRS-REFRESH-TOKEN-001": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-001",
@@ -5790,6 +5790,15 @@
       "caseId": "TC-21",
       "caseTitle": "TC-21 — Verify Security step mismatch: `confirmNewPassword` different from `newPassword` blocks moving to the review step and shows mismatch validation message.",
       "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "runId": "current"
+    },
+    "EXCP-QE-PROBLEM-DAYS-021": {
+      "key": "EXCP-QE-PROBLEM-DAYS-021",
+      "status": "succeeded",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-problem-days-navigator-test-cases.md",
+      "caseId": "TC-21",
+      "caseTitle": "TC-21 — Verify schedule correction succeeds after duplicate overtime is removed",
+      "updatedAtUtc": "2026-05-18T13:07:53.009Z",
       "runId": "current"
     },
     "EXCP-BUG-ADMIN-FAB-AZURE-022": {
