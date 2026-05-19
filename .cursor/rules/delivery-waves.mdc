@@ -1,0 +1,34 @@
+---
+description: Delivery waves — stage manual testing by chunk and use Requires gates (product TestCases + apps)
+globs:
+  - test-cases/**/*.md
+alwaysApply: false
+---
+
+# Delivery waves (testing staging)
+
+When a feature ships in **multiple chunks** or when **one failing test blocks others**, use **delivery waves** so QA and agents do not mix unrelated plans.
+
+## Canonical spec
+
+Read and follow:
+
+- `Testing-feature/docs/standards/delivery-waves.md` (or the same path relative to the vendor clone)
+
+## Agent behavior
+
+1. **Declare the wave** for the current task (e.g. “Wave 4 — range notify”). One primary wave per task unless the user expands scope.
+
+2. **Closeout** — In the final answer, **Test What Changed** must list only keys for **this wave** (and minimal regression keys). Do not list every row in the file.
+
+3. **Editing test cases** — When adding dependent scenarios, set **`Requires`** to the stable `Key` values that must be `succeeded` first. Prefer `Requires` over “Complete TC-09” alone in Steps.
+
+4. **Blockers** — If a wave gate fails, tell QA which `Key` is blocked and which key must pass first; suggest `tc s KEY block "…"` for dependents until the fix lands.
+
+5. **Markdown** — Use `### Wave N — <short title>` under `## Test cases` where helpful, and optional `## Delivery waves` mapping table. Do not break table column rules in `test-case-format.md`.
+
+## Product install
+
+Product TestCases repos: installed automatically with `tc project init` / `tc project install-rules` (see `src/commands/cursor-rules-install.ts`). Copy manually only if you need a one-off without reinstalling.
+
+Application repos: optional; waves mainly apply where `*-test-cases.md` lives. App-repo agents should still respect one-wave closeouts when touching linked test files.

@@ -9,7 +9,7 @@ alwaysApply: true
 
 When creating or editing any file under `test-cases/**/*.md`, follow the canonical spec:
 
-- `o:/Company work/Company projects/ExcpTime/Testing-feature/docs/standards/test-case-format.md`
+- `Testing-feature/docs/standards/test-case-format.md` (path relative to your clone of the vendor repo)
 
 ## Hard requirements
 
@@ -23,4 +23,5 @@ When creating or editing any file under `test-cases/**/*.md`, follow the canonic
 
 Real **Related code** paths enable **`tc impact`** (mark cases `needs-update` when linked files change) and clear **`tc project doctor`** warnings for placeholders.
 
-Update `*-test-cases.md` in the **same task** as related product code changes in linked app repos.
+8. **Delivery waves (optional):** For multi-chunk features, follow the vendor doc **Delivery waves** (`docs/standards/delivery-waves.md` in Testing-feature) — `### Wave N` headings, optional `## Delivery waves`, and **`Requires`** gates. Install `delivery-waves.mdc` via `tc project install-rules`.
+9. **Same-task updates:** Update `*-test-cases.md` in the **same task** as related product code changes in linked app repos.
