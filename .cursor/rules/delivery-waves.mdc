@@ -27,6 +27,8 @@ Read and follow:
 
 5. **Markdown** — Use `### Wave N — <short title>` under `## Test cases` where helpful, and optional `## Delivery waves` mapping table. Do not break table column rules in `test-case-format.md`.
 
+6. **Structured failure block** — When QA marks a case `failed` or `blocked` in `tc ui`, the **Failure modal** records `failure.kind` (`product-bug` | `test-out-of-date` | `environment` | `unknown`), `failure.actual`, and `failure.fixHint` on the status record. CLI equivalent: `tc s <KEY> fail --failure-kind product-bug --actual "…" --fix-hint "…"`. When asked to *“fix the Wave N blocker”*, **first run `tc blockers --wave N --json`** (or `GET /api/blockers?wave=N`) to read the structured fix message — do not ask the user to re-type it. Scope the fix to that wave only, then re-run the wave's keys.
+
 ## Product install
 
 Product TestCases repos: installed automatically with `tc project init` / `tc project install-rules` (see `src/commands/cursor-rules-install.ts`). Copy manually only if you need a one-off without reinstalling.

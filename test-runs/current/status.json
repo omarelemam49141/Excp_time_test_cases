@@ -2,15 +2,21 @@
   "version": 1,
   "project": "excp-time",
   "runId": "current",
-  "updatedAtUtc": "2026-05-18T13:07:53.009Z",
+  "updatedAtUtc": "2026-05-19T09:16:30.805Z",
   "cases": {
     "EXCP-AUTH-HRS-REFRESH-TOKEN-001": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-001",
-      "status": "new",
+      "status": "failed",
       "sourceFile": "test-cases/authentication/backend/hrsystem-refresh-token-test-cases.md",
       "caseId": "TC-01",
       "caseTitle": "TC-01 — Verify Happy path refresh",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "failure": {
+        "kind": "product-bug",
+        "reportedAtUtc": "2026-05-19T09:14:37.999Z",
+        "actual": "test actual",
+        "fixHint": "test fix hint"
+      },
+      "updatedAtUtc": "2026-05-19T09:14:37.999Z",
       "runId": "current"
     },
     "EXCP-AUTH-ANG-REFRESH-TOKEN-001": {
@@ -5961,6 +5967,22 @@
       "caseId": "TC-23",
       "caseTitle": "TC-23 — Verify User created with empty/whitespace `leaderId` must not break login/get-profile/get-user-for-admin-edit paths that read leader from `ExtraProperties`; expect no `Guid` conversion exception.",
       "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "runId": "current"
+    },
+    "EXCP-OT-REVIEW-READINESS-023": {
+      "key": "EXCP-OT-REVIEW-READINESS-023",
+      "status": "blocked",
+      "notes": "\\",
+      "sourceFile": "test-cases/overtime/frontend/overtime-review-readiness-guard-test-cases.md",
+      "caseId": "TC-23",
+      "caseTitle": "TC-23 — Verify combined notify range end-to-end for two problem days",
+      "failure": {
+        "kind": "product-bug",
+        "reportedAtUtc": "2026-05-19T09:16:30.805Z",
+        "actual": "Test actual",
+        "fixHint": "Test fix hint"
+      },
+      "updatedAtUtc": "2026-05-19T09:16:30.805Z",
       "runId": "current"
     },
     "EXCP-BUG-ADMIN-FAB-AZURE-024": {
