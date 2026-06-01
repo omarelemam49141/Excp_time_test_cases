@@ -1,0 +1,15 @@
+# Local spreadsheets and exports (not source)
+*.xlsx
+*.xlsm
+*.xls
+
+# Status / tooling backups
+*.bak
+*.bak-*
+
+# Node (if scripts add deps locally)
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
