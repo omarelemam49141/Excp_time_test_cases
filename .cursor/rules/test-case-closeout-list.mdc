@@ -26,3 +26,5 @@ Each item must include:
 - A short reason why it should be run.
 
 Keep the list concise and tied to the actual behavior changed. If no product behavior changed, say that no QA test-case run list is needed.
+
+When **auto-impact** is enabled, also note any keys that were auto-marked **`needs-update`** (check `tc ui` or `status.json`) so QA knows what to re-run after spec updates.

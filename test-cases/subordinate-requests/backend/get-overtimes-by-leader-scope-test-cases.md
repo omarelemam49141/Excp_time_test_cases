@@ -29,6 +29,7 @@
 - The API can sort visible overtime results by overtime date from oldest to newest or newest to oldest.
 - An unknown sort value still returns a normal paged response without changing the caller's allowed scope.
 - Overtime corrected to `"WithinOvertimeGap"` does not appear when a leader asks for `"Pending"` overtime.
+- Optional body fields **`employeeId`**, **`from`**, and **`to`** narrow the leader overtime list to one direct report and an inclusive overtime-date range (used after period validation on the list-requests page).
 
 ## Test cases
 
@@ -79,4 +80,10 @@
 
 | ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
 |----|-----|------|------|---------------|-------|----------|-----------|
-| TC-14 | EXCP-SUBREQ-HRS-OVERTIMES-014 | Verify within-gap overtime is not returned when the leader asks for pending overtime | Regression | A team lead has a direct report with overtime status `"WithinOvertimeGap"` after quick-entry correction.<br>The same team lead has at least one other direct report with real `"Pending"` overtime. | 1. Sign in as the team lead.<br>2. Call `"POST /api/attendance-overtime/Get-overtimes-By-LeaderId-and-status"` with `"overTimeStatus"` set to `"Pending"`.<br>3. Read `"items"` in the response. | 1. HTTP status indicates success.<br>2. The `"WithinOvertimeGap"` overtime entry is not included in `"items"`.<br>3. The real `"Pending"` overtime entry is still included when it matches the normal leader scope. | overTimeStatus: `"Pending" |
+| TC-14 | EXCP-SUBREQ-HRS-OVERTIMES-014 | Verify within-gap overtime is not returned when the leader asks for pending overtime | Regression | A team lead has a direct report with overtime status `"WithinOvertimeGap"` after quick-entry correction.<br>The same team lead has at least one other direct report with real `"Pending"` overtime. | 1. Sign in as the team lead.<br>2. Call `"POST /api/attendance-overtime/Get-overtimes-By-LeaderId-and-status"` with `"overTimeStatus"` set to `"Pending"`.<br>3. Read `"items"` in the response. | 1. HTTP status indicates success.<br>2. The `"WithinOvertimeGap"` overtime entry is not included in `"items"`.<br>3. The real `"Pending"` overtime entry is still included when it matches the normal leader scope. | overTimeStatus: `"Pending"` |
+
+### Optional employee and date filters
+
+| ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
+|----|-----|------|------|---------------|-------|----------|-----------|
+| TC-15 | EXCP-SUBREQ-HRS-OVERTIMES-015 | Verify leader overtime list can filter by employee and inclusive date range | Main | A team lead has two direct reports **E1** and **E2**.<br>**E1** has pending overtime on `"2026-01-01"` and `"2026-01-05"`.<br>**E2** has pending overtime on `"2026-01-02"`. | 1. Sign in as the team lead.<br>2. Call `"POST /api/attendance-overtime/Get-overtimes-By-LeaderId-and-status"` with `"overTimeStatus"` `"Pending"`, `"employeeId"` set to **E1**'s id, `"from"` `"2026-01-01"`, and `"to"` `"2026-01-02"`.<br>3. Read `"items"`.<br>4. Repeat without `"employeeId"` / `"from"` / `"to"`. | 1. HTTP status indicates success.<br>2. Every item belongs to **E1** only.<br>3. Only overtime dated `"2026-01-01"` is returned (not `"2026-01-05"` or **E2**'s row).<br>4. The unfiltered call returns overtime for both employees in the leader's scope. | employeeId: **E1**<br>from: `"2026-01-01"`<br>to: `"2026-01-02"` |
