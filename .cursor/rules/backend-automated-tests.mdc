@@ -1,0 +1,47 @@
+---
+description: Backend Keys require xUnit in the linked API repo — same task, run dotnet test
+alwaysApply: true
+---
+
+# Backend automated tests (xUnit)
+
+Canonical copy: `Testing-feature/templates/cursor-rules/backend-automated-tests.mdc`.
+
+For every **backend** test-case Key (`Layer: backend` in markdown), agents **must** add or update xUnit coverage in the **linked backend app repo** in the **same task** as the API or helper change.
+
+## Frontend unchanged
+
+- `Layer: frontend` → keep Session / `tc ui` manual specs. **Do not** add xUnit for frontend Keys.
+
+## Same task (mandatory)
+
+1. Change backend API, builder, or shared helper.
+2. Add or update xUnit `[Fact]` / `[Theory]` with `[Trait("Key", "<STABLE-KEY>")]` matching the markdown `Key`.
+3. Run `dotnet test` on the test project (filter by trait or class when useful).
+4. **Fail the task** if tests are red — do not hand off broken automation.
+
+## Trait convention
+
+Every automated Fact/Theory for a backend Key:
+
+```csharp
+[Trait("Key", "EXCP-FEATURE-AREA-001")]
+[Fact]
+public void Example_scenario() { ... }
+```
+
+One Key may map to one or more tests; each test that covers that Key must carry the trait.
+
+## Metadata pointer
+
+In backend `*-test-cases.md` **Metadata**, add:
+
+- `Automation:` repo-relative xUnit file path (e.g. `test/Excp.HRSystem.Application.Tests/Reports/FooTests.cs`) or `-` until the file exists.
+
+Frontend specs: omit `Automation:` or use `-`.
+
+## Out of scope for this rule
+
+- New `tc` CLI runners or doctor parsers for `Automation:` (markdown + agent rule only).
+- Playwright, HTTP `WebApplicationFactory`, or live API Session for backend Keys covered by xUnit.
+- Backfilling xUnit for legacy backend APIs unless the current task touches that Key.

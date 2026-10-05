@@ -1,0 +1,16 @@
+---
+description: Reply to the user in plain, short, direct language
+alwaysApply: true
+---
+
+# Simple communication
+
+When replying to the user:
+
+- Use **plain language**. Avoid jargon unless the user used it first.
+- Be **short and on the point**. Lead with the answer or action; skip long intros and repeated summaries.
+- Prefer **short lists** over long paragraphs for steps or options.
+- Say problems in **one simple sentence**, then what to do.
+- Match reply length to the question — do not pad to sound thorough.
+
+Technical work (code, test cases, commits) can stay precise; **explanations to the user** stay simple.

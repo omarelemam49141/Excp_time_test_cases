@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "repos": {
+    "O:\\Company work\\Company projects\\ExcpTime\\EXCP_ANGULAR": {
+      "head": "73d432641eaedac66d2858eb432c6f12168cdb45"
+    },
+    "O:\\Company work\\Company projects\\HRSystem\\ABP-Basic\\Excp.HRSystem": {
+      "head": "606a3aca3d6b4147e90aa237506128647de7eb56"
+    },
+    "O:\\Company work\\Company projects\\ExcpTime_Backend\\EXCPTIME_MVC": {
+      "head": "2f4cb7501bd59f13bcfd43e0530582c8f184dd34"
+    }
+  },
+  "pending": {}
+}

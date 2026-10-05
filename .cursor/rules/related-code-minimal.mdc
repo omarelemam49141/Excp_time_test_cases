@@ -1,0 +1,29 @@
+---
+description: Link each test case to the smallest set of app files (accurate tc impact)
+alwaysApply: true
+---
+
+# Minimal Related code (tc impact)
+
+When you add or change **application code** or **`*-test-cases.md`** in a product that uses Testing-feature:
+
+## Goal
+
+One test case → **only the files that test actually needs**.  
+When those files change, **only those tests** should be marked `needs-update`.
+
+## Rules
+
+1. **Per test row:** Use the table **Related code** column for each `Key`. Use `-` only when the whole file truly shares one small path set.
+2. **Concrete files:** Prefer exact paths (e.g. `src/features/foo/bar.tsx`). **Do not** link whole folders (`src/app/reports/`, `src/features/alforqan/components`) unless every test in that markdown file tests everything under that folder.
+3. **Match what Steps/Expected assert:** If the case only checks the notification bell, link the bell file — not the report page. If it deep-links to a report, link the bell **and** the specific report page/component files — not the whole route tree.
+4. **Split code when needed:** If one file causes false impact on many tests, extract UI/logic into a smaller module and link that module on the relevant row only.
+5. **Avoid shared helpers on unrelated rows:** Do not list shared utils on a test unless that case verifies behavior through those helpers.
+6. **Same task:** Update Related code in the **same task** as the code change. Run `tc project doctor` from the TestCases repo when done.
+
+## Check impact before trusting auto-mark
+
+- Dry-run: `tc impact --git` from the TestCases repo root.
+- If the list looks wrong, **fix Related code** — do not tell QA to rerun everything.
+
+Canonical spec: `Testing-feature/docs/standards/test-case-format.md` (*Related code (for tc impact)*).

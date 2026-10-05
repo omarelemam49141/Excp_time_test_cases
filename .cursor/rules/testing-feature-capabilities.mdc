@@ -1,0 +1,41 @@
+---
+description: Testing-feature capabilities synced to this TestCases repo — run tc project update when vendor adds features
+alwaysApply: true
+---
+
+# Testing-feature capabilities (EXCP Time)
+
+This repo uses **Testing-feature** (`tc`). Vendor features are synced into **`.testing-feature/docs/`** by **`tc project sync`** / **`tc project update`**.
+
+## Keep sync current
+
+After **Testing-feature** vendor changes or when `tc project check-updates` reports drift:
+
+```bash
+tc project update
+```
+
+Rebuild the linked CLI once per machine after vendor pulls:
+
+```bash
+cd /path/to/Testing-feature && npm run link:dev
+```
+
+## Capability index
+
+Read **`.testing-feature/docs/capabilities.md`** for the full list. Highlights:
+
+| Feature | Entry |
+|---------|--------|
+| Session queue + status | `tc ui` → **Session** |
+| Fix-proof recording | `.testing-feature/docs/session-recording.md` — max **5 clips/Key**, `test-runs/current/evidence/` |
+| Blockers + agent fix | **Blockers** tab / `tc blockers` |
+| Impact | `tc impact --git` / auto-impact on linked app edits |
+| Backend xUnit | `.cursor/rules/backend-automated-tests.mdc` — backend Keys → xUnit + `dotnet test` |
+
+## Agent tasks
+
+- **Product behavior** changes → update `test-cases/**` specs and **Related code** in the same task.
+- **Tool-only** behavior (new `tc` / `tc ui` feature) → run **`tc project update`** here; vendor self-tests stay in the Testing-feature repo unless the product needs new QA rows.
+
+Do not commit `.testing-feature/`, `test-runs/`, or other local-only paths.
