@@ -10,6 +10,7 @@
 # Node (if scripts add deps locally)
 node_modules/
 
+testing-feature.project.json
 # OS
 .DS_Store
 Thumbs.db

@@ -12,7 +12,7 @@
     },
     {
       "role": "backend",
-      "path": "../../ExcpTime_Backend/EXCPTIME_MVC"
+      "path": "../../EXCPTIME_MVC"
     }
   ]
 }
