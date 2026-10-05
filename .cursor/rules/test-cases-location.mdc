@@ -10,16 +10,9 @@ All `*-test-cases.md` files for this product live in **this TestCases repo**:
 - `test-cases/<feature>/frontend/*.md`
 - `test-cases/<feature>/backend/*.md`
 
-Format: `o:/Company work/Company projects/ExcpTime/Testing-feature/docs/standards/test-case-format.md`
+Format: **`docs/standards/test-case-format.md`** (this repo).
 
-Run the status CLI from this repo root:
-
-```bash
-tc project doctor
-tc t "test-cases/<feature>/<layer>/<file>.md"
-tc s <KEY> ok
-tc next "test-cases/<feature>/<layer>/<file>.md"
-```
+Run status lives in **`test-runs/current/status.json`**. Update it in git, or use the optional `tc` CLI if installed on your machine.
 
 Use stable `Key` values (prefix `EXCP`) for status updates, not `TC-01` alone.
 
@@ -27,4 +20,4 @@ When linked app repos change behavior, update matching `*-test-cases.md` here in
 
 **No file yet?** Create the spec under `test-cases/<feature>/<layer>/` in the same task — never skip test-case authoring because the folder or file is missing.
 
-**Auto-impact:** With `autoImpact` in `testing-feature.project.json` (default), succeeded keys linked via **Related code** are set to **`needs-update`** automatically — no manual `tc impact` after each edit. Run `tc project sync` once to install the workspace Cursor stop hook.
+Teammate onboarding: **`docs/TEAM-SETUP.md`**.

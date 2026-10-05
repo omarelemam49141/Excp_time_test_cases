@@ -13,7 +13,7 @@ When a feature ships in **multiple chunks** or when **one failing test blocks ot
 
 Read and follow:
 
-- `Testing-feature/docs/standards/delivery-waves.md` (or the same path relative to the vendor clone)
+- **`docs/standards/delivery-waves.md`** (this repository)
 
 ## Agent behavior
 

@@ -15,4 +15,4 @@ When a manual test case needs a **known database state** (seed), **post-check qu
 3. **Markdown:** After all tables under `## Test cases`, add optional `## Test data scripts`.
 4. **Verify scripts:** Assert every outcome in `Expected` with fail-fast `THROW`s.
 
-See `Testing-feature/docs/standards/test-case-format.md` and this repo's `test-data/README.md`.
+See `docs/standards/test-case-format.md` and this repo's `test-data/README.md`.

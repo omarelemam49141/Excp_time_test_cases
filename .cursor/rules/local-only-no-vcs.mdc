@@ -1,42 +1,28 @@
 ---
-description: VIP — Testing-feature artifacts are local-only; never stage, commit, or push them
+description: Shared TestCases repo — commit specs and status; never commit secrets
 alwaysApply: true
 ---
 
-# Local only — no version control (VIP)
+# TestCases git workflow (EXCP Time)
 
-Canonical copy: `Testing-feature/templates/cursor-rules/local-only-no-vcs.mdc`.
+This **TestCases** repository is **shared on GitHub**. Commit and push:
 
-**Testing-feature is personal local tooling.** Everything it installs or manages in this repo must stay **on your machine only** — never in GitHub, GitLab, or any remote.
+- `test-cases/`
+- `test-runs/`
+- `test-data/`
+- `queries/`
+- `testing-feature.project.json`
+- `docs/standards/`
 
-## Never commit or push
+## Do not commit
 
-Do **not** stage, commit, push, or add to a PR any path under the `tc project sync` **local-only** block in `.gitignore` (between `# BEGIN testing-feature` and `# END testing-feature`), including:
+- Passwords, connection strings, or production credentials inside SQL or markdown.
+- Large personal exports (`*.xlsx` are gitignored).
 
-- `testing-feature.project.json`, `testing-feature.sync.json`
-- `test-cases/`, `test-runs/`, `test-data/`
-- `.cursor/rules/` files installed by Testing-feature (`test-case-format.mdc`, `test-cases-location.mdc`, `local-only-no-vcs.mdc`, etc.)
-- `.cursor/hooks/` Testing-feature scripts and manifests
-- `.cursor-rules-snippet.mdc`
+## Application repos (Angular / MVC)
 
-## Agent rules
+Product code follows each app repo's normal git workflow. Some `.cursor/rules` files in app repos may still be tc-installed and gitignored there — that does not apply to this TestCases repo.
 
-1. **Do not remove** or weaken the marked `.gitignore` block or pre-push guard installed by `tc project sync`.
-2. **Do not** run `git add -f` on Testing-feature paths to bypass ignore rules.
-3. When creating commits, **exclude** all Testing-feature artifacts; product application code only unless the user explicitly overrides.
-4. If the user asks to push and Testing-feature files are staged, **warn** and unstage those paths first.
-5. Test-case markdown and run status live in the **local TestCases repo** — not in shared app remotes.
+## Optional `tc` tooling
 
-## If files were committed earlier
-
-Tell the user to run from the affected repo root:
-
-```bash
-tc project untrack
-```
-
-Then commit the removal of those paths from the index (product code only in that commit).
-
-## Product code vs tooling
-
-Application source (e.g. `src/`, `cypress/`) follows the product repo's normal git workflow. Only **Testing-feature-managed** paths are local-only.
+If you use Testing-feature locally, do not commit `.testing-feature/` vendor cache unless the team agrees. Prefer `docs/standards/` in this repo for format references.

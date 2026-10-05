@@ -26,4 +26,4 @@ When those files change, **only those tests** should be marked `needs-update`.
 - Dry-run: `tc impact --git` from the TestCases repo root.
 - If the list looks wrong, **fix Related code** — do not tell QA to rerun everything.
 
-Canonical spec: `Testing-feature/docs/standards/test-case-format.md` (*Related code (for tc impact)*).
+Canonical spec: `docs/standards/test-case-format.md` (*Related code (for tc impact)*).

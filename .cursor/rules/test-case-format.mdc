@@ -9,7 +9,7 @@ alwaysApply: true
 
 When creating or editing any file under `test-cases/**/*.md`, follow the canonical spec:
 
-- `Testing-feature/docs/standards/test-case-format.md` (vendor repo; use the path to your local clone)
+- **`docs/standards/test-case-format.md`** (this repository)
 
 ## Hard requirements
 

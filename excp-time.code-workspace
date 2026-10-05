@@ -5,16 +5,12 @@
       "path": "../EXCP_ANGULAR"
     },
     {
-      "name": "Excp.HRSystem (backend)",
-      "path": "../../HRSystem/ABP-Basic/Excp.HRSystem"
+      "name": "EXCPTIME MVC (backend)",
+      "path": "../EXCPTIME_MVC"
     },
     {
-      "name": "ExcpTime.TestCases",
+      "name": "ExcpTime TestCases",
       "path": "."
-    },
-    {
-      "name": "Testing-feature (tc CLI)",
-      "path": "../Testing-feature"
     }
   ],
   "settings": {}
