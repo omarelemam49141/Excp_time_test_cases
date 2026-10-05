@@ -25,4 +25,6 @@ Use stable `Key` values (prefix `EXCP`) for status updates, not `TC-01` alone.
 
 When linked app repos change behavior, update matching `*-test-cases.md` here in the same task.
 
+**No file yet?** Create the spec under `test-cases/<feature>/<layer>/` in the same task — never skip test-case authoring because the folder or file is missing.
+
 **Auto-impact:** With `autoImpact` in `testing-feature.project.json` (default), succeeded keys linked via **Related code** are set to **`needs-update`** automatically — no manual `tc impact` after each edit. Run `tc project sync` once to install the workspace Cursor stop hook.

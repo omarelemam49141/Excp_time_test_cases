@@ -30,8 +30,8 @@ test-data/
 .cursor/rules/test-cases-location.mdc
 .cursor/rules/local-only-no-vcs.mdc
 .cursor/rules/testing-feature-capabilities.mdc
+.cursor/rules/backend-automated-tests.mdc
 .testing-feature/
 .cursor/hooks/tc-local-only-paths.json
 .cursor/hooks/tc-pre-push-guard.mjs
 # END testing-feature
-

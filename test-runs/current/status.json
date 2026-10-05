@@ -2,7 +2,7 @@
   "version": 1,
   "project": "excp-time",
   "runId": "current",
-  "updatedAtUtc": "2026-06-25T05:35:53.304Z",
+  "updatedAtUtc": "2026-08-19T14:21:42.308Z",
   "cases": {
     "EXCP-AUTH-HRS-REFRESH-TOKEN-001": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-001",
@@ -640,6 +640,26 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-SCHED-OT-GAP-001": {
+      "key": "EXCP-SCHED-OT-GAP-001",
+      "status": "succeeded",
+      "sourceFile": "test-cases/system-work-schedule/frontend/overtime-gap-home-vs-site-test-cases.md",
+      "caseId": "TC-01",
+      "caseTitle": "TC-01 — Verify Admin can set different site and home overtime gap minutes on the Overtime defaults tab and both persist after save and reload.",
+      "updatedAtUtc": "2026-08-19T09:28:55.634Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-REPORT-UAR-UI-001": {
+      "key": "EXCP-REPORT-UAR-UI-001",
+      "status": "succeeded",
+      "sourceFile": "test-cases/reports/frontend/users-daily-attendance-roster-test-cases.md",
+      "caseId": "TC-01",
+      "caseTitle": "TC-01 — Verify The attendance tab loads today's roster with Username, \"Start time\", \"End time\", and \"Work duration without breaks\" only.",
+      "updatedAtUtc": "2026-08-19T10:48:51.809Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-002": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-002",
       "status": "new",
@@ -1250,6 +1270,26 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-SCHED-OT-GAP-002": {
+      "key": "EXCP-SCHED-OT-GAP-002",
+      "status": "succeeded",
+      "sourceFile": "test-cases/system-work-schedule/frontend/overtime-gap-home-vs-site-test-cases.md",
+      "caseId": "TC-02",
+      "caseTitle": "TC-02 — Verify A schedule rule can override the home overtime gap independently from the site override.",
+      "updatedAtUtc": "2026-08-19T09:29:31.086Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-REPORT-UAR-UI-002": {
+      "key": "EXCP-REPORT-UAR-UI-002",
+      "status": "succeeded",
+      "sourceFile": "test-cases/reports/frontend/users-daily-attendance-roster-test-cases.md",
+      "caseId": "TC-02",
+      "caseTitle": "TC-02 — Verify Search without a work date is blocked.",
+      "updatedAtUtc": "2026-08-19T10:51:39.987Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-003": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-003",
       "status": "new",
@@ -1830,6 +1870,26 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-SCHED-OT-GAP-003": {
+      "key": "EXCP-SCHED-OT-GAP-003",
+      "status": "succeeded",
+      "sourceFile": "test-cases/system-work-schedule/frontend/overtime-gap-home-vs-site-test-cases.md",
+      "caseId": "TC-03",
+      "caseTitle": "TC-03 — Verify Export JSON includes `overtimeGapMinutesFromHome` and Import restores both site and home values.",
+      "updatedAtUtc": "2026-08-19T10:41:53.344Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-REPORT-UAR-UI-003": {
+      "key": "EXCP-REPORT-UAR-UI-003",
+      "status": "succeeded",
+      "sourceFile": "test-cases/reports/frontend/users-daily-attendance-roster-test-cases.md",
+      "caseId": "TC-03",
+      "caseTitle": "TC-03 — Verify \"Hide inactive employees\" removes inactive rows and \"Show inactive employees\" brings them back.",
+      "updatedAtUtc": "2026-08-19T10:54:58.306Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-004": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-004",
       "status": "new",
@@ -2390,6 +2450,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-REPORT-UAR-UI-004": {
+      "key": "EXCP-REPORT-UAR-UI-004",
+      "status": "succeeded",
+      "sourceFile": "test-cases/reports/frontend/users-daily-attendance-roster-test-cases.md",
+      "caseId": "TC-04",
+      "caseTitle": "TC-04 — Verify An approved leave day with no punch shows shift times, a \"Leave\" badge, and required-hours net.",
+      "updatedAtUtc": "2026-08-19T10:59:04.661Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-005": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-005",
       "status": "new",
@@ -2900,6 +2970,26 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-SCHED-OT-GAP-005": {
+      "key": "EXCP-SCHED-OT-GAP-005",
+      "status": "succeeded",
+      "sourceFile": "test-cases/system-work-schedule/frontend/overtime-gap-home-vs-site-test-cases.md",
+      "caseId": "TC-05",
+      "caseTitle": "TC-05 — Verify Export/import round-trip preserves an explicit home overtime gap of `0` minutes.",
+      "updatedAtUtc": "2026-08-19T10:42:51.018Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-REPORT-UAR-UI-005": {
+      "key": "EXCP-REPORT-UAR-UI-005",
+      "status": "succeeded",
+      "sourceFile": "test-cases/reports/frontend/users-daily-attendance-roster-test-cases.md",
+      "caseId": "TC-05",
+      "caseTitle": "TC-05 — Verify A missing punch (not leave) shows \"—\" for start and end and 0:00 net.",
+      "updatedAtUtc": "2026-08-19T10:59:34.301Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-006": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-006",
       "status": "new",
@@ -3350,6 +3440,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-REPORT-UAR-UI-006": {
+      "key": "EXCP-REPORT-UAR-UI-006",
+      "status": "succeeded",
+      "sourceFile": "test-cases/reports/frontend/users-daily-attendance-roster-test-cases.md",
+      "caseId": "TC-06",
+      "caseTitle": "TC-06 — Verify For a punched day, start and end match the employee hours report \"Actual start\" and \"Actual end\" for that employee and date.",
+      "updatedAtUtc": "2026-08-19T11:59:03.629Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-007": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-007",
       "status": "new",
@@ -3730,6 +3830,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-REPORT-UAR-UI-007": {
+      "key": "EXCP-REPORT-UAR-UI-007",
+      "status": "succeeded",
+      "sourceFile": "test-cases/reports/frontend/users-daily-attendance-roster-test-cases.md",
+      "caseId": "TC-07",
+      "caseTitle": "TC-07 — Verify A punch start inside late grace shows the \"On time\" chip in the Punctuality column.",
+      "updatedAtUtc": "2026-08-19T11:59:39.641Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-REFRESH-TOKEN-008": {
       "key": "EXCP-AUTH-REFRESH-TOKEN-008",
       "status": "new",
@@ -4057,6 +4167,16 @@
       "caseId": "TC-08",
       "caseTitle": "TC-08 — Verify tab buttons expose correct accessibility state",
       "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-REPORT-UAR-UI-008": {
+      "key": "EXCP-REPORT-UAR-UI-008",
+      "status": "succeeded",
+      "sourceFile": "test-cases/reports/frontend/users-daily-attendance-roster-test-cases.md",
+      "caseId": "TC-08",
+      "caseTitle": "TC-08 — Verify A punch start beyond late grace shows \"Late {n} min\" with the penalizable minutes.",
+      "updatedAtUtc": "2026-08-19T12:00:50.656Z",
       "runId": "current",
       "evidence": []
     },
@@ -4390,6 +4510,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-REPORT-UAR-UI-009": {
+      "key": "EXCP-REPORT-UAR-UI-009",
+      "status": "succeeded",
+      "sourceFile": "test-cases/reports/frontend/users-daily-attendance-roster-test-cases.md",
+      "caseId": "TC-09",
+      "caseTitle": "TC-09 — Verify A punch start beyond early grace shows \"Early {n} min\".",
+      "updatedAtUtc": "2026-08-19T12:02:17.948Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-REFRESH-TOKEN-010": {
       "key": "EXCP-AUTH-REFRESH-TOKEN-010",
       "status": "new",
@@ -4690,6 +4820,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-REPORT-UAR-UI-010": {
+      "key": "EXCP-REPORT-UAR-UI-010",
+      "status": "succeeded",
+      "sourceFile": "test-cases/reports/frontend/users-daily-attendance-roster-test-cases.md",
+      "caseId": "TC-10",
+      "caseTitle": "TC-10 — Verify Leave and absent rows show \"—\" in the Punctuality column.",
+      "updatedAtUtc": "2026-08-19T14:18:40.240Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-REFRESH-TOKEN-011": {
       "key": "EXCP-AUTH-REFRESH-TOKEN-011",
       "status": "new",
@@ -4941,6 +5081,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-REPORT-UAR-UI-011": {
+      "key": "EXCP-REPORT-UAR-UI-011",
+      "status": "succeeded",
+      "sourceFile": "test-cases/reports/frontend/users-daily-attendance-roster-test-cases.md",
+      "caseId": "TC-11",
+      "caseTitle": "TC-11 — Verify Search without a period start is blocked and does not call the roster API.",
+      "updatedAtUtc": "2026-08-19T14:19:26.203Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-REFRESH-TOKEN-012": {
       "key": "EXCP-AUTH-REFRESH-TOKEN-012",
       "status": "new",
@@ -5171,6 +5321,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-REPORT-UAR-UI-012": {
+      "key": "EXCP-REPORT-UAR-UI-012",
+      "status": "succeeded",
+      "sourceFile": "test-cases/reports/frontend/users-daily-attendance-roster-test-cases.md",
+      "caseId": "TC-12",
+      "caseTitle": "TC-12 — Verify Search is blocked when period start is after the work date.",
+      "updatedAtUtc": "2026-08-19T14:19:47.492Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-BUG-HRS-ADMIN-AZURE-013": {
       "key": "EXCP-BUG-HRS-ADMIN-AZURE-013",
       "status": "new",
@@ -5371,6 +5531,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-REPORT-UAR-UI-013": {
+      "key": "EXCP-REPORT-UAR-UI-013",
+      "status": "succeeded",
+      "sourceFile": "test-cases/reports/frontend/users-daily-attendance-roster-test-cases.md",
+      "caseId": "TC-13",
+      "caseTitle": "TC-13 — Verify Opening the page does not auto-load the roster until Search.",
+      "updatedAtUtc": "2026-08-19T14:20:03.961Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-BUG-HRS-ADMIN-AZURE-014": {
       "key": "EXCP-BUG-HRS-ADMIN-AZURE-014",
       "status": "new",
@@ -5541,6 +5711,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-REPORT-UAR-UI-014": {
+      "key": "EXCP-REPORT-UAR-UI-014",
+      "status": "succeeded",
+      "sourceFile": "test-cases/reports/frontend/users-daily-attendance-roster-test-cases.md",
+      "caseId": "TC-14",
+      "caseTitle": "TC-14 — Verify The \"Payable overtime\" cell matches hours-report \"Payable overtime hours\" with pending treated as accepted.",
+      "updatedAtUtc": "2026-08-19T14:21:29.847Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-BUG-HRS-ADMIN-AZURE-015": {
       "key": "EXCP-BUG-HRS-ADMIN-AZURE-015",
       "status": "new",
@@ -5700,6 +5880,15 @@
       "updatedAtUtc": "2026-05-18T11:38:40.009Z",
       "runId": "current",
       "evidence": []
+    },
+    "EXCP-REPORT-UAR-UI-015": {
+      "key": "EXCP-REPORT-UAR-UI-015",
+      "status": "succeeded",
+      "sourceFile": "test-cases/reports/frontend/users-daily-attendance-roster-test-cases.md",
+      "caseId": "TC-15",
+      "caseTitle": "TC-15 — Verify An employee with no leftover overtime shows `0:00:00` in \"Payable overtime\".",
+      "updatedAtUtc": "2026-08-19T14:21:42.308Z",
+      "runId": "current"
     },
     "EXCP-BUG-HRS-ADMIN-AZURE-016": {
       "key": "EXCP-BUG-HRS-ADMIN-AZURE-016",
@@ -6855,7 +7044,8 @@
       "caseId": "TC-26",
       "caseTitle": "TC-26 — Verify All employees mode validates the loaded directory without HTTP 500",
       "updatedAtUtc": "2026-06-25T05:35:53.304Z",
-      "runId": "current"
+      "runId": "current",
+      "evidence": []
     },
     "EXCP-BUG-ADMIN-FAB-AZURE-027": {
       "key": "EXCP-BUG-ADMIN-FAB-AZURE-027",

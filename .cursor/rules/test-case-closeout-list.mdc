@@ -10,9 +10,17 @@ Every product **app repo** and **TestCases repo** that uses `tc` must include th
 
 For every feature/task that adds, changes, or removes behavior, the final response must include the relevant manual test cases for QA.
 
+## Create specs when missing
+
+If product behavior changed but **no** `*-test-cases.md` exists yet for that feature/layer/step in the linked TestCases repo, **create one in the same task** — do not close out with "no test-case file exists."
+
+- Path: `test-cases/<feature>/<layer>/<topic>-test-cases.md` (match existing folder naming when present).
+- Follow `docs/standards/test-case-format.md` (Metadata, Scope, tables, **Verify** cases, **Related code**).
+- Run `tc project doctor` from the TestCases repo root when done.
+
 ## Required Closeout
 
-Before marking the task complete, identify the test-case docs updated or affected by the work.
+Before marking the task complete, identify the test-case docs updated or affected by the work (including files you created because none existed).
 
 In the final answer, include:
 

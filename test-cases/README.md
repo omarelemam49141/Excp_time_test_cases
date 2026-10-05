@@ -15,6 +15,16 @@ This index lists the private test-case definitions organized by project, feature
 
 - `authentication/frontend/refresh-token-test-cases.md`
 
+### Attendance / backend
+
+- `attendance/backend/update-attendance-record-work-segments-test-cases.md`
+- `attendance/backend/modify-attendance-status-update-test-cases.md`
+
+### Attendance / frontend
+
+- `attendance/frontend/modify-attendance-work-place-test-cases.md`
+- `attendance/frontend/modify-attendance-list-users-status-test-cases.md`
+
 ### Bug Report / backend
 
 - `bug-report/backend/admin-bug-report-api-azure-devops-test-cases.md`
@@ -114,6 +124,7 @@ This index lists the private test-case definitions organized by project, feature
 ### Reports / backend
 
 - `reports/backend/bulk-employee-hours-report-api-test-cases.md`
+- `reports/backend/users-daily-attendance-roster-test-cases.md`
 
 ### Reports / frontend
 
@@ -121,6 +132,7 @@ This index lists the private test-case definitions organized by project, feature
 - `reports/frontend/bulk-employee-hours-report-test-cases.md`
 - `reports/frontend/employee-hours-report-refused-ot-shortage-test-cases.md`
 - `reports/frontend/employee-hours-tour-guide-test-cases.md`
+- `reports/frontend/users-daily-attendance-roster-test-cases.md`
 
 ### Request Types / frontend
 
@@ -148,16 +160,23 @@ This index lists the private test-case definitions organized by project, feature
 ### System Work Schedule / backend
 
 - `system-work-schedule/backend/system-work-schedule-admin-settings-json-transfer-api-test-cases.md`
+- `system-work-schedule/backend/overtime-gap-home-vs-site-resolver-test-cases.md`
 
 ### System Work Schedule / frontend
 
 - `system-work-schedule/frontend/system-work-schedule-admin-settings-json-transfer-test-cases.md`
+- `system-work-schedule/frontend/overtime-gap-home-vs-site-test-cases.md`
 
 ### User Management / backend
 
 - `user-management/backend/admin-user-by-admin-test-cases.md`
+- `user-management/backend/list-users-attendance-status-sync-test-cases.md`
 
 ### User Management / frontend
 
 - `user-management/frontend/admin-user-wizard-test-cases.md`
 - `user-management/frontend/list-users-tabs-test-cases.md`
+
+### UI / frontend
+
+- `ui/frontend/almarai-app-fonts-test-cases.md`

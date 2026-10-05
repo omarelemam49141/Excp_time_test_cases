@@ -1,0 +1,34 @@
+---
+description: VIP — never skip workspace or user rules; mandatory compliance
+alwaysApply: true
+---
+
+# Never skip rules (VIP)
+
+Every applicable rule in this session is **mandatory**. Rules are not hints, not "when convenient", and not lower priority than speed.
+
+## Before you act
+
+1. **Check** which rules apply (`alwaysApply`, open files, user rules, workspace rules).
+2. **Follow the strictest** requirement when two rules overlap.
+3. **Do not invent exceptions** unless the rule's own **When skip** section explicitly allows it.
+
+## Hard stops (non-negotiable)
+
+| Rule | You must |
+|------|----------|
+| Ask before broad search | Stop. Caveman ask (2–6 options). No wide grep/glob/explore/Task until user picks |
+| Simple communication | Short, plain replies — no essays unless user asks for depth |
+| Test-case closeout | End with **Test What Changed** + **Regression Re-Run** when product behavior changed |
+| Local-only no VCS | Never stage/commit/push Testing-feature paths |
+| Related code minimal | Per-test paths only — not whole folders |
+| Test-case format | Metadata, Verify, numbered Expected when multiple outcomes |
+| Backend automated tests | Backend Key → xUnit in linked API repo + `dotnet test` green same task; frontend Keys stay Session |
+
+## If tempted to skip
+
+**Stop.** Re-read the rule. Follow it. Slow and correct beats fast and rule-breaking.
+
+## User override
+
+Skip a rule **only** when the user **explicitly overrides it in the current message** (e.g. "skip closeout this time"). Silence or vagueness is not permission.

@@ -20,8 +20,25 @@ When creating or editing any file under `test-cases/**/*.md`, follow the canonic
 5. **SQL fixtures:** See `test-data-sql.mdc` and `test-data/README.md` when applicable.
 6. **Metadata — Related code:** Every file must include a `- Related code:` line under `## Metadata` (fallback for rows with `-` in the optional **Related code** table column). When this agent task adds or edits application code in linked app repos (same session), populate paths in backticks — **per row** when one spec covers multiple subsystems, otherwise file-level. Repo-relative to the linked repo for `Layer:` (`frontend` or `backend`). See canonical doc *Related code (for tc impact)*.
 7. **Metadata — Related docs:** Every file must include a `- Related docs:` line. Point to the **technical or feature markdown** under the app repo (e.g. `docs/technical/...`, `docs/explanation/...`) that describes this behavior; use `_See..._` only when no doc exists yet.
+8. **Metadata — Automation (backend):** Backend specs (`Layer: backend`) should include `- Automation:` with the repo-relative xUnit file; use `-` until tests exist. Frontend: omit or `-`. Each automated test uses `[Trait("Key", "<KEY>")]`. See `backend-automated-tests.mdc`.
 
 Real **Related code** paths enable **`tc impact`** (mark cases `needs-update` when linked files change) and clear **`tc project doctor`** warnings for placeholders.
 
-8. **Delivery waves (optional):** For multi-chunk features, follow [`docs/standards/delivery-waves.md`](../../docs/standards/delivery-waves.md) — `### Wave N` headings, optional `## Delivery waves`, and **`Requires`** gates. Product repos install `delivery-waves.mdc` via `tc project install-rules`.
-9. **Same-task updates:** Update `*-test-cases.md` in the **same task** as related product code changes in linked app repos.
+9. **Delivery waves (optional):** For multi-chunk features, follow [`docs/standards/delivery-waves.md`](../../docs/standards/delivery-waves.md) — `### Wave N` headings, optional `## Delivery waves`, and **`Requires`** gates. Product repos install `delivery-waves.mdc` via `tc project install-rules`.
+10. **Same-task updates:** Update `*-test-cases.md` in the **same task** as related product code changes in linked app repos.
+11. **Create when missing:** If no `*-test-cases.md` covers the behavior you changed, **create** one under `test-cases/<feature>/<layer>/` in that same task. Do not report "no test-case file exists" as a reason to skip QA specs.
+
+## Expected column (mandatory formatting)
+
+When **more than one observable outcome** must hold, write **Expected** as a numbered list — same style as **Steps**:
+
+- Pattern: `1. First fact.<br>2. Second fact.<br>3. Third fact.`
+- **One observable fact per line** — never chain checks with semicolons in one sentence.
+- Put exact UI strings in **double quotes**.
+- A single short sentence is OK only when there is **one** simple outcome (e.g. one message or one visible label).
+
+**Bad:** `Each account has a notification; clicking it opens the page; the page shows score and scope; students see "Sard result".`
+
+**Good:** `1. Each account sees a sard decision notification with the student name.<br>2. Clicking the notification opens the sard result page (not a permission error).<br>3. The page shows pass/fail status, score, and scope.<br>4. Students and parents see the title "Sard result" / "نتيجة السرد" with no "Open student profile" link.`
+
+`tc project doctor` warns on dense or unnumbered Expected cells; use `--strict` to fail CI when formatting is wrong.

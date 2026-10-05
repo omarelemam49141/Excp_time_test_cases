@@ -1,0 +1,46 @@
+---
+description: Ask user which file to search before broad repo scans — save quota
+alwaysApply: true
+---
+
+# Ask before broad search
+
+Task need hunt many files? **Stop. Ask user first.**
+
+Part of **never-skip-rules** — do not bypass this for speed.
+
+## When trigger
+
+- Task vague — no path, no symbol, no file named
+- Would need: wide glob, grep whole repo, Task explore agent, read 5+ files
+- Multiple plausible folders/files exist
+
+## When skip
+
+- User named exact file/path
+- One obvious file (error stack trace, open file, single match)
+- 1–2 known files enough
+
+## What do
+
+1. **No** broad grep/glob/Task/explore yet
+2. List **2–6 specific file/path options** (from index, recent changes, folder names — light peek ok)
+3. Ask user pick one (or "all" / "other")
+4. Use **AskQuestion** tool when available
+5. Search only picked scope
+
+## Caveman ask format
+
+Short. Options as list. No essay.
+
+Example:
+
+Where look?
+A) `src/features/auth/`
+B) `src/lib/api/tenant.ts`
+C) whole `src/app/tenant/`
+Pick A/B/C
+
+## After pick
+
+Search narrow. Don't re-expand without asking.
