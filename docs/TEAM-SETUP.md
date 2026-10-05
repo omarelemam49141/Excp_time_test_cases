@@ -77,4 +77,9 @@ Push/pull this repo for test cases, `test-runs`, `test-data`, `queries`, and `te
 
 Rules in each repo’s `.cursor/` and `.cursorrules` are in git. They refer to the **TestCases repo in your workspace**, not a fixed `O:\...` path.
 
+**EXCP_ANGULAR** also ships shared agent behavior (pull latest `issues-new`):
+
+- `.cursor/rules/ask-before-optional-steps.mdc` — no auto test-case / browser / build unless you ask
+- `.cursor/skills/caveman/` + `.cursor/rules/caveman-priority.mdc` — terse reply tone (project skill; no copy to `~/.cursor/skills` needed if this repo is in the workspace)
+
 If the agent still mentions an old absolute path, your lead may have unpushed rule updates — pull latest on all three repos.
