@@ -6,9 +6,10 @@
 - Feature: `company-structure`
 - Layer: `backend`
 - Routes: -
-- APIs: `(Add the primary screen route or API path here.)`
-- Related code: `src/Excp.HRSystem.Application/Services/CompanyStructure/`, `src/Excp.HRSystem.HttpApi/Controllers/CompanyStructure/`, `src/Excp.HRSystem.Domain/Entities/CompanyStructure/`
+- APIs: `POST /api/company-structure/Get-active-graph`, `POST /api/company-structure/Save-graph`, `POST /api/company-structure/Get-snapshots`, `POST /api/company-structure/Restore-from-snapshot`
+- Related code: `src/Excp.HRSystem.Application/Services/CompanyStructure/CompanyStructureAppService.cs`
 - Related docs: `docs/backend/technical/company-structure-org-chart.md`, `docs/backend/technical/company-structure-read-vs-save-authorization.md`, `docs/backend/technical/company-structure-data-protection.md`
+- Automation: `test/Excp.HRSystem.Application.Tests/CompanyStructure/OrgStructureTeamRulesTests.cs`, `test/Excp.HRSystem.Application.Tests/CompanyStructure/OrgStructureDestructiveSaveRulesTests.cs`
 
 ## Scope
 
@@ -28,6 +29,21 @@
 - HR-only JWT (`roles` contains `"HR"`) can use standard workforce APIs (for example notification unread count) without **403**.
 - Primary reporting line drives `LeaderId`; secondary lines do not.
 - Validation rejects invalid graphs (cycle, employee as manager, duplicate user, bad primary flags).
+- Save-graph blocks a payload that drops all reporting lines (or under half) unless `confirmDestructiveChange` is true.
+- Restore of an empty or zero-line snapshot over a live chart with lines requires `confirmWipe`.
+- While `IsTeamLayout` is false, Get-active-graph hides the old person chart and returns empty `teams`, plus `legacyNodeCount` / `legacyEdgeCount`.
+- `OrgStructureTeamRules` rejects duplicate team names, bad membership, bad badges, two parents, team cycles, missing/extra outside supervisors, employee-as-parent, and person cycles.
+- Save-graph runs team rules, upserts teams and membership, sets `IsTeamLayout`, and includes `teams` in snapshot JSON.
+- First confirmed save replaces old people and old team rows. Second save still returns those teams on Get-active-graph.
+- Restore-from-snapshot rejects a snapshot with no teams. Empty editor must send `expectedExistingNodeCount` = `legacyNodeCount`.
+
+
+## Delivery waves
+
+| Wave | Intent | Keys |
+|------|--------|------|
+| 5 | Empty Get-active-graph + team graph rules (save still old) | `EXCP-ORG-HRS-ORG-CHART-040` … `EXCP-ORG-HRS-ORG-CHART-052` |
+| 6 | Save writes teams; restore rejects old snapshots | `EXCP-ORG-HRS-ORG-CHART-053` … `EXCP-ORG-HRS-ORG-CHART-056` |
 
 
 ## Test cases
@@ -216,3 +232,45 @@
 | TC-32 | EXCP-ORG-HRS-ORG-CHART-032 | Verify pre-save snapshot and restore | Main | Graph with at least 5 nodes saved once (creates snapshot). | 1. `POST Get-snapshots` for version.<br>2. Save a smaller graph with confirm.<br>3. `POST Restore-from-snapshot` with prior snapshot id. | Snapshots list non-empty; after restore, node count matches snapshot `nodeCount`. | - |
 | TC-33 | EXCP-ORG-HRS-ORG-CHART-033 | Verify removed nodes are soft-deleted | Main | Graph had user U; save graph without U (with confirm if mass shrink). | 1. Query `OrgStructureNodes` for U's row. | Row exists with `IsDeleted = 1` (not physically deleted). | - |
 | TC-34 | EXCP-ORG-HRS-ORG-CHART-034 | Verify Save-graph audited | Main | Auditing enabled on environment. | 1. Admin save graph.<br>2. Query `AbpAuditLogs` for `Save-graph`. | Row exists with `UserId` of admin and recent `ExecutionTime`. | - |
+
+### CS-BE-25 — Wave 3 edge wipe
+
+| ID | Key | Case | Type | Preconditions | Steps | Expected | Related code | Test data |
+|----|-----|------|------|---------------|-------|----------|--------------|-----------|
+| TC-35 | EXCP-ORG-HRS-ORG-CHART-036 | Verify zero-edge save blocked without confirm | Main | DB has people **and** reporting lines for the version. | 1. Admin `POST Save-graph` with the same nodes and **zero** edges, without `confirmDestructiveChange`. | **400** user-friendly error.<br>DB node and edge counts are unchanged. | `src/Excp.HRSystem.Application/Services/CompanyStructure/OrgStructureDestructiveSaveRules.cs`, `src/Excp.HRSystem.Application/Services/CompanyStructure/CompanyStructureAppService.cs` | - |
+| TC-36 | EXCP-ORG-HRS-ORG-CHART-037 | Verify zero-edge save allowed with confirm | Main | Same as TC-35. | 1. Repeat with `confirmDestructiveChange: true`. | **200**.<br>Saved graph has the same people and zero edges. | `src/Excp.HRSystem.Application/Services/CompanyStructure/OrgStructureDestructiveSaveRules.cs`, `src/Excp.HRSystem.Application/Services/CompanyStructure/CompanyStructureAppService.cs` | - |
+
+### CS-BE-26 — Wave 4 restore wipe
+
+| ID | Key | Case | Type | Preconditions | Steps | Expected | Related code | Test data |
+|----|-----|------|------|---------------|-------|----------|--------------|-----------|
+| TC-37 | EXCP-ORG-HRS-ORG-CHART-038 | Verify zero-line restore blocked without confirmWipe | Main | Live chart has reporting lines. A snapshot exists with 0 edges (or 0 nodes). | 1. Admin `POST Restore-from-snapshot` with that snapshot id and `confirmWipe: false`. | **400** user-friendly error.<br>Live graph is unchanged. | `src/Excp.HRSystem.Application/Services/CompanyStructure/OrgStructureDestructiveSaveRules.cs`, `src/Excp.HRSystem.Application/Services/CompanyStructure/CompanyStructureAppService.cs` | - |
+| TC-38 | EXCP-ORG-HRS-ORG-CHART-039 | Verify zero-line restore allowed with confirmWipe | Main | Same as TC-37. | 1. Repeat with `confirmWipe: true`. | **200**.<br>Graph matches the snapshot. | `src/Excp.HRSystem.Application/Services/CompanyStructure/OrgStructureDestructiveSaveRules.cs`, `src/Excp.HRSystem.Application/Services/CompanyStructure/CompanyStructureAppService.cs` | - |
+
+### Wave 5 — Empty read + team rules
+
+| ID | Key | Case | Type | Preconditions | Steps | Expected | Related code | Test data |
+|----|-----|------|------|---------------|-------|----------|--------------|-----------|
+| TC-39 | EXCP-ORG-HRS-ORG-CHART-040 | Verify Get-active-graph hides the old chart while IsTeamLayout is false | Main | Version has live `OrgStructureNodes` / `OrgStructureEdges`. `OrgStructureVersions.IsTeamLayout` is 0. Migration applied (`ParentUserId`, `IsTeamLayout`). | 1. Any authenticated user `POST /api/company-structure/Get-active-graph` with `{}`.<br>2. Query `OrgStructureNodes` and `OrgStructureEdges` for the version. | 1. **200**.<br>2. `nodes`, `edges`, and `teams` are empty arrays.<br>3. `legacyNodeCount` equals the live node count.<br>4. `legacyEdgeCount` equals the live edge count.<br>5. Live rows are still in the database (`IsDeleted = 0`). | `src/Excp.HRSystem.Application/Services/CompanyStructure/CompanyStructureAppService.cs`, `src/Excp.HRSystem.Application/Services/CompanyStructure/OrgStructureTeamRules.cs` | - |
+| TC-40 | EXCP-ORG-HRS-ORG-CHART-041 | Verify Get-active-graph returns teams when IsTeamLayout is true | Main | Set `OrgStructureVersions.IsTeamLayout = 1` for the active version. At least one `Teams` row and matching `AbpUsers.TeamId`. | 1. `POST /api/company-structure/Get-active-graph` `{}`. | 1. **200**.<br>2. `teams` includes that team `id`, `name`, `leaderUserId`, `parentTeamId`, `parentUserId`.<br>3. Member nodes include `teamId` from `AbpUsers.TeamId`. | `src/Excp.HRSystem.Application/Services/CompanyStructure/CompanyStructureAppService.cs` | - |
+| TC-41 | EXCP-ORG-HRS-ORG-CHART-042 | Verify duplicate team names fail the team rules | Edge | - | 1. Build a graph payload with teams named `"Backend"` and `" backend "`.<br>2. Run `OrgStructureTeamRules.Validate` (or Save after it is wired). | Validation includes the duplicate-name error. Names that differ only by case or spaces are treated as the same. | `src/Excp.HRSystem.Application/Services/CompanyStructure/OrgStructureTeamRules.cs` | - |
+| TC-42 | EXCP-ORG-HRS-ORG-CHART-043 | Verify Employee or Leader without a team fails | Edge | - | 1. Node kind Employee or Leader with `teamId` null. | Validation includes the must-belong-to-a-team error. | `src/Excp.HRSystem.Application/Services/CompanyStructure/OrgStructureTeamRules.cs` | - |
+| TC-43 | EXCP-ORG-HRS-ORG-CHART-044 | Verify Admin or HR with a team fails | Edge | - | 1. Node kind Admin or HR with a non-empty `teamId`. | Validation includes the must-sit-above-teams error. | `src/Excp.HRSystem.Application/Services/CompanyStructure/OrgStructureTeamRules.cs` | - |
+| TC-44 | EXCP-ORG-HRS-ORG-CHART-045 | Verify team badge must be a Leader in that team | Edge | - | 1. Set `leaderUserId` to an Employee in the team, or to a Leader in another team. | Validation includes the badge error. | `src/Excp.HRSystem.Application/Services/CompanyStructure/OrgStructureTeamRules.cs` | - |
+| TC-45 | EXCP-ORG-HRS-ORG-CHART-046 | Verify a team cannot have both parents | Edge | - | 1. Set both `parentTeamId` and `parentUserId` on one team. | Validation includes the one-parent error. | `src/Excp.HRSystem.Application/Services/CompanyStructure/OrgStructureTeamRules.cs` | - |
+| TC-46 | EXCP-ORG-HRS-ORG-CHART-047 | Verify team parent cycle fails | Edge | - | 1. Team A parent is B, team B parent is A. | Validation includes the team cycle error. | `src/Excp.HRSystem.Application/Services/CompanyStructure/OrgStructureTeamRules.cs` | - |
+| TC-47 | EXCP-ORG-HRS-ORG-CHART-048 | Verify a person with no in-team manager needs one outside supervisor | Edge | - | 1. Leader in a team has no in-team parent and no outside parent edge. | Validation includes the missing-supervisor error. | `src/Excp.HRSystem.Application/Services/CompanyStructure/OrgStructureTeamRules.cs` | - |
+| TC-48 | EXCP-ORG-HRS-ORG-CHART-049 | Verify outside supervisor must be a Leader in another team or Admin/HR | Edge | - | 1. Person with no in-team manager reports to an Employee. | Validation includes the invalid-supervisor error and the employee-cannot-be-parent error. | `src/Excp.HRSystem.Application/Services/CompanyStructure/OrgStructureTeamRules.cs` | - |
+| TC-49 | EXCP-ORG-HRS-ORG-CHART-050 | Verify an in-team manager cannot also have an outside supervisor | Edge | - | 1. Employee already reports to a Leader in the same team.<br>2. Add a second incoming edge from Admin. | Validation includes the extra-outside-supervisor error. | `src/Excp.HRSystem.Application/Services/CompanyStructure/OrgStructureTeamRules.cs` | - |
+| TC-50 | EXCP-ORG-HRS-ORG-CHART-051 | Verify person reporting cycle fails | Edge | - | 1. Leader → Employee and Employee → Leader. | Validation includes the person-cycle error. | `src/Excp.HRSystem.Application/Services/CompanyStructure/OrgStructureTeamRules.cs` | - |
+| TC-51 | EXCP-ORG-HRS-ORG-CHART-052 | Verify a valid team graph passes the team rules | Main | - | 1. One Admin above a team, badge Leader in the team, Employee under that Leader, Admin is the Leader's outside supervisor. | `OrgStructureTeamRules.Validate` returns no errors. | `src/Excp.HRSystem.Application/Services/CompanyStructure/OrgStructureTeamRules.cs` | - |
+
+### Wave 6 — Save teams and restore
+
+| ID | Key | Case | Type | Preconditions | Steps | Expected | Related code | Test data |
+|----|-----|------|------|---------------|-------|----------|--------------|-----------|
+| TC-52 | EXCP-ORG-HRS-ORG-CHART-053 | Verify first team save replaces old people and old teams | Main | `IsTeamLayout` is 0. Live org-chart nodes/edges exist. At least one old `Teams` row is not in the new payload. Admin or HR token. | 1. `POST Get-active-graph` `{}` and read `legacyNodeCount`.<br>2. `POST Save-graph` with a valid team graph (`teams`, node `teamId`, supervisor edges), `confirmDestructiveChange: true`, and `expectedExistingNodeCount` equal to `legacyNodeCount`. | 1. **200**.<br>2. Active nodes/edges match the payload (removed people are `IsDeleted = 1`).<br>3. Payload teams exist; teams missing from the payload are `IsDeleted = 1`.<br>4. `OrgStructureVersions.IsTeamLayout` is 1.<br>5. Member `AbpUsers.TeamId` matches node `teamId`. Admin/HR `TeamId` is null. | `src/Excp.HRSystem.Application/Services/CompanyStructure/CompanyStructureAppService.cs` | - |
+| TC-53 | EXCP-ORG-HRS-ORG-CHART-054 | Verify second save reloads the same teams | Main | TC-52 succeeded. | 1. `POST Get-active-graph` `{}`.<br>2. `POST Save-graph` with the same teams/nodes/edges (`confirmDestructiveChange` as required). | 1. Get returns those `teams` and member `teamId` values.<br>2. After the second save, Get still returns the same team `id`, `name`, `leaderUserId`, `parentTeamId`, `parentUserId`. | `src/Excp.HRSystem.Application/Services/CompanyStructure/CompanyStructureAppService.cs` | - |
+| TC-54 | EXCP-ORG-HRS-ORG-CHART-055 | Verify restore of a snapshot with no teams fails | Edge | A snapshot payload has empty or missing `teams` (old person-only backup). Live chart already has a team layout, or use any live version. | 1. Admin `POST Restore-from-snapshot` with that snapshot id (`confirmWipe` true or false). | 1. **400** with the no-teams backup message.<br>2. Live graph is unchanged. | `src/Excp.HRSystem.Application/Services/CompanyStructure/CompanyStructureAppService.cs`, `src/Excp.HRSystem.Application/Services/CompanyStructure/OrgStructureTeamRules.cs` | - |
+| TC-55 | EXCP-ORG-HRS-ORG-CHART-056 | Verify empty editor still sends legacy node counts | Edge | `IsTeamLayout` is 0. Live node count N is greater than 0. | 1. `POST Get-active-graph` `{}`. Confirm empty `nodes` and `legacyNodeCount` = N.<br>2. `POST Save-graph` with a valid small team graph, `confirmDestructiveChange: true`, and `expectedExistingNodeCount: 0`. | 1. **400** expected-count mismatch.<br>2. Live rows unchanged.<br>3. Repeat with `expectedExistingNodeCount` = N and the save is not rejected for count mismatch. | `src/Excp.HRSystem.Application/Services/CompanyStructure/CompanyStructureAppService.cs`, `src/Excp.HRSystem.Application/Services/CompanyStructure/OrgStructureDestructiveSaveRules.cs` | - |
+

@@ -2,7 +2,7 @@
   "version": 1,
   "project": "excp-time",
   "runId": "current",
-  "updatedAtUtc": "2026-08-19T14:21:42.308Z",
+  "updatedAtUtc": "2026-10-06T09:28:09.230Z",
   "cases": {
     "EXCP-AUTH-HRS-REFRESH-TOKEN-001": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-001",
@@ -5888,7 +5888,8 @@
       "caseId": "TC-15",
       "caseTitle": "TC-15 — Verify An employee with no leftover overtime shows `0:00:00` in \"Payable overtime\".",
       "updatedAtUtc": "2026-08-19T14:21:42.308Z",
-      "runId": "current"
+      "runId": "current",
+      "evidence": []
     },
     "EXCP-BUG-HRS-ADMIN-AZURE-016": {
       "key": "EXCP-BUG-HRS-ADMIN-AZURE-016",
@@ -7517,6 +7518,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-ORG-ORG-CHART-037": {
+      "key": "EXCP-ORG-ORG-CHART-037",
+      "status": "succeeded",
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-36",
+      "caseTitle": "TC-36 — Verify cancel remove leaves the card",
+      "updatedAtUtc": "2026-10-06T09:16:54.526Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-QE-HRS-RANGE-CORRECTION-037": {
       "key": "EXCP-QE-HRS-RANGE-CORRECTION-037",
       "status": "new",
@@ -7544,6 +7555,16 @@
       "caseId": "TC-37",
       "caseTitle": "TC-37 — Verify **Open single report** from the bulk table opens the employee hours report in a new tab for the same dates and employee",
       "updatedAtUtc": "2026-05-18T09:52:24.196Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-ORG-ORG-CHART-038": {
+      "key": "EXCP-ORG-ORG-CHART-038",
+      "status": "succeeded",
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-37",
+      "caseTitle": "TC-37 — Verify remove a middle person re-parents reports",
+      "updatedAtUtc": "2026-10-06T09:17:34.207Z",
       "runId": "current",
       "evidence": []
     },
@@ -7577,6 +7598,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-ORG-ORG-CHART-039": {
+      "key": "EXCP-ORG-ORG-CHART-039",
+      "status": "succeeded",
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-38",
+      "caseTitle": "TC-38 — Verify top person with reports cannot be removed",
+      "updatedAtUtc": "2026-10-06T09:18:12.382Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-QE-HRS-RANGE-CORRECTION-039": {
       "key": "EXCP-QE-HRS-RANGE-CORRECTION-039",
       "status": "new",
@@ -7604,6 +7635,16 @@
       "caseId": "TC-39",
       "caseTitle": "TC-39 — Verify the **Employees** pick list stays fully visible and stays next to the field",
       "updatedAtUtc": "2026-05-18T09:52:24.196Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-ORG-ORG-CHART-040": {
+      "key": "EXCP-ORG-ORG-CHART-040",
+      "status": "succeeded",
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-39",
+      "caseTitle": "TC-39 — Verify Employee kind blocked when person has reports",
+      "updatedAtUtc": "2026-10-06T09:18:34.991Z",
       "runId": "current",
       "evidence": []
     },
@@ -7637,6 +7678,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-ORG-ORG-CHART-041": {
+      "key": "EXCP-ORG-ORG-CHART-041",
+      "status": "succeeded",
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-40",
+      "caseTitle": "TC-40 — Verify Employee kind allowed when person has no reports",
+      "updatedAtUtc": "2026-10-06T09:18:54.632Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-QE-HRS-RANGE-CORRECTION-041": {
       "key": "EXCP-QE-HRS-RANGE-CORRECTION-041",
       "status": "new",
@@ -7664,6 +7715,16 @@
       "caseId": "TC-41",
       "caseTitle": "TC-41 — Verify a connection-style failure does not show browser or URL jargon in the **Fail** dialog",
       "updatedAtUtc": "2026-05-18T09:52:24.196Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-ORG-ORG-CHART-042": {
+      "key": "EXCP-ORG-ORG-CHART-042",
+      "status": "succeeded",
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-41",
+      "caseTitle": "TC-41 — Verify save warns when all reporting lines are dropped",
+      "updatedAtUtc": "2026-10-06T09:27:20.026Z",
       "runId": "current",
       "evidence": []
     },
@@ -7697,6 +7758,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-ORG-ORG-CHART-043": {
+      "key": "EXCP-ORG-ORG-CHART-043",
+      "status": "succeeded",
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-42",
+      "caseTitle": "TC-42 — Verify backup list shows people and lines",
+      "updatedAtUtc": "2026-10-06T09:27:33.784Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-QE-HRS-RANGE-CORRECTION-043": {
       "key": "EXCP-QE-HRS-RANGE-CORRECTION-043",
       "status": "new",
@@ -7726,6 +7797,15 @@
       "updatedAtUtc": "2026-05-18T09:52:24.196Z",
       "runId": "current",
       "evidence": []
+    },
+    "EXCP-ORG-ORG-CHART-044": {
+      "key": "EXCP-ORG-ORG-CHART-044",
+      "status": "succeeded",
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-43",
+      "caseTitle": "TC-43 — Verify empty or zero-line restore needs a second warning",
+      "updatedAtUtc": "2026-10-06T09:28:09.230Z",
+      "runId": "current"
     },
     "EXCP-QE-HRS-RANGE-CORRECTION-044": {
       "key": "EXCP-QE-HRS-RANGE-CORRECTION-044",
