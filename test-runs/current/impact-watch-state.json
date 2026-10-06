@@ -81,6 +81,22 @@
       "matchedRelatedPath": "src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts",
       "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
       "firstSeen": "2026-10-06T13:10:15.954Z"
+    },
+    "EXCP-ORG-ORG-CHART-045": {
+      "changedPaths": [
+        "src/app/features/admin-leader/admin/components/company-structure/company-structure-team-name.ts"
+      ],
+      "matchedRelatedPath": "src/app/features/admin-leader/admin/components/company-structure/company-structure-team-name.ts",
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "firstSeen": "2026-10-06T13:56:15.359Z"
+    },
+    "EXCP-ORG-ORG-CHART-007": {
+      "changedPaths": [
+        "src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts"
+      ],
+      "matchedRelatedPath": "src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts",
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "firstSeen": "2026-10-06T13:57:06.364Z"
     }
   }
 }
