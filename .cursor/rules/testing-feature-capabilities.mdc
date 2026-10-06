@@ -13,13 +13,17 @@ This repository is the **canonical** home for manual test specs, SQL fixtures, r
 2. Commit and push to GitHub with the app repos.
 3. Update **`test-runs/current/status.json`** when QA completes a case (coordinate to avoid merge conflicts).
 
-## Optional: Testing-feature (`tc` CLI)
+## Test-case GUI (bundled)
 
-If you install the private **Testing-feature** vendor repo and run `npm run link:dev`, you can use:
+From this repo root (Node 18+). Do **not** clone Testing-feature.
 
-- `tc project doctor`
-- `tc t`, `tc s <KEY> ok`, `tc ui`
+```powershell
+npm install
+npm run ui
+```
 
-Do **not** run `tc project sync` on this repo unless your team lead asks — sync can reinstall local-only gitignore blocks meant for single-machine setups.
+Also: `npm run doctor`, `npx tc s <KEY> ok`, `npx tc t <file>`.
+
+Do **not** run `tc project sync` unless the team lead asks — sync can reinstall local-only gitignore blocks.
 
 Format and delivery waves are copied into **`docs/standards/`** so teammates without the vendor clone still follow the same rules.

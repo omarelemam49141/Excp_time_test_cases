@@ -4,7 +4,7 @@ Manual test-case definitions and committed run status for **EXCP Time** (fronten
 
 - Config: [`testing-feature.project.json`](testing-feature.project.json)
 - Index: [`test-cases/README.md`](test-cases/README.md)
-- Format: [Testing-feature standard](O:/Company work/Company projects/ExcpTime/Testing-feature/docs/standards/test-case-format.md)
+- Format: [test-case format](docs/standards/test-case-format.md)
 
 Linked application repos (see `linkedRepos` in config):
 
@@ -18,7 +18,7 @@ Linked application repos (see `linkedRepos` in config):
 | Test definitions | `test-cases/<feature>/frontend\|backend/*-test-cases.md` (this repo) |
 | Run status | `test-runs/current/status.json` (committed; never move markdown for status) |
 | Stable identity | **`Key`** column (`EXCP-...`), not `TC-01` alone |
-| Tooling | [`tc` CLI](../Testing-feature) from **this repo root** |
+| Tooling | Bundled `tc` in this repo (`npm install`, then `npm run ui`) |
 
 Status values: `new`, `in-progress`, `succeeded`, `failed`, `blocked`, `needs-update`.
 
@@ -27,58 +27,54 @@ Status values: `new`, `in-progress`, `succeeded`, `failed`, `blocked`, `needs-up
 All `*-test-cases.md` files have **Related code** mapped to real paths in linked app repos. Run:
 
 ```powershell
-tc project doctor --strict
+npm run doctor -- --strict
 ```
 
 Exit code **0** is required (no unmapped Related code, no stale paths). When you add or change a feature, update **Related code** and **Related docs** in the same task.
 
-## Install `tc`
+## Install the GUI
 
-From [Testing-feature](../Testing-feature):
+Node.js 18+. From **this repo root** (no Testing-feature clone):
 
 ```powershell
 npm install
-npm run link:dev
+npm run ui
 ```
 
-Or without a global link, from this folder:
+Open `http://127.0.0.1:3847`.
 
-```powershell
-node "../Testing-feature/dist/cli.js" project doctor
-```
+The CLI is the file `vendor/excp-tc-1.0.0.tgz` (built app only). After `npm install`, `npm run doctor` and `npx tc` work from this folder too.
 
 ## CLI (day one)
 
-From this folder:
+From this folder, after `npm install`:
 
 ```powershell
-tc project doctor
-tc t "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md"
-tc next "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md"
-tc s EXCP-QE-PENDING-LEAVE-013 ok
-tc list --status succeeded
+npx tc project doctor
+npx tc t "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md"
+npx tc next "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md"
+npx tc s EXCP-QE-PENDING-LEAVE-013 ok
+npx tc list --status succeeded
 ```
 
 After code changes in linked repos (when **Related code** is mapped):
 
 ```powershell
-tc impact --git              # dry-run
-tc impact --git --apply      # mark succeeded keys needs-update
+npx tc impact --git              # dry-run
+npx tc impact --git --apply      # mark succeeded keys needs-update
 ```
 
-Bulk status: `tc sf`, `tc sm`, `tc sr` — see [CLI guide](../Testing-feature/docs/technical/cli.md).
+Bulk status: `npx tc sf`, `npx tc sm`, `npx tc sr`.
 
-## Web UI (`tc ui`)
+## Web UI
 
 Browse cases, filter by status, view file todo lists by markdown `###` groups, and update status from the case detail panel (same rules as `tc s`, including **Requires**).
 
 ```powershell
-tc ui
-# optional: tc ui --port 3847 --open
+npm run ui
 ```
 
-Requires a built Testing-feature (`npm run build` includes `dist/ui/`).  
-UX standards: [ui-ux-standards.md](../Testing-feature/docs/technical/ui-ux-standards.md).
+Optional: `npx tc ui --port 3847 --open`
 
 ## Status metadata repair
 
@@ -96,4 +92,4 @@ When app code changes, update matching `*-test-cases.md` here in the **same task
 
 ## Cursor workspace
 
-Open this repo alongside `EXCP_ANGULAR`, `Excp.HRSystem`, and `Testing-feature` so agents run `tc` from the correct root. Example multi-root file: [`excp-time.code-workspace`](excp-time.code-workspace).
+Open this repo alongside `EXCP_ANGULAR` and `EXCPTIME_MVC`. Example multi-root file: [`excp-time.code-workspace`](excp-time.code-workspace). Teammates do not need the Testing-feature source repo.

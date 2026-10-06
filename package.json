@@ -1,0 +1,15 @@
+{
+  "name": "excp-time-test-cases",
+  "private": true,
+  "description": "EXCP Time manual test cases. GUI via the bundled tc CLI (no Testing-feature clone).",
+  "scripts": {
+    "ui": "tc ui",
+    "doctor": "tc project doctor"
+  },
+  "dependencies": {
+    "excp-tc": "file:vendor/excp-tc-1.0.0.tgz"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -30,7 +30,7 @@ Checkout branch **`issues-new`** on Angular and MVC (unless your lead says other
 
 Or open `excp-time.code-workspace` from this repo and fix each folder `path` if your clone names differ (right-click folder → wrong path → remove and re-add).
 
-You do **not** need the Testing-feature (`tc`) vendor repo for day-to-day work.
+You do **not** clone the Testing-feature vendor repo. The test-case GUI is bundled in this repo.
 
 ## 3. `testing-feature.project.json` (paths to Angular + API)
 
@@ -67,7 +67,15 @@ npm start
 
 - Specs: `test-cases/<feature>/frontend|backend/*-test-cases.md`
 - Format: `docs/standards/test-case-format.md` (in this repo)
-- Run status: `test-runs/current/status.json` — edit in git or use `tc` if someone on the team installed Testing-feature locally (optional)
+- Run status: `test-runs/current/status.json`
+- GUI (from this repo root, Node 18+):
+
+```powershell
+npm install
+npm run ui
+```
+
+Browser: `http://127.0.0.1:3847`
 
 ## 6. What syncs via git
 
@@ -83,3 +91,7 @@ Rules in each repo’s `.cursor/` and `.cursorrules` are in git. They refer to t
 - `.cursor/skills/caveman/` + `.cursor/rules/caveman-priority.mdc` — terse reply tone (project skill; no copy to `~/.cursor/skills` needed if this repo is in the workspace)
 
 If the agent still mentions an old absolute path, your lead may have unpushed rule updates — pull latest on all three repos.
+
+## 8. Refresh the GUI bundle (team lead only)
+
+Teammates never clone Testing-feature. After you change that tool, rebuild and replace `vendor/excp-tc-1.0.0.tgz` (pack `dist/` + `templates/` only, package name `excp-tc`), then commit the new tarball. Teammates pull and run `npm install` again.
