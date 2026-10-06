@@ -2,11 +2,11 @@
   "folders": [
     {
       "name": "EXCP Angular (frontend)",
-      "path": "../EXCP_ANGULAR"
+      "path": "../../../Frontend/Excp Time/EXCP_ANGULAR"
     },
     {
       "name": "EXCPTIME MVC (backend)",
-      "path": "../EXCPTIME_MVC"
+      "path": "../../../Backend/Projects/Excp time/EXCPTIME_MVC"
     },
     {
       "name": "ExcpTime TestCases",

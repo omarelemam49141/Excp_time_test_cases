@@ -1,18 +1,37 @@
 {
+
   "projectId": "excp-time",
+
   "displayName": "EXCP Time",
+
   "keyPrefix": "EXCP",
+
   "testCasesRoot": "test-cases",
+
   "testRunsRoot": "test-runs",
+
   "defaultRunId": "current",
+
   "linkedRepos": [
+
     {
+
       "role": "frontend",
-      "path": "../EXCP_ANGULAR"
+
+      "path": "../../../Frontend/Excp Time/EXCP_ANGULAR"
+
     },
+
     {
+
       "role": "backend",
-      "path": "../../EXCPTIME_MVC"
+
+      "path": "../../../Backend/Projects/Excp time/EXCPTIME_MVC"
+
     }
+
   ]
+
 }
+
+
