@@ -2,7 +2,7 @@
   "version": 1,
   "project": "excp-time",
   "runId": "current",
-  "updatedAtUtc": "2026-10-06T09:28:09.230Z",
+  "updatedAtUtc": "2026-10-06T13:43:06.854Z",
   "cases": {
     "EXCP-AUTH-HRS-REFRESH-TOKEN-001": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-001",
@@ -3062,11 +3062,12 @@
     },
     "EXCP-ORG-ORG-CHART-007": {
       "key": "EXCP-ORG-ORG-CHART-007",
-      "status": "new",
+      "status": "succeeded",
+      "currentStep": 1,
       "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
       "caseId": "TC-06",
       "caseTitle": "TC-06 — Verify Empty CTA",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-10-06T13:41:38.015Z",
       "runId": "current",
       "evidence": []
     },
@@ -7805,7 +7806,8 @@
       "caseId": "TC-43",
       "caseTitle": "TC-43 — Verify empty or zero-line restore needs a second warning",
       "updatedAtUtc": "2026-10-06T09:28:09.230Z",
-      "runId": "current"
+      "runId": "current",
+      "evidence": []
     },
     "EXCP-QE-HRS-RANGE-CORRECTION-044": {
       "key": "EXCP-QE-HRS-RANGE-CORRECTION-044",
@@ -7837,6 +7839,17 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-ORG-ORG-CHART-045": {
+      "key": "EXCP-ORG-ORG-CHART-045",
+      "status": "succeeded",
+      "currentStep": 1,
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-44",
+      "caseTitle": "TC-44 — Verify duplicate team name is blocked",
+      "updatedAtUtc": "2026-10-06T13:42:01.570Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-QE-RANGE-CORRECTION-045": {
       "key": "EXCP-QE-RANGE-CORRECTION-045",
       "status": "new",
@@ -7844,6 +7857,17 @@
       "caseId": "TC-45",
       "caseTitle": "TC-45 — Verify Employee hours report parity — TC-45 — Verify Employee hours report parity — **Expect** `Total actual work hours without breaks` follows the same allowance rule and matches Quick Entry net aggregation for attendance hours.",
       "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-ORG-ORG-CHART-046": {
+      "key": "EXCP-ORG-ORG-CHART-046",
+      "status": "succeeded",
+      "currentStep": 1,
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-45",
+      "caseTitle": "TC-45 — Verify read-only user has no Add team button",
+      "updatedAtUtc": "2026-10-06T13:42:20.526Z",
       "runId": "current",
       "evidence": []
     },
@@ -7857,6 +7881,17 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-ORG-ORG-CHART-047": {
+      "key": "EXCP-ORG-ORG-CHART-047",
+      "status": "succeeded",
+      "currentStep": 1,
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-46",
+      "caseTitle": "TC-46 — Verify read-only team cards have no edit controls",
+      "updatedAtUtc": "2026-10-06T13:42:57.627Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-QE-RANGE-CORRECTION-047": {
       "key": "EXCP-QE-RANGE-CORRECTION-047",
       "status": "new",
@@ -7866,6 +7901,16 @@
       "updatedAtUtc": "2026-05-13T20:11:09.247Z",
       "runId": "current",
       "evidence": []
+    },
+    "EXCP-ORG-ORG-CHART-048": {
+      "key": "EXCP-ORG-ORG-CHART-048",
+      "status": "in-progress",
+      "currentStep": 1,
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-47",
+      "caseTitle": "TC-47 — Verify a person is added only inside a team",
+      "updatedAtUtc": "2026-10-06T13:43:06.854Z",
+      "runId": "current"
     },
     "EXCP-QE-RANGE-CORRECTION-048": {
       "key": "EXCP-QE-RANGE-CORRECTION-048",
