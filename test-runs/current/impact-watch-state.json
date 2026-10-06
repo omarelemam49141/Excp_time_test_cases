@@ -17,5 +17,70 @@
       "head": "54f09e1e8e173afd046b27b8aab79317ebffdea2"
     }
   },
-  "pending": {}
+  "pending": {
+    "EXCP-ORG-ORG-CHART-037": {
+      "changedPaths": [
+        "src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts"
+      ],
+      "matchedRelatedPath": "src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts",
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "firstSeen": "2026-10-06T13:10:15.954Z"
+    },
+    "EXCP-ORG-ORG-CHART-038": {
+      "changedPaths": [
+        "src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts"
+      ],
+      "matchedRelatedPath": "src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts",
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "firstSeen": "2026-10-06T13:10:15.954Z"
+    },
+    "EXCP-ORG-ORG-CHART-039": {
+      "changedPaths": [
+        "src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts"
+      ],
+      "matchedRelatedPath": "src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts",
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "firstSeen": "2026-10-06T13:10:15.954Z"
+    },
+    "EXCP-ORG-ORG-CHART-040": {
+      "changedPaths": [
+        "src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts"
+      ],
+      "matchedRelatedPath": "src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts",
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "firstSeen": "2026-10-06T13:10:15.954Z"
+    },
+    "EXCP-ORG-ORG-CHART-041": {
+      "changedPaths": [
+        "src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts"
+      ],
+      "matchedRelatedPath": "src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts",
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "firstSeen": "2026-10-06T13:10:15.954Z"
+    },
+    "EXCP-ORG-ORG-CHART-042": {
+      "changedPaths": [
+        "src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts"
+      ],
+      "matchedRelatedPath": "src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts",
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "firstSeen": "2026-10-06T13:10:15.954Z"
+    },
+    "EXCP-ORG-ORG-CHART-043": {
+      "changedPaths": [
+        "src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts"
+      ],
+      "matchedRelatedPath": "src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts",
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "firstSeen": "2026-10-06T13:10:15.954Z"
+    },
+    "EXCP-ORG-ORG-CHART-044": {
+      "changedPaths": [
+        "src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts"
+      ],
+      "matchedRelatedPath": "src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts",
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "firstSeen": "2026-10-06T13:10:15.954Z"
+    }
+  }
 }
