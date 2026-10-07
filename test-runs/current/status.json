@@ -2,7 +2,7 @@
   "version": 1,
   "project": "excp-time",
   "runId": "current",
-  "updatedAtUtc": "2026-10-06T14:20:14.440Z",
+  "updatedAtUtc": "2026-10-07T07:10:52.888Z",
   "cases": {
     "EXCP-AUTH-HRS-REFRESH-TOKEN-001": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-001",
@@ -8061,12 +8061,23 @@
     },
     "EXCP-ORG-ORG-CHART-058": {
       "key": "EXCP-ORG-ORG-CHART-058",
-      "status": "in-progress",
+      "status": "succeeded",
       "currentStep": 1,
       "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
       "caseId": "TC-57",
       "caseTitle": "TC-57 — Verify in-team manager clears outside supervisor",
-      "updatedAtUtc": "2026-10-06T14:20:14.440Z",
+      "updatedAtUtc": "2026-10-07T07:10:17.397Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-ORG-ORG-CHART-064": {
+      "key": "EXCP-ORG-ORG-CHART-064",
+      "status": "in-progress",
+      "currentStep": 1,
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-63",
+      "caseTitle": "TC-63 — Verify first Leader in a team gets the Team leader badge",
+      "updatedAtUtc": "2026-10-07T07:10:52.888Z",
       "runId": "current"
     }
   }
