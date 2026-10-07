@@ -1,0 +1,42 @@
+# Request routing — frontend test cases
+
+## Metadata
+- Project: `excp-time`
+- Feature: `request-routing`
+- Layer: `frontend`
+- Routes: `/admin/company-structure`, `/admin-leader/list-requests`
+- APIs: `GET /api/request-routing-settings`, `PUT /api/request-routing-settings`
+- Related code: `src/app/features/admin-leader/admin/models/request-routing.model.ts`, `src/app/features/admin-leader/admin/components/company-structure/request-routing-dialog.component.ts`
+- Related docs: `docs/frontend/technical/company-structure-org-chart.md`
+- Automation: `-`
+
+## Scope
+
+Company structure routing wizards and Accept gating on requests and overtime.
+
+## Test scenarios
+
+- Admin/HR open company routing from the toolbar and save without Save structure.
+- Company routing final approver has no "Pick a person" (not a global user list).
+- Team and leader icons open inherit-capable wizards; team/leader values save with Save structure.
+- After save and reload, reopening a wizard shows the saved mode chips selected (teal highlight).
+- Team and leader send icons use a filled teal style and pulse when that scope has a custom override; tooltips describe the mode or company default.
+- Team "Pick a person" lists only Leaders on that team.
+- Accept is disabled when the current user is not the snapshot final approver.
+
+## Test cases
+
+### Company structure
+
+| ID | Key | Case | Type | Preconditions | Steps | Expected | Related code | Test data |
+|----|-----|------|------|---------------|-------|----------|--------------|-----------|
+| TC-01 | EXCP-REQ-ROUTE-UI-001 | Verify company routing toolbar | Main | Admin on `/admin/company-structure` | 1. Click "Request routing".<br>2. Change Direct team leader to "Request only".<br>3. Click "Apply". | 1. Dialog title is "Company request routing".<br>2. Success toast "Request routing saved." appears.<br>3. Save structure was not required.<br>4. "Pick a person" is not shown. | `src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts`, `src/app/features/admin-leader/admin/services/request-routing-settings.service.ts`, `src/app/features/admin-leader/admin/components/company-structure/request-routing-dialog.component.html` | - |
+| TC-02 | EXCP-REQ-ROUTE-UI-002 | Verify team override wizard | Main | Admin with at least one team | 1. Click the send icon on a team card header.<br>2. Uncheck "Use the company default".<br>3. Set Direct team leader to "Request only".<br>4. Click "Apply".<br>5. Click "Save structure". | 1. Dialog title is "Team request routing".<br>2. Save structure succeeds.<br>3. The team send icon is filled teal with a pulsing ring.<br>4. Hovering the icon shows a tooltip that mentions direct and upper routing (for example "Team override"). | `src/app/features/admin-leader/admin/components/company-structure/company-structure-team-card.component.ts`, `src/app/features/admin-leader/admin/components/company-structure/company-structure-team-card.component.html` | - |
+| TC-03 | EXCP-REQ-ROUTE-UI-003 | Verify leader personal override | Main | Admin with a Leader in a team | 1. Click the send icon on a Leader chip.<br>2. Uncheck "Use the company default" and pick "Notification only".<br>3. Click "Apply".<br>4. Click "Save structure". | 1. Dialog title is "Leader request routing".<br>2. The Leader send icon is filled teal with a pulsing ring.<br>3. Hovering the icon shows a tooltip with "Personal routing" and "Notification only".<br>4. Employee chips have no send icon. | `src/app/features/admin-leader/admin/components/company-structure/company-structure-person-chip.component.ts`, `src/app/features/admin-leader/admin/components/company-structure/company-structure-team-in-team-tree.component.ts` | - |
+| TC-04 | EXCP-REQ-ROUTE-UI-004 | Verify Accept hidden for non-final TL | Main | Pending request with FinalApproverUsername set to another user | 1. Open Requests as a receiver who is not that person.<br>2. Look at Accept. | 1. Accept is disabled.<br>2. Text "Waiting for {name} to approve" is visible. | `src/app/features/admin-leader/shared/components/subordinate-requests/subordinate-requests-table/subordinate-requests-table.component.ts` | - |
+| TC-05 | EXCP-REQ-ROUTE-UI-005 | Verify overtime Accept follows the same gate | Edge | Pending overtime with currentUserCanApprove false | 1. Open overtime tab.<br>2. Look at Accept on the row and in details. | Accept is disabled on the table and in the details dialog. | `src/app/features/admin-leader/shared/components/over-time-list/overtimes-list-table/overtimes-list-table.component.ts`, `src/app/features/admin-leader/shared/components/over-time-list/overtime-details-dialog/overtime-details-dialog.component.ts` | - |
+| TC-06 | EXCP-REQ-ROUTE-UI-006 | Verify company routing has no pick a person | Main | Admin on `/admin/company-structure` | 1. Click "Request routing".<br>2. Look at "Final approver". | 1. Chips shown are "Anyone who received the request" and "Top of the chain".<br>2. "Pick a person" is not shown.<br>3. No people dropdown is shown. | `src/app/features/admin-leader/admin/components/company-structure/request-routing-dialog.component.html` | - |
+| TC-07 | EXCP-REQ-ROUTE-UI-007 | Verify team pick a person lists only that team's leaders | Main | Admin with Team A that has at least one Leader, and other people exist in the company | 1. Click the send icon on Team A's card.<br>2. Uncheck "Use the company default".<br>3. Click "Pick a person".<br>4. Open the people dropdown. | 1. Dialog title is "Team request routing".<br>2. Placeholder is "Choose a person from this team".<br>3. Dropdown lists Leaders who belong to Team A.<br>4. People from other teams are not listed. | `src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts`, `src/app/features/admin-leader/admin/components/company-structure/request-routing-dialog.component.html` | - |
+| TC-08 | EXCP-REQ-ROUTE-UI-008 | Verify leader dialog reopens with saved mode selected | Main | Leader with personal routing saved (see TC-03) | 1. Reload `/admin/company-structure`.<br>2. Open the same Leader send icon again. | 1. "Use the company default" is unchecked.<br>2. The "Notification only" chip is highlighted in teal.<br>3. No routing chip looks unselected while a custom mode is active. | `src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts`, `src/app/features/admin-leader/admin/models/request-routing.model.ts`, `src/app/features/admin-leader/admin/components/company-structure/request-routing-dialog.component.html` | Requires TC-03 |
+| TC-09 | EXCP-REQ-ROUTE-UI-009 | Verify team dialog reopens with saved modes selected | Main | Team with routing override saved (see TC-02) | 1. Reload `/admin/company-structure`.<br>2. Click the team send icon on that team. | 1. "Use the company default" is unchecked.<br>2. The Direct team leader chip "Request only" is highlighted in teal.<br>3. Other saved team fields (upper levels, final approver) match what was set in TC-02. | `src/app/features/admin-leader/admin/components/company-structure/company-structure-page.component.ts`, `src/app/features/admin-leader/admin/models/request-routing.model.ts` | Requires TC-02 |
+| TC-10 | EXCP-REQ-ROUTE-UI-010 | Verify inherit routing uses default icon and tooltip | Edge | Team and Leader with no custom routing (inherit company default) | 1. Open a team send icon with "Use the company default" checked.<br>2. Open a Leader send icon with inherit checked.<br>3. Hover each send icon on the chart (not inside the dialog). | 1. Team and Leader send icons are pale teal (not filled).<br>2. No pulsing override ring on those icons.<br>3. Tooltip text is "Uses company default routing" (or Arabic equivalent). | `src/app/features/admin-leader/admin/components/company-structure/company-structure-team-card.component.ts`, `src/app/features/admin-leader/admin/components/company-structure/company-structure-person-chip.component.ts` | - |
