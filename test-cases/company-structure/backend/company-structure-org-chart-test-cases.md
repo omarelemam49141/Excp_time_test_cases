@@ -6,10 +6,10 @@
 - Feature: `company-structure`
 - Layer: `backend`
 - Routes: -
-- APIs: `POST /api/company-structure/Get-active-graph`, `POST /api/company-structure/Save-graph`, `POST /api/company-structure/Get-snapshots`, `POST /api/company-structure/Restore-from-snapshot`
+- APIs: `POST /api/company-structure/Get-active-graph`, `POST /api/company-structure/Save-graph`, `POST /api/company-structure/Get-snapshots`, `POST /api/company-structure/Get-snapshot-graph`, `POST /api/company-structure/Restore-from-snapshot`
 - Related code: `src/Excp.HRSystem.Application/Services/CompanyStructure/CompanyStructureAppService.cs`
 - Related docs: `docs/backend/technical/company-structure-org-chart.md`, `docs/backend/technical/company-structure-read-vs-save-authorization.md`, `docs/backend/technical/company-structure-data-protection.md`
-- Automation: `test/Excp.HRSystem.Application.Tests/CompanyStructure/OrgStructureTeamRulesTests.cs`, `test/Excp.HRSystem.Application.Tests/CompanyStructure/OrgStructureDestructiveSaveRulesTests.cs`
+- Automation: `test/Excp.HRSystem.Application.Tests/CompanyStructure/OrgStructureTeamRulesTests.cs`, `test/Excp.HRSystem.Application.Tests/CompanyStructure/OrgStructureDestructiveSaveRulesTests.cs`, `test/Excp.HRSystem.Application.Tests/CompanyStructure/OrgStructureGraphUserHydratorTests.cs`
 
 ## Scope
 
@@ -230,6 +230,7 @@
 | TC-30 | EXCP-ORG-HRS-ORG-CHART-030 | Verify destructive save allowed with confirm | Main | Same as TC-29. | 1. Repeat with `confirmDestructiveChange: true`. | **200**; DB node count matches payload; a new row exists in `OrgStructureGraphSnapshots`. | - |
 | TC-31 | EXCP-ORG-HRS-ORG-CHART-031 | Verify expected node count mismatch | Edge | DB has N nodes; client sends `expectedExistingNodeCount` not equal to N. | 1. Admin save with valid graph but wrong `expectedExistingNodeCount`. | **400** reload message; no graph change. | - |
 | TC-32 | EXCP-ORG-HRS-ORG-CHART-032 | Verify pre-save snapshot and restore | Main | Graph with at least 5 nodes saved once (creates snapshot). | 1. `POST Get-snapshots` for version.<br>2. Save a smaller graph with confirm.<br>3. `POST Restore-from-snapshot` with prior snapshot id. | Snapshots list non-empty; after restore, node count matches snapshot `nodeCount`. | - |
+| TC-32b | EXCP-ORG-HRS-ORG-CHART-057 | Verify Get-snapshot-graph previews without writing DB | Main | A team-layout snapshot exists (`teamCount` &gt; 0). Note live node count N. | 1. Admin `POST Get-snapshot-graph` with `{ "snapshotId": "<id>" }`.<br>2. `POST Get-active-graph`. | 1. **200** with `teams`, `nodes`, and `edges` from the snapshot; node `userName` / `profileImage` populated when users exist.<br>2. Live graph still has N people (unchanged). | `src/Excp.HRSystem.Application/Services/CompanyStructure/CompanyStructureAppService.cs`, `src/Excp.HRSystem.HttpApi/Controllers/CompanyStructure/CompanyStructureController.cs` | - |
 | TC-33 | EXCP-ORG-HRS-ORG-CHART-033 | Verify removed nodes are soft-deleted | Main | Graph had user U; save graph without U (with confirm if mass shrink). | 1. Query `OrgStructureNodes` for U's row. | Row exists with `IsDeleted = 1` (not physically deleted). | - |
 | TC-34 | EXCP-ORG-HRS-ORG-CHART-034 | Verify Save-graph audited | Main | Auditing enabled on environment. | 1. Admin save graph.<br>2. Query `AbpAuditLogs` for `Save-graph`. | Row exists with `UserId` of admin and recent `ExecutionTime`. | - |
 
