@@ -134,6 +134,14 @@ This index lists the private test-case definitions organized by project, feature
 - `reports/frontend/employee-hours-tour-guide-test-cases.md`
 - `reports/frontend/users-daily-attendance-roster-test-cases.md`
 
+### Request Routing / backend
+
+- `request-routing/backend/request-routing-settings-test-cases.md`
+
+### Request Routing / frontend
+
+- `request-routing/frontend/request-routing-settings-test-cases.md`
+
 ### Request Types / frontend
 
 - `request-types/frontend/request-type-media-url-resolution-test-cases.md`
