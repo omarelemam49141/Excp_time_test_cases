@@ -19,6 +19,8 @@ This index lists the private test-case definitions organized by project, feature
 
 - `attendance/backend/update-attendance-record-work-segments-test-cases.md`
 - `attendance/backend/modify-attendance-status-update-test-cases.md`
+- `attendance/backend/end-work-after-gap-choice-test-cases.md`
+- `attendance/frontend/end-work-overtime-choice-popup-test-cases.md`
 
 ### Attendance / frontend
 
@@ -171,11 +173,13 @@ This index lists the private test-case definitions organized by project, feature
 
 - `system-work-schedule/backend/system-work-schedule-admin-settings-json-transfer-api-test-cases.md`
 - `system-work-schedule/backend/overtime-gap-home-vs-site-resolver-test-cases.md`
+- `system-work-schedule/backend/overtime-ask-after-gap-settings-test-cases.md`
 
 ### System Work Schedule / frontend
 
 - `system-work-schedule/frontend/system-work-schedule-admin-settings-json-transfer-test-cases.md`
 - `system-work-schedule/frontend/overtime-gap-home-vs-site-test-cases.md`
+- `system-work-schedule/frontend/overtime-ask-after-gap-admin-ui-test-cases.md`
 
 ### User Management / backend
 
