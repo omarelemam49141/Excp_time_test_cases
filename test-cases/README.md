@@ -38,11 +38,13 @@ This index lists the private test-case definitions organized by project, feature
 ### Company Structure / backend
 
 - `company-structure/backend/company-structure-org-chart-test-cases.md`
+- `company-structure/backend/company-structure-leader-permissions-test-cases.md`
 
 ### Company Structure / frontend
 
 - `company-structure/frontend/company-structure-employee-view-test-cases.md`
 - `company-structure/frontend/company-structure-org-chart-test-cases.md`
+- `company-structure/frontend/company-structure-leader-permissions-test-cases.md`
 
 ### Deployment / backend
 
