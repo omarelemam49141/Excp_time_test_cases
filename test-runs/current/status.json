@@ -2,7 +2,7 @@
   "version": 1,
   "project": "excp-time",
   "runId": "current",
-  "updatedAtUtc": "2026-10-07T07:10:52.888Z",
+  "updatedAtUtc": "2026-10-08T13:56:56.312Z",
   "cases": {
     "EXCP-AUTH-HRS-REFRESH-TOKEN-001": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-001",
@@ -82,11 +82,12 @@
     },
     "EXCP-ORG-ORG-CHART-001": {
       "key": "EXCP-ORG-ORG-CHART-001",
-      "status": "new",
+      "status": "succeeded",
+      "currentStep": 1,
       "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
       "caseId": "TC-01",
       "caseTitle": "TC-01 — Verify Admin navigation",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-10-08T11:16:25.108Z",
       "runId": "current",
       "evidence": []
     },
@@ -732,11 +733,12 @@
     },
     "EXCP-ORG-ORG-CHART-002": {
       "key": "EXCP-ORG-ORG-CHART-002",
-      "status": "new",
+      "status": "succeeded",
+      "currentStep": 1,
       "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
       "caseId": "TC-02",
       "caseTitle": "TC-02 — Verify HR navigation",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-10-08T13:56:16.366Z",
       "runId": "current",
       "evidence": []
     },
@@ -4223,13 +4225,13 @@
     },
     "EXCP-ORG-ORG-CHART-010": {
       "key": "EXCP-ORG-ORG-CHART-010",
-      "status": "new",
+      "status": "in-progress",
+      "currentStep": 1,
       "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
       "caseId": "TC-09",
       "caseTitle": "TC-09 — Verify Primary toggle",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
-      "runId": "current",
-      "evidence": []
+      "updatedAtUtc": "2026-10-08T13:56:56.312Z",
+      "runId": "current"
     },
     "EXCP-DEPLOY-HRS-SQL-ARTIFACT-009": {
       "key": "EXCP-DEPLOY-HRS-SQL-ARTIFACT-009",
@@ -4873,11 +4875,12 @@
     },
     "EXCP-ORG-ORG-CHART-012": {
       "key": "EXCP-ORG-ORG-CHART-012",
-      "status": "new",
+      "status": "succeeded",
+      "currentStep": 1,
       "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
       "caseId": "TC-11",
       "caseTitle": "TC-11 — Verify Duplicate user",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-10-08T11:33:57.314Z",
       "runId": "current",
       "evidence": []
     },
@@ -5134,11 +5137,12 @@
     },
     "EXCP-ORG-ORG-CHART-013": {
       "key": "EXCP-ORG-ORG-CHART-013",
-      "status": "new",
+      "status": "succeeded",
+      "currentStep": 1,
       "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
       "caseId": "TC-12",
       "caseTitle": "TC-12 — Verify Missing title",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-10-08T11:33:36.565Z",
       "runId": "current",
       "evidence": []
     },
@@ -6334,11 +6338,12 @@
     },
     "EXCP-ORG-ORG-CHART-020": {
       "key": "EXCP-ORG-ORG-CHART-020",
-      "status": "new",
+      "status": "succeeded",
+      "currentStep": 1,
       "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
       "caseId": "TC-19",
       "caseTitle": "TC-19 — Verify User picker loading",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-10-08T11:25:19.761Z",
       "runId": "current",
       "evidence": []
     },
@@ -6554,11 +6559,12 @@
     },
     "EXCP-ORG-ORG-CHART-022": {
       "key": "EXCP-ORG-ORG-CHART-022",
-      "status": "new",
+      "status": "succeeded",
+      "currentStep": 1,
       "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
       "caseId": "TC-21",
       "caseTitle": "TC-21 — Verify User search instant",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-10-08T11:26:44.724Z",
       "runId": "current",
       "evidence": []
     },
@@ -7131,11 +7137,12 @@
     },
     "EXCP-ORG-ORG-CHART-029": {
       "key": "EXCP-ORG-ORG-CHART-029",
-      "status": "new",
+      "status": "succeeded",
+      "currentStep": 1,
       "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
       "caseId": "TC-28",
       "caseTitle": "TC-28 — Verify no forced navigation after background refresh",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-10-08T13:55:54.099Z",
       "runId": "current",
       "evidence": []
     },
@@ -7181,11 +7188,12 @@
     },
     "EXCP-ORG-ORG-CHART-030": {
       "key": "EXCP-ORG-ORG-CHART-030",
-      "status": "new",
+      "status": "succeeded",
+      "currentStep": 1,
       "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
       "caseId": "TC-29",
       "caseTitle": "TC-29 — Verify unsaved changes prompt offers stay option",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-10-08T12:20:56.481Z",
       "runId": "current",
       "evidence": []
     },
@@ -7231,11 +7239,12 @@
     },
     "EXCP-ORG-ORG-CHART-031": {
       "key": "EXCP-ORG-ORG-CHART-031",
-      "status": "new",
+      "status": "succeeded",
+      "currentStep": 1,
       "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
       "caseId": "TC-30",
       "caseTitle": "TC-30 — Verify unsaved changes prompt allows leave without saving",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-10-08T12:21:26.141Z",
       "runId": "current",
       "evidence": []
     },
@@ -7281,11 +7290,12 @@
     },
     "EXCP-ORG-ORG-CHART-032": {
       "key": "EXCP-ORG-ORG-CHART-032",
-      "status": "new",
+      "status": "succeeded",
+      "currentStep": 1,
       "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
       "caseId": "TC-31",
       "caseTitle": "TC-31 — Verify unsaved changes prompt saves then navigates",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-10-08T13:48:55.727Z",
       "runId": "current",
       "evidence": []
     },
@@ -7331,11 +7341,12 @@
     },
     "EXCP-ORG-ORG-CHART-003": {
       "key": "EXCP-ORG-ORG-CHART-003",
-      "status": "new",
+      "status": "succeeded",
+      "currentStep": 1,
       "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
       "caseId": "TC-32",
       "caseTitle": "TC-32 — Verify any employee can open company structure",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "updatedAtUtc": "2026-10-08T13:56:35.362Z",
       "runId": "current",
       "evidence": []
     },
@@ -7449,6 +7460,22 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-ORG-ORG-CHART-035": {
+      "key": "EXCP-ORG-ORG-CHART-035",
+      "status": "failed",
+      "currentStep": 1,
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-34",
+      "caseTitle": "TC-34 — Verify destructive save confirmation",
+      "failure": {
+        "kind": "product-bug",
+        "reportedAtUtc": "2026-10-08T13:51:05.848Z",
+        "fixHint": "no error hint appear like said"
+      },
+      "updatedAtUtc": "2026-10-08T13:51:05.848Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-BUG-ADMIN-FAB-AZURE-035": {
       "key": "EXCP-BUG-ADMIN-FAB-AZURE-035",
       "status": "new",
@@ -7486,6 +7513,17 @@
       "caseId": "TC-35",
       "caseTitle": "TC-35 — Verify excluding someone does not by itself show the stale information notice",
       "updatedAtUtc": "2026-05-18T09:52:24.196Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-ORG-ORG-CHART-036": {
+      "key": "EXCP-ORG-ORG-CHART-036",
+      "status": "succeeded",
+      "currentStep": 1,
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-35",
+      "caseTitle": "TC-35 — Verify Restore backup",
+      "updatedAtUtc": "2026-10-08T13:55:13.680Z",
       "runId": "current",
       "evidence": []
     },
@@ -8049,6 +8087,17 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-ORG-ORG-CHART-055": {
+      "key": "EXCP-ORG-ORG-CHART-055",
+      "status": "succeeded",
+      "currentStep": 1,
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-54",
+      "caseTitle": "TC-54 — Verify change outside supervisor to another Leader",
+      "updatedAtUtc": "2026-10-08T12:07:20.459Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-QE-RANGE-CORRECTION-055": {
       "key": "EXCP-QE-RANGE-CORRECTION-055",
       "status": "new",
@@ -8056,6 +8105,28 @@
       "caseId": "TC-55",
       "caseTitle": "TC-55 — Verify Legacy payload compatibility: if only `status` is returned (without `attendanceOvertimeStatus`), UI still shows attendance status using the legacy field.",
       "updatedAtUtc": "2026-05-13T20:11:09.247Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-ORG-ORG-CHART-056": {
+      "key": "EXCP-ORG-ORG-CHART-056",
+      "status": "succeeded",
+      "currentStep": 1,
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-55",
+      "caseTitle": "TC-55 — Verify save blocked when outside supervisor missing",
+      "updatedAtUtc": "2026-10-08T11:39:04.001Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-ORG-ORG-CHART-057": {
+      "key": "EXCP-ORG-ORG-CHART-057",
+      "status": "succeeded",
+      "currentStep": 1,
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-56",
+      "caseTitle": "TC-56 — Verify team under Admin or HR person",
+      "updatedAtUtc": "2026-10-08T12:08:58.574Z",
       "runId": "current",
       "evidence": []
     },
@@ -8070,15 +8141,125 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-ORG-ORG-CHART-060": {
+      "key": "EXCP-ORG-ORG-CHART-060",
+      "status": "succeeded",
+      "currentStep": 1,
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-59",
+      "caseTitle": "TC-59 — Verify reload after save shows saved teams",
+      "updatedAtUtc": "2026-10-08T12:20:08.382Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-ORG-ORG-CHART-063": {
+      "key": "EXCP-ORG-ORG-CHART-063",
+      "status": "succeeded",
+      "currentStep": 1,
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-62",
+      "caseTitle": "TC-62 — Verify unsaved team edits trigger leave guard",
+      "updatedAtUtc": "2026-10-08T13:54:40.947Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-ORG-ORG-CHART-064": {
       "key": "EXCP-ORG-ORG-CHART-064",
-      "status": "in-progress",
+      "status": "succeeded",
       "currentStep": 1,
       "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
       "caseId": "TC-63",
       "caseTitle": "TC-63 — Verify first Leader in a team gets the Team leader badge",
-      "updatedAtUtc": "2026-10-07T07:10:52.888Z",
-      "runId": "current"
+      "updatedAtUtc": "2026-10-08T11:38:16.540Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-ORG-ORG-CHART-065": {
+      "key": "EXCP-ORG-ORG-CHART-065",
+      "status": "failed",
+      "currentStep": 1,
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-64",
+      "caseTitle": "TC-64 — Verify another Leader can take the Team leader badge",
+      "failure": {
+        "kind": "product-bug",
+        "reportedAtUtc": "2026-10-08T12:14:32.313Z",
+        "fixHint": "when make the other leader team leader  then try to save it give me error and i donnot know what is the error it is generic when trying to save the structure"
+      },
+      "updatedAtUtc": "2026-10-08T12:14:32.313Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-ORG-ORG-CHART-066": {
+      "key": "EXCP-ORG-ORG-CHART-066",
+      "status": "succeeded",
+      "currentStep": 1,
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-65",
+      "caseTitle": "TC-65 — Verify removing the badge Leader moves the badge",
+      "updatedAtUtc": "2026-10-08T12:18:34.820Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-ORG-ORG-CHART-067": {
+      "key": "EXCP-ORG-ORG-CHART-067",
+      "status": "succeeded",
+      "currentStep": 1,
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-66",
+      "caseTitle": "TC-66 — Verify save stays disabled without a Team leader badge",
+      "updatedAtUtc": "2026-10-08T11:34:34.577Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-ORG-ORG-CHART-068": {
+      "key": "EXCP-ORG-ORG-CHART-068",
+      "status": "succeeded",
+      "currentStep": 1,
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-67",
+      "caseTitle": "TC-67 — Verify team member edit does not offer Admin or HR",
+      "updatedAtUtc": "2026-10-08T11:40:07.346Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-ORG-ORG-CHART-069": {
+      "key": "EXCP-ORG-ORG-CHART-069",
+      "status": "failed",
+      "currentStep": 1,
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-68",
+      "caseTitle": "TC-68 — Verify Admin or HR edit does not offer Employee or Leader",
+      "failure": {
+        "kind": "product-bug",
+        "reportedAtUtc": "2026-10-08T12:04:01.186Z",
+        "fixHint": "no edit button on added hr team or card there is only delete card"
+      },
+      "updatedAtUtc": "2026-10-08T12:04:01.186Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-ORG-ORG-CHART-070": {
+      "key": "EXCP-ORG-ORG-CHART-070",
+      "status": "succeeded",
+      "currentStep": 1,
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-69",
+      "caseTitle": "TC-69 — Verify changing team parent keeps a custom outside supervisor",
+      "updatedAtUtc": "2026-10-08T12:08:02.768Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-ORG-ORG-CHART-071": {
+      "key": "EXCP-ORG-ORG-CHART-071",
+      "status": "succeeded",
+      "currentStep": 1,
+      "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
+      "caseId": "TC-70",
+      "caseTitle": "TC-70 — Verify changing the badge Leader to Employee moves the badge",
+      "updatedAtUtc": "2026-10-08T12:16:26.270Z",
+      "runId": "current",
+      "evidence": []
     }
   }
 }
