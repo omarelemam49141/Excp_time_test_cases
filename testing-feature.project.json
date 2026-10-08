@@ -18,7 +18,7 @@
 
       "role": "frontend",
 
-      "path": "../../../Frontend/Excp Time/EXCP_ANGULAR"
+      "path": "../../Excp-Time-Angular/EXCP_ANGULAR"
 
     },
 
@@ -26,7 +26,7 @@
 
       "role": "backend",
 
-      "path": "../../../Backend/Projects/Excp time/EXCPTIME_MVC"
+      "path": "../../Excp-MVC/EXCPTIME_MVC"
 
     }
 

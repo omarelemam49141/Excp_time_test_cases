@@ -5,9 +5,9 @@
 - Project: `excp-time`
 - Feature: `realtime-attendance`
 - Layer: `frontend`
-- Routes: `/home`, `/attendance/working-time`, `/attendance/overtime-timer`, `/admin-leader/list-requests`
+- Routes: `/home`, `/attendance/working-time`, `/attendance/overtime-timer`, `/admin-leader/list-requests`, `/admin-leader/list-users`
 - APIs: -
-- Related code: `src/app/core/services/Signal-R/attendance-hub.service.ts`, `src/app/core/services/attendance-realtime-sync.service.ts`, `src/app/core/models/attendance-state-changed.model.ts`, `src/app/pages/home/home.component.ts`, `src/app/features/attendance/components/working-timer/working-timer.component.ts`, `src/app/features/attendance/components/overtime-timer/overtime-timer.component.ts`
+- Related code: `src/app/core/services/Signal-R/attendance-hub.service.ts`, `src/app/core/services/attendance-realtime-sync.service.ts`, `src/app/core/models/attendance-state-changed.model.ts`, `src/app/pages/home/home.component.ts`, `src/app/features/attendance/components/working-timer/working-timer.component.ts`, `src/app/features/attendance/components/overtime-timer/overtime-timer.component.ts`, `src/app/features/admin-leader/shared/components/list-users/list-users.component.ts`
 - Related docs: `docs/frontend/technical/realtime-attendance-sync.md`
 
 ## Scope
@@ -32,6 +32,7 @@
 - Session B's browser should not show the same attendance API name firing many times in a row for one action in the other session (no noisy duplicate calls).
 - Quick alt-tab (under 30 seconds away) should not fire any attendance API calls.
 - Non-attendance pages refresh attendance status in the background without automatic route changes.
+- The admin/leader users list refreshes live when the server reports an attendance change for an employee, keeping its tab, filters, search, and page.
 
 ## Test cases
 
@@ -60,3 +61,10 @@
 | ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
 |----|-----|------|------|---------------|-------|----------|-----------|
 | TC-11 | EXCP-RTATT-SYNC-011 | Verify background attendance refresh does not redirect from requests page | Regression | User is signed in and can open "Subordinate requests".<br>User is on "/admin-leader/list-requests". | 1. Open "/admin-leader/list-requests".<br>2. Keep the page open while an attendance refresh happens in the background, such as returning after more than 30 seconds away or changing attendance in another session.<br>3. Wait a few seconds after the refresh. | 1. The browser remains on "/admin-leader/list-requests".<br>2. The page does not redirect to "Home", "Working time", or "Overtime timer". | - |
+
+### Admin/leader users list
+
+| ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
+|----|-----|------|------|---------------|-------|----------|-----------|
+| TC-12 | EXCP-RTATT-SYNC-012 | Verify the users list refreshes live when an employee's attendance changes | Main | An admin or leader is on "/admin-leader/list-users".<br>Another session can start or end work for an employee visible in that list. | 1. Open "/admin-leader/list-users" as an admin or leader.<br>2. In another session, start or end work for an employee in view and wait for success.<br>3. Watch the list for a few seconds without manually refreshing. | 1. The affected employee's row updates within a few seconds (times, status, or platform change).<br>2. No full page reload happens. | - |
+| TC-13 | EXCP-RTATT-SYNC-013 | Verify the users list keeps tab, filters, and page after a live refresh | Edge | The users list is open with a non-default tab, applied filters, search text, and a page other than page 1. | 1. On "/admin-leader/list-users", switch to the other tab, apply filters, type a search, and go to page 2.<br>2. In another session, change attendance for an employee in view.<br>3. Wait for the list to refresh. | 1. The list reloads with the same tab, filters, search text, and page still applied.<br>2. The refreshed rows respect those filters. | - |
