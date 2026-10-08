@@ -124,11 +124,13 @@ This index lists the private test-case definitions organized by project, feature
 ### Reports / backend
 
 - `reports/backend/bulk-employee-hours-report-api-test-cases.md`
+- `reports/backend/daily-attendance-dashboard-test-cases.md`
 - `reports/backend/users-daily-attendance-roster-test-cases.md`
 
 ### Reports / frontend
 
 - `reports/frontend/admin-reports-layout-test-cases.md`
+- `reports/frontend/daily-attendance-dashboard-test-cases.md`
 - `reports/frontend/bulk-employee-hours-report-test-cases.md`
 - `reports/frontend/employee-hours-report-refused-ot-shortage-test-cases.md`
 - `reports/frontend/employee-hours-tour-guide-test-cases.md`
