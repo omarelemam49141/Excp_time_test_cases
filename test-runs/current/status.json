@@ -2,7 +2,7 @@
   "version": 1,
   "project": "excp-time",
   "runId": "current",
-  "updatedAtUtc": "2026-10-08T13:56:56.312Z",
+  "updatedAtUtc": "2026-10-11T08:40:25.252Z",
   "cases": {
     "EXCP-AUTH-HRS-REFRESH-TOKEN-001": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-001",
@@ -661,6 +661,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-ATT-ENDWORK-UI-001": {
+      "key": "EXCP-ATT-ENDWORK-UI-001",
+      "status": "succeeded",
+      "sourceFile": "test-cases/attendance/frontend/end-work-overtime-choice-popup-test-cases.md",
+      "caseId": "TC-01",
+      "caseTitle": "TC-01 — Verify end work within silent band shows only Finish (no Yes/No).",
+      "updatedAtUtc": "2026-10-11T08:37:49.483Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-002": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-002",
       "status": "new",
@@ -1292,6 +1302,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-ATT-ENDWORK-UI-002": {
+      "key": "EXCP-ATT-ENDWORK-UI-002",
+      "status": "succeeded",
+      "sourceFile": "test-cases/attendance/frontend/end-work-overtime-choice-popup-test-cases.md",
+      "caseId": "TC-02",
+      "caseTitle": "TC-02 — Verify end work past silent band shows Yes/No and extra-after-gap duration.",
+      "updatedAtUtc": "2026-10-11T08:38:29.107Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-003": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-003",
       "status": "new",
@@ -1892,6 +1912,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-ATT-ENDWORK-UI-003": {
+      "key": "EXCP-ATT-ENDWORK-UI-003",
+      "status": "succeeded",
+      "sourceFile": "test-cases/attendance/frontend/end-work-overtime-choice-popup-test-cases.md",
+      "caseId": "TC-03",
+      "caseTitle": "TC-03 — Verify No shows confirm then ends work without reason field.",
+      "updatedAtUtc": "2026-10-11T08:39:18.269Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-004": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-004",
       "status": "new",
@@ -2461,6 +2491,15 @@
       "updatedAtUtc": "2026-08-19T10:59:04.661Z",
       "runId": "current",
       "evidence": []
+    },
+    "EXCP-ATT-ENDWORK-UI-004": {
+      "key": "EXCP-ATT-ENDWORK-UI-004",
+      "status": "succeeded",
+      "sourceFile": "test-cases/attendance/frontend/end-work-overtime-choice-popup-test-cases.md",
+      "caseId": "TC-04",
+      "caseTitle": "TC-04 — Verify Yes shows reason field and Finish stays disabled until reason is valid.",
+      "updatedAtUtc": "2026-10-11T08:40:25.252Z",
+      "runId": "current"
     },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-005": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-005",
@@ -4231,7 +4270,8 @@
       "caseId": "TC-09",
       "caseTitle": "TC-09 — Verify Primary toggle",
       "updatedAtUtc": "2026-10-08T13:56:56.312Z",
-      "runId": "current"
+      "runId": "current",
+      "evidence": []
     },
     "EXCP-DEPLOY-HRS-SQL-ARTIFACT-009": {
       "key": "EXCP-DEPLOY-HRS-SQL-ARTIFACT-009",
