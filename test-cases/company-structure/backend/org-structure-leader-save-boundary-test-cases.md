@@ -15,7 +15,7 @@
 
 This document covers what a Leader can and cannot change when saving the company structure. A Leader manages their own team and the teams below it, and cannot manage another Leader's branch. Every change to who reports to whom also changes who approves that person's requests, so these limits matter for request approval.
 
-Two cases (TC-02) describe the correct behavior that the current system does not yet have. Their automated tests exist but are switched off with the reason "known gap" until the save check is fixed. Do not mark TC-02 as succeeded before that fix.
+A leader save is checked against the structure stored on the server. Re-ordering lines is display only and is always fine. Adding, removing or rewiring a reporting line, or flipping which line is the main one, is only accepted for people inside the leader area (or, with the outside-supervisor right, for a link from an own person to someone of another team). This was a gap until P0.9 and is now covered by automated tests that run and pass.
 
 ## Test pages
 
@@ -50,3 +50,15 @@ Two cases (TC-02) describe the correct behavior that the current system does not
 | TC-04 | EXCP-ORG-LEADER-SAVE-004 | Verify a leader cannot change the team tree | Regression | Leader A leads team "Sales" with child team "Sales North". Another leader leads team "Support". | 1. Sign in as leader A.<br>2. Send a save that moves "Sales" under "Support".<br>3. Send a save that moves "Sales North" under "Support".<br>4. Send a save that moves "Support" under "Sales". | 1. Every save is refused.<br>2. The team tree is unchanged. | Teams: "Sales", "Sales North", "Support" |
 | TC-05 | EXCP-ORG-LEADER-SAVE-005 | Verify a leader cannot use the people or the settings of another leader's team | Regression | Same as TC-04. | 1. Sign in as leader A.<br>2. Send a save that moves A's member into "Support".<br>3. Send a save that adds a new person to "Support".<br>4. Send a save that sets leader A as the final approver of "Support".<br>5. Send a save that gives leader A the leader badge of "Support". | 1. Every save is refused.<br>2. "Support" keeps its people, its final approver and its badge leader. | Team: "Support" |
 | TC-06 | EXCP-ORG-LEADER-SAVE-006 | Verify a leader's editable area is their own team and the teams below it, and only with the child-team right | Regression | Leader A leads "Sales" with child team "Sales North". Another leader leads "Support". | 1. Open the company structure as leader A with the child-team right on.<br>2. Note which teams and people can be edited.<br>3. Switch the child-team right off and open it again. | 1. With the right on, "Sales" and "Sales North" can be edited and "Support" cannot.<br>2. With the right off, only "Sales" can be edited. | Rights: "child teams" on and off |
+
+### Normal saves keep working
+
+| ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
+|----|-----|------|------|---------------|-------|----------|-----------|
+| TC-07 | EXCP-ORG-LEADER-SAVE-007 | Verify normal leader saves are not blocked by the stricter line check | Regression | Leader A leads a team and has member-level rights. Another leader has people in a different team. | 1. Sign in as leader A and open the company structure.<br>2. Save without changing anything.<br>3. Change only the display order of a line in another leader's team and save.<br>4. Add a new member under leader A and save.<br>5. Remove one of A's own members and save. | 1. Every save succeeds.<br>2. No reporting line of another leader's people changes. | Members: "new member", "A1" |
+
+### Protected lines
+
+| ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
+|----|-----|------|------|---------------|-------|----------|-----------|
+| TC-08 | EXCP-ORG-LEADER-SAVE-008 | Verify a leader cannot flip a main line, pull people of another branch under their own node, or link people outside their area | Regression | Leader A and leader B lead different teams. B has people B1 and B2. | 1. Sign in as leader A without the outside-supervisor right.<br>2. Save with B1's main line turned into a secondary line.<br>3. Save with B1 now reporting to A.<br>4. Turn the outside-supervisor right on and save with B1 also reporting to A as a secondary line.<br>5. With the right still on, save with B2 now reporting to B1. | 1. Steps 2 and 3 are refused with `"You are not allowed to change this part of the organization chart."`.<br>2. Step 4 succeeds and B1 keeps B as the main leader.<br>3. Step 5 is refused. | People: "B1", "B2" |

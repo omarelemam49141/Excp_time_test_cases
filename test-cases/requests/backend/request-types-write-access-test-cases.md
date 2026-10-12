@@ -9,7 +9,7 @@
 - APIs: `POST /api/Request-types/create`, `PUT /api/Request-types/update`, `DELETE /api/Request-types/deleteById`, `GET /api/Request-types/getById`, `POST /api/Request-types/getAll`, `GET /api/Request-types/get-request-types-counts`
 - Related code: `src/Excp.HRSystem.Application/Services/RequestTypes/RequestTypesService.cs`
 - Related docs: `docs/backend/technical/request-types-write-access.md`
-- Automation: `test/Excp.HRSystem.Application.Tests/Requests/RequestTypesWriteGateTests.cs`
+- Automation: `test/Excp.HRSystem.Application.Tests/Requests/RequestTypesWriteGateTests.cs`, `test/Excp.HRSystem.Application.Tests/Requests/RequestTypesCountsScopeTests.cs`
 
 ## Scope
 
@@ -42,3 +42,11 @@ The automated tests check the access rules on each route for every role. The ste
 | ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
 |----|-----|------|------|---------------|-------|----------|-----------|
 | TC-03 | EXCP-REQ-HRS-RTYPES-002 | Verify employees, leaders and HR can still read request types | Regression | An employee, a leader and an HR user exist. | 1. Sign in as the employee and open the "My requests" page and the new request dialog.<br>2. Sign in as the leader and open the "Requests" page.<br>3. As each role, send `GET /api/Request-types/getById` and `POST /api/Request-types/getAll`. | 1. The request types appear in the dialog and in the filters.<br>2. The read calls succeed for every role. | Request type id: "1" |
+
+### Counts scope
+
+| ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
+|----|-----|------|------|---------------|-------|----------|-----------|
+| TC-04 | EXCP-REQ-HRS-RTYPES-004 | Verify an employee only gets counts of their own requests | Regression | Employees A and B have requests of different types. Employee A is signed in. | 1. Send `GET /api/Request-types/get-request-types-counts` with no filters.<br>2. Send it again naming employee B as the issuer and a leader as the receiver.<br>3. Send it without a sign-in token. | 1. Steps 1 and 2 return counts for employee A's requests only.<br>2. Step 3 is refused. | Issuer id: "employee-b-id" |
+| TC-05 | EXCP-REQ-HRS-RTYPES-005 | Verify a leader only gets counts of requests routed to them | Regression | Leaders L1 and L2 each have requests routed to them. Leader L1 is signed in. | 1. Send the counts call naming L1 as the receiver.<br>2. Send it naming employee B as the issuer.<br>3. Send it naming L2 as the receiver. | 1. Step 1 returns counts of the requests routed to L1.<br>2. Step 2 returns only those of employee B that are routed to L1.<br>3. Step 3 returns a forbidden response and no counts. | Receiver id: "leader-l2-id" |
+| TC-06 | EXCP-REQ-HRS-RTYPES-006 | Verify an administrator keeps the full counts and the optional filters | Regression | An administrator is signed in. | 1. Send the counts call with no filters.<br>2. Send it naming a leader as the receiver.<br>3. Send it naming an employee as the issuer. | 1. Step 1 returns counts for everyone.<br>2. Steps 2 and 3 return counts for that leader and that employee. | Receiver id: "leader-l1-id" |
