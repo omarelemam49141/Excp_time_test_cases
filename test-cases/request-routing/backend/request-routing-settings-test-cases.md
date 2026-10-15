@@ -8,7 +8,7 @@
 - APIs: `GET /api/request-routing-settings`, `PUT /api/request-routing-settings`, `POST /api/Requests/create`, `POST /api/Requests/get-requests-paged-filtered-list`
 - Related code: `src/Excp.HRSystem.Domain/RequestRouting/RequestRoutingPolicy.cs`
 - Related docs: `docs/backend/technical/request-routing-settings.md`
-- Automation: `test/Excp.HRSystem.Application.Tests/Requests/RequestRoutingPolicyTests.cs`, `test/Excp.HRSystem.Application.Tests/Requests/SaveOrgStructureTeamRoutingValidationTests.cs`
+- Automation: `test/Excp.HRSystem.Application.Tests/Requests/RequestRoutingPolicyTests.cs`, `test/Excp.HRSystem.Application.Tests/Requests/SaveOrgStructureTeamRoutingValidationTests.cs`, `test/Excp.HRSystem.Application.Tests/CompanyStructure/OrgStructureTeamChainTests.cs`
 
 ## Scope
 
@@ -20,7 +20,7 @@ Global, team, and leader request routing modes; snapshots; final approver; leade
 - Personal override wins over team and global.
 - Notify-only hops cannot act.
 - Final approver is forced to an actionable hop.
-- Pick a specific person is team-only and must already sit on that team's leader chain.
+- Pick a specific person is team-only and must sit on the team routing chain after stop-at is applied; configured SpecificUser is forced onto the request as final approver.
 
 ## Test cases
 
