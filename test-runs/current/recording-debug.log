@@ -2,3 +2,23 @@
 2026-10-06T13:56:54.495Z cleanup-stream
 2026-10-08T11:20:34.532Z cleanup-stream
 2026-10-08T11:29:39.702Z cleanup-stream
+2026-10-11T10:38:26.547Z recorder-start-failed {"name":"NotAllowedError","code":0}
+2026-10-11T10:38:31.800Z recorder-start {"videoMime":"video/webm;codecs=vp8","includeMicrophone":false,"source":"tab","dualTrack":false}
+2026-10-11T10:38:34.347Z upload-flow-start key=EXCP-AUTH-HRS-REFRESH-TOKEN-001 {"caseKey":"EXCP-AUTH-HRS-REFRESH-TOKEN-001","includeMicrophone":false,"source":"tab"}
+2026-10-11T10:38:34.349Z recorder-stop-requested {"hasVoice":false}
+2026-10-11T10:38:34.367Z video-finalized {"bytes":245555,"chunkStrategy":"live-chunks"}
+2026-10-11T10:38:34.368Z recorder-finalized {"videoBytes":245555,"audioBytes":0,"durationSec":2.595,"hasVoice":false}
+2026-10-11T10:38:34.369Z upload-video key=EXCP-AUTH-HRS-REFRESH-TOKEN-001 {"videoBytes":245555}
+2026-10-11T10:38:34.370Z evidence-upload-started key=EXCP-AUTH-HRS-REFRESH-TOKEN-001 voice=no content-length=245555
+2026-10-11T10:38:34.403Z upload-ok key=EXCP-AUTH-HRS-REFRESH-TOKEN-001 {"bytes":245555,"id":"95408b15-0469-413e-b64e-bf7178590d8f"}
+2026-10-11T10:38:34.405Z cleanup-stream
+2026-10-11T10:51:06.191Z recorder-start {"videoMime":"video/webm;codecs=vp8","includeMicrophone":false,"source":"tab","dualTrack":false}
+2026-10-11T10:51:08.675Z upload-flow-start key=EXCP-AUTH-ANG-REFRESH-TOKEN-001 {"caseKey":"EXCP-AUTH-ANG-REFRESH-TOKEN-001","includeMicrophone":false,"source":"tab"}
+2026-10-11T10:51:08.677Z recorder-stop-requested {"hasVoice":false}
+2026-10-11T10:51:08.687Z video-finalized {"bytes":195907,"chunkStrategy":"live-chunks"}
+2026-10-11T10:51:08.688Z recorder-finalized {"videoBytes":195907,"audioBytes":0,"durationSec":2.526,"hasVoice":false}
+2026-10-11T10:51:08.690Z upload-video key=EXCP-AUTH-ANG-REFRESH-TOKEN-001 {"videoBytes":195907}
+2026-10-11T10:51:08.691Z evidence-upload-started key=EXCP-AUTH-ANG-REFRESH-TOKEN-001 voice=no content-length=195907
+2026-10-11T10:51:08.752Z upload-ok key=EXCP-AUTH-ANG-REFRESH-TOKEN-001 {"bytes":195907,"id":"070ab882-d071-4285-86e1-030914e33df1"}
+2026-10-11T10:51:08.753Z cleanup-stream
+2026-10-11T11:10:45.421Z cleanup-stream

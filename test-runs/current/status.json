@@ -2,33 +2,40 @@
   "version": 1,
   "project": "excp-time",
   "runId": "current",
-  "updatedAtUtc": "2026-10-11T08:40:25.252Z",
+  "updatedAtUtc": "2026-10-11T10:51:08.709Z",
   "cases": {
     "EXCP-AUTH-HRS-REFRESH-TOKEN-001": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-001",
-      "status": "failed",
+      "status": "in-progress",
+      "currentStep": 4,
       "sourceFile": "test-cases/authentication/backend/hrsystem-refresh-token-test-cases.md",
       "caseId": "TC-01",
       "caseTitle": "TC-01 — Verify Happy path refresh",
-      "failure": {
-        "kind": "product-bug",
-        "reportedAtUtc": "2026-05-19T09:14:37.999Z",
-        "actual": "test actual",
-        "fixHint": "test fix hint"
-      },
-      "updatedAtUtc": "2026-05-19T09:14:37.999Z",
+      "updatedAtUtc": "2026-10-11T10:38:40.408Z",
       "runId": "current",
       "evidence": []
     },
     "EXCP-AUTH-ANG-REFRESH-TOKEN-001": {
       "key": "EXCP-AUTH-ANG-REFRESH-TOKEN-001",
       "status": "in-progress",
+      "currentStep": 1,
       "sourceFile": "test-cases/authentication/backend/refresh-token-test-cases.md",
       "caseId": "TC-01",
       "caseTitle": "TC-01 — Verify Valid refresh token rotation",
-      "updatedAtUtc": "2026-05-17T08:18:32.910Z",
+      "updatedAtUtc": "2026-10-11T10:51:08.709Z",
       "runId": "current",
-      "evidence": []
+      "evidence": [
+        {
+          "id": "070ab882-d071-4285-86e1-030914e33df1",
+          "kind": "video",
+          "path": "test-runs/current/evidence/authentication/backend/refresh-token-test-cases/1-EXCP-AUTH-ANG-REFRESH-TOKEN-001/1- 2026-10-11T10-51-08-699Z.webm",
+          "capturedAtUtc": "2026-10-11T10:51:08.699Z",
+          "durationSec": 2.5,
+          "bytes": 195907,
+          "source": "tab",
+          "mime": "video/webm;codecs=vp8"
+        }
+      ]
     },
     "EXCP-AUTH-REFRESH-TOKEN-001": {
       "key": "EXCP-AUTH-REFRESH-TOKEN-001",
@@ -2499,7 +2506,8 @@
       "caseId": "TC-04",
       "caseTitle": "TC-04 — Verify Yes shows reason field and Finish stays disabled until reason is valid.",
       "updatedAtUtc": "2026-10-11T08:40:25.252Z",
-      "runId": "current"
+      "runId": "current",
+      "evidence": []
     },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-005": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-005",
