@@ -2,7 +2,7 @@
   "version": 1,
   "project": "excp-time",
   "runId": "current",
-  "updatedAtUtc": "2026-10-11T10:51:08.709Z",
+  "updatedAtUtc": "2026-10-15T12:06:27.003Z",
   "cases": {
     "EXCP-AUTH-HRS-REFRESH-TOKEN-001": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-001",
@@ -675,6 +675,17 @@
       "caseId": "TC-01",
       "caseTitle": "TC-01 — Verify end work within silent band shows only Finish (no Yes/No).",
       "updatedAtUtc": "2026-10-11T08:37:49.483Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-REQ-ROUTE-UI-020": {
+      "key": "EXCP-REQ-ROUTE-UI-020",
+      "status": "in-progress",
+      "currentStep": 1,
+      "sourceFile": "test-cases/request-routing/frontend/overtime-approval-recipients-ui-test-cases.md",
+      "caseId": "TC-01",
+      "caseTitle": "TC-01 — Verify End work with overtime reaches the direct leader",
+      "updatedAtUtc": "2026-10-15T11:45:08.452Z",
       "runId": "current",
       "evidence": []
     },
@@ -1391,13 +1402,13 @@
     },
     "EXCP-ORG-ORG-CHART-004": {
       "key": "EXCP-ORG-ORG-CHART-004",
-      "status": "new",
+      "status": "in-progress",
+      "currentStep": 1,
       "sourceFile": "test-cases/company-structure/frontend/company-structure-org-chart-test-cases.md",
       "caseId": "TC-03",
       "caseTitle": "TC-03 — Verify Non-privileged blocked",
-      "updatedAtUtc": "2026-05-13T20:11:09.247Z",
-      "runId": "current",
-      "evidence": []
+      "updatedAtUtc": "2026-10-15T12:06:27.003Z",
+      "runId": "current"
     },
     "EXCP-DEPLOY-HRS-SQL-ARTIFACT-003": {
       "key": "EXCP-DEPLOY-HRS-SQL-ARTIFACT-003",

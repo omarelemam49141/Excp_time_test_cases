@@ -22,7 +22,7 @@
 
 | ID | Key | Case | Type | Preconditions | Steps | Expected |
 |----|-----|------|------|---------------|-------|----------|
-| TC-01 | EXCP-ORG-LEADER-PERM-FE-001 | Verify Admin opens structure settings with both tabs | Main | Admin on `/admin/company-structure` | 1. Tap **"Structure settings"**.<br>2. Switch to **"Leader permissions"**. | 1. Dialog opens.<br>2. Member and badge permission groups appear with toggles (all off by default). |
+| TC-01 | EXCP-ORG-LEADER-PERM-FE-001 | Verify Admin opens structure settings with both tabs | Main | Admin on `/admin/company-structure` | 1. Tap **"Structure settings"**.<br>2. Switch to **"Leader permissions"**. | 1. Dialog opens.<br>2. Member and badge permission groups appear with toggles (all off by default).<br>3. "Edit leader personal routing" is not shown. |
 | TC-02 | EXCP-ORG-LEADER-PERM-FE-002 | Verify team inherit whole pack | Main | Admin; team exists | 1. Open team routing/settings.<br>2. On **Leader permissions** tab, check **Use the company default**.<br>3. Apply. | Success toast; team uses global pack. |
 
 ### Leader edit
