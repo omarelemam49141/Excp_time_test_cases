@@ -20,10 +20,12 @@ This index lists the private test-case definitions organized by project, feature
 - `attendance/backend/update-attendance-record-work-segments-test-cases.md`
 - `attendance/backend/modify-attendance-status-update-test-cases.md`
 - `attendance/backend/end-work-after-gap-choice-test-cases.md`
-- `attendance/frontend/end-work-overtime-choice-popup-test-cases.md`
+- `attendance/backend/month-shortage-overtime-test-cases.md`
 
 ### Attendance / frontend
 
+- `attendance/frontend/end-work-overtime-choice-popup-test-cases.md`
+- `attendance/frontend/month-shortage-overtime-test-cases.md`
 - `attendance/frontend/modify-attendance-work-place-test-cases.md`
 - `attendance/frontend/modify-attendance-list-users-status-test-cases.md`
 
