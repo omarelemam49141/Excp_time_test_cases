@@ -2,7 +2,7 @@
   "version": 1,
   "project": "excp-time",
   "runId": "current",
-  "updatedAtUtc": "2026-10-15T12:06:27.003Z",
+  "updatedAtUtc": "2026-10-19T09:22:22.601Z",
   "cases": {
     "EXCP-AUTH-HRS-REFRESH-TOKEN-001": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-001",
@@ -689,6 +689,26 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-REQ-HRS-READ-007": {
+      "key": "EXCP-REQ-HRS-READ-007",
+      "status": "succeeded",
+      "sourceFile": "test-cases/requests/backend/request-visibility-and-notification-links-test-cases.md",
+      "caseId": "TC-01",
+      "caseTitle": "TC-01 — Verify a Leader can list the requests they submitted",
+      "updatedAtUtc": "2026-10-19T08:40:36.165Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-NOTIF-NAV-001": {
+      "key": "EXCP-NOTIF-NAV-001",
+      "status": "succeeded",
+      "sourceFile": "test-cases/notifications/frontend/notification-click-routing-test-cases.md",
+      "caseId": "TC-01",
+      "caseTitle": "TC-01 — Verify the requester is taken to My Requests with the request opened",
+      "updatedAtUtc": "2026-10-19T08:40:42.716Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-002": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-002",
       "status": "new",
@@ -1330,6 +1350,26 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-REQ-HRS-ACCESS-001": {
+      "key": "EXCP-REQ-HRS-ACCESS-001",
+      "status": "succeeded",
+      "sourceFile": "test-cases/requests/backend/request-visibility-and-notification-links-test-cases.md",
+      "caseId": "TC-02",
+      "caseTitle": "TC-02 — Verify HR can use the requests API but cannot approve or reject",
+      "updatedAtUtc": "2026-10-19T08:40:38.415Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-NOTIF-NAV-002": {
+      "key": "EXCP-NOTIF-NAV-002",
+      "status": "succeeded",
+      "sourceFile": "test-cases/notifications/frontend/notification-click-routing-test-cases.md",
+      "caseId": "TC-02",
+      "caseTitle": "TC-02 — Verify a Leader or Admin is taken to the review page",
+      "updatedAtUtc": "2026-10-19T08:40:44.868Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-003": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-003",
       "status": "new",
@@ -1408,7 +1448,8 @@
       "caseId": "TC-03",
       "caseTitle": "TC-03 — Verify Non-privileged blocked",
       "updatedAtUtc": "2026-10-15T12:06:27.003Z",
-      "runId": "current"
+      "runId": "current",
+      "evidence": []
     },
     "EXCP-DEPLOY-HRS-SQL-ARTIFACT-003": {
       "key": "EXCP-DEPLOY-HRS-SQL-ARTIFACT-003",
@@ -1937,6 +1978,26 @@
       "caseId": "TC-03",
       "caseTitle": "TC-03 — Verify No shows confirm then ends work without reason field.",
       "updatedAtUtc": "2026-10-11T08:39:18.269Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-REQ-HRS-CANCEL-008": {
+      "key": "EXCP-REQ-HRS-CANCEL-008",
+      "status": "succeeded",
+      "sourceFile": "test-cases/requests/backend/request-visibility-and-notification-links-test-cases.md",
+      "caseId": "TC-03",
+      "caseTitle": "TC-03 — Verify a request cancelled by an Admin sends each person a link they can open",
+      "updatedAtUtc": "2026-10-19T08:40:40.602Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-NOTIF-NAV-003": {
+      "key": "EXCP-NOTIF-NAV-003",
+      "status": "succeeded",
+      "sourceFile": "test-cases/notifications/frontend/notification-click-routing-test-cases.md",
+      "caseId": "TC-03",
+      "caseTitle": "TC-03 — Verify HR stays on the current page and sees read-only details",
+      "updatedAtUtc": "2026-10-19T09:22:02.087Z",
       "runId": "current",
       "evidence": []
     },
@@ -2520,6 +2581,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-NOTIF-NAV-004": {
+      "key": "EXCP-NOTIF-NAV-004",
+      "status": "succeeded",
+      "sourceFile": "test-cases/notifications/frontend/notification-click-routing-test-cases.md",
+      "caseId": "TC-04",
+      "caseTitle": "TC-04 — Verify notification text is Arabic in the Arabic app",
+      "updatedAtUtc": "2026-10-19T08:40:47.051Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-005": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-005",
       "status": "new",
@@ -3050,6 +3121,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-NOTIF-MYREQ-001": {
+      "key": "EXCP-NOTIF-MYREQ-001",
+      "status": "succeeded",
+      "sourceFile": "test-cases/notifications/frontend/notification-click-routing-test-cases.md",
+      "caseId": "TC-05",
+      "caseTitle": "TC-05 — Verify a Leader sees their own pending request on My Requests",
+      "updatedAtUtc": "2026-10-19T09:22:07.634Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-006": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-006",
       "status": "new",
@@ -3511,6 +3592,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-NOTIF-MYREQ-002": {
+      "key": "EXCP-NOTIF-MYREQ-002",
+      "status": "succeeded",
+      "sourceFile": "test-cases/notifications/frontend/notification-click-routing-test-cases.md",
+      "caseId": "TC-06",
+      "caseTitle": "TC-06 — Verify HR can submit a request and see it on My Requests",
+      "updatedAtUtc": "2026-10-19T09:22:09.460Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-HRS-REFRESH-TOKEN-007": {
       "key": "EXCP-AUTH-HRS-REFRESH-TOKEN-007",
       "status": "new",
@@ -3901,6 +3992,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-NOTIF-MYREQ-003": {
+      "key": "EXCP-NOTIF-MYREQ-003",
+      "status": "succeeded",
+      "sourceFile": "test-cases/notifications/frontend/notification-click-routing-test-cases.md",
+      "caseId": "TC-07",
+      "caseTitle": "TC-07 — Verify a decided request moves to the right tab",
+      "updatedAtUtc": "2026-10-19T09:22:11.413Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-REFRESH-TOKEN-008": {
       "key": "EXCP-AUTH-REFRESH-TOKEN-008",
       "status": "new",
@@ -4238,6 +4339,16 @@
       "caseId": "TC-08",
       "caseTitle": "TC-08 — Verify A punch start beyond late grace shows \"Late {n} min\" with the penalizable minutes.",
       "updatedAtUtc": "2026-08-19T12:00:50.656Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-NOTIF-ROUTE-001": {
+      "key": "EXCP-NOTIF-ROUTE-001",
+      "status": "succeeded",
+      "sourceFile": "test-cases/notifications/frontend/notification-click-routing-test-cases.md",
+      "caseId": "TC-08",
+      "caseTitle": "TC-08 — Verify the direct leader mode decides what the Leader receives",
+      "updatedAtUtc": "2026-10-19T09:22:13.232Z",
       "runId": "current",
       "evidence": []
     },
@@ -4582,6 +4693,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-NOTIF-ROUTE-002": {
+      "key": "EXCP-NOTIF-ROUTE-002",
+      "status": "succeeded",
+      "sourceFile": "test-cases/notifications/frontend/notification-click-routing-test-cases.md",
+      "caseId": "TC-09",
+      "caseTitle": "TC-09 — Verify \"لا شيء\" as the global direct mode is refused when there is no final approver",
+      "updatedAtUtc": "2026-10-19T09:22:15.097Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-REFRESH-TOKEN-010": {
       "key": "EXCP-AUTH-REFRESH-TOKEN-010",
       "status": "new",
@@ -4892,6 +5013,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-NOTIF-ROUTE-003": {
+      "key": "EXCP-NOTIF-ROUTE-003",
+      "status": "succeeded",
+      "sourceFile": "test-cases/notifications/frontend/notification-click-routing-test-cases.md",
+      "caseId": "TC-10",
+      "caseTitle": "TC-10 — Verify Admin and HR are always told about every new request",
+      "updatedAtUtc": "2026-10-19T09:22:16.938Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-REFRESH-TOKEN-011": {
       "key": "EXCP-AUTH-REFRESH-TOKEN-011",
       "status": "new",
@@ -5154,6 +5285,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-NOTIF-LIFE-001": {
+      "key": "EXCP-NOTIF-LIFE-001",
+      "status": "succeeded",
+      "sourceFile": "test-cases/notifications/frontend/notification-click-routing-test-cases.md",
+      "caseId": "TC-11",
+      "caseTitle": "TC-11 — Verify editing a pending request notifies the reviewers again",
+      "updatedAtUtc": "2026-10-19T09:22:18.779Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-AUTH-REFRESH-TOKEN-012": {
       "key": "EXCP-AUTH-REFRESH-TOKEN-012",
       "status": "new",
@@ -5395,6 +5536,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-NOTIF-LIFE-002": {
+      "key": "EXCP-NOTIF-LIFE-002",
+      "status": "succeeded",
+      "sourceFile": "test-cases/notifications/frontend/notification-click-routing-test-cases.md",
+      "caseId": "TC-12",
+      "caseTitle": "TC-12 — Verify a rejection reaches the Employee with the reason",
+      "updatedAtUtc": "2026-10-19T09:22:20.754Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-BUG-HRS-ADMIN-AZURE-013": {
       "key": "EXCP-BUG-HRS-ADMIN-AZURE-013",
       "status": "new",
@@ -5605,6 +5756,15 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-NOTIF-LIFE-003": {
+      "key": "EXCP-NOTIF-LIFE-003",
+      "status": "succeeded",
+      "sourceFile": "test-cases/notifications/frontend/notification-click-routing-test-cases.md",
+      "caseId": "TC-13",
+      "caseTitle": "TC-13 — Verify cancelling sends each person a link they can open",
+      "updatedAtUtc": "2026-10-19T09:22:22.601Z",
+      "runId": "current"
+    },
     "EXCP-BUG-HRS-ADMIN-AZURE-014": {
       "key": "EXCP-BUG-HRS-ADMIN-AZURE-014",
       "status": "new",
@@ -5785,6 +5945,16 @@
       "runId": "current",
       "evidence": []
     },
+    "EXCP-NOTIF-NAV-005": {
+      "key": "EXCP-NOTIF-NAV-005",
+      "status": "succeeded",
+      "sourceFile": "test-cases/notifications/frontend/notification-click-routing-test-cases.md",
+      "caseId": "TC-14",
+      "caseTitle": "TC-14 — Verify a decided request opens from its link on the review page",
+      "updatedAtUtc": "2026-10-19T09:22:04.009Z",
+      "runId": "current",
+      "evidence": []
+    },
     "EXCP-BUG-HRS-ADMIN-AZURE-015": {
       "key": "EXCP-BUG-HRS-ADMIN-AZURE-015",
       "status": "new",
@@ -5952,6 +6122,16 @@
       "caseId": "TC-15",
       "caseTitle": "TC-15 — Verify An employee with no leftover overtime shows `0:00:00` in \"Payable overtime\".",
       "updatedAtUtc": "2026-08-19T14:21:42.308Z",
+      "runId": "current",
+      "evidence": []
+    },
+    "EXCP-NOTIF-NAV-006": {
+      "key": "EXCP-NOTIF-NAV-006",
+      "status": "succeeded",
+      "sourceFile": "test-cases/notifications/frontend/notification-click-routing-test-cases.md",
+      "caseId": "TC-15",
+      "caseTitle": "TC-15 — Verify popup titles are Arabic in the Arabic app",
+      "updatedAtUtc": "2026-10-19T09:22:05.889Z",
       "runId": "current",
       "evidence": []
     },
