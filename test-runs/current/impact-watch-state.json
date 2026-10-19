@@ -17,5 +17,54 @@
       "head": "54f09e1e8e173afd046b27b8aab79317ebffdea2"
     }
   },
-  "pending": {}
+  "pending": {
+    "EXCP-NOTIF-NAV-006": {
+      "changedPaths": [
+        "src/assets/i18n/ar.json"
+      ],
+      "matchedRelatedPath": "src/assets/i18n/ar.json",
+      "sourceFile": "test-cases/notifications/frontend/notification-click-routing-test-cases.md",
+      "firstSeen": "2026-10-19T11:35:07.604Z"
+    },
+    "EXCP-NOTIF-ROUTE-002": {
+      "changedPaths": [
+        "src/assets/i18n/ar.json"
+      ],
+      "matchedRelatedPath": "src/assets/i18n/ar.json",
+      "sourceFile": "test-cases/notifications/frontend/notification-click-routing-test-cases.md",
+      "firstSeen": "2026-10-19T11:35:07.604Z"
+    },
+    "EXCP-ATT-ENDWORK-UI-001": {
+      "changedPaths": [
+        "src/app/features/attendance/components/working-timer/working-timer.component.ts"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/working-timer/working-timer.component.ts",
+      "sourceFile": "test-cases/attendance/frontend/end-work-overtime-choice-popup-test-cases.md",
+      "firstSeen": "2026-10-19T12:06:55.817Z"
+    },
+    "EXCP-ATT-ENDWORK-UI-002": {
+      "changedPaths": [
+        "src/app/features/attendance/components/working-timer/working-timer.component.ts"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/working-timer/working-timer.component.ts",
+      "sourceFile": "test-cases/attendance/frontend/end-work-overtime-choice-popup-test-cases.md",
+      "firstSeen": "2026-10-19T12:06:55.817Z"
+    },
+    "EXCP-ATT-ENDWORK-UI-003": {
+      "changedPaths": [
+        "src/app/features/attendance/components/working-timer/working-timer.component.ts"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/working-timer/working-timer.component.ts",
+      "sourceFile": "test-cases/attendance/frontend/end-work-overtime-choice-popup-test-cases.md",
+      "firstSeen": "2026-10-19T12:06:55.817Z"
+    },
+    "EXCP-ATT-ENDWORK-UI-004": {
+      "changedPaths": [
+        "src/app/features/attendance/components/working-timer/working-timer.component.ts"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/working-timer/working-timer.component.ts",
+      "sourceFile": "test-cases/attendance/frontend/end-work-overtime-choice-popup-test-cases.md",
+      "firstSeen": "2026-10-19T12:06:55.817Z"
+    }
+  }
 }
