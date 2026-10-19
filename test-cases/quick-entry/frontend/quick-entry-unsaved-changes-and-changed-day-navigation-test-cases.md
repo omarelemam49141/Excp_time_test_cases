@@ -12,7 +12,7 @@
 
 ## Scope
 
-Covers `/attendance/quick-entry` save controls, unsaved-change prompts, editable overtime saves for existing overtime entries, and restoring the last selected period.
+Covers `/attendance/quick-entry` save controls, unsaved-change prompts, editable overtime saves for existing overtime entries, and the default period when the page is opened fresh.
 
 ## Test pages
 
@@ -27,7 +27,7 @@ Covers `/attendance/quick-entry` save controls, unsaved-change prompts, editable
 - Existing editable overtime with `"Within overtime gap"` status can be saved after a time edit.
 - Existing editable overtime with `"Within overtime gap"` status shows the within-gap label/color, not the pending label/color.
 - A selected `"From day to day"` period remains selected after browser refresh.
-- Returning to quick entry from another page restores the last selected period.
+- Returning to quick entry from another page opens on the default period (1st of the month to today).
 - **Apply schedule correction** is hidden while unsaved edits exist and returns after save.
 
 ## Test cases
@@ -56,4 +56,4 @@ Covers `/attendance/quick-entry` save controls, unsaved-change prompts, editable
 | ID | Key | Case | Type | Preconditions | Steps | Expected | Test data |
 |----|-----|------|------|---------------|-------|----------|-----------|
 | TC-09 | EXCP-QE-UNSAVED-CHANGES-009 | Verify refreshing quick entry keeps a selected date range | Main | The `/attendance/quick-entry` page is loaded with no unsaved edits. | 1. Click `"From day to day"`.<br>2. Select `"2026-05-01"` in `"From"`.<br>3. Select `"2026-05-13"` in `"To"`.<br>4. Wait until the period data loads.<br>5. Refresh the browser tab. | 1. The page opens with `"From day to day"` still selected.<br>2. `"From"` shows `"01/05/2026"`.<br>3. `"To"` shows `"13/05/2026"`.<br>4. The visible days match the selected period. | From: `"2026-05-01"`<br>To: `"2026-05-13"` |
-| TC-10 | EXCP-QE-UNSAVED-CHANGES-010 | Verify returning to quick entry restores the last selected date range | Main | The `/attendance/quick-entry` page is loaded with no unsaved edits. | 1. Click `"From day to day"`.<br>2. Select `"2026-05-01"` in `"From"`.<br>3. Select `"2026-05-13"` in `"To"`.<br>4. Wait until the period data loads.<br>5. Navigate to another page, such as `"Home"`.<br>6. Open `/attendance/quick-entry` again. | 1. The page opens with `"From day to day"` still selected.<br>2. `"From"` shows `"01/05/2026"`.<br>3. `"To"` shows `"13/05/2026"`.<br>4. The visible days match the selected period without choosing the dates again. | From: `"2026-05-01"`<br>To: `"2026-05-13"` |
+| TC-10 | EXCP-QE-UNSAVED-CHANGES-010 | Verify returning to quick entry opens on the default date range | Main | The `/attendance/quick-entry` page is loaded with no unsaved edits. | 1. Click `"From day to day"`.<br>2. Select `"2026-05-01"` in `"From"`.<br>3. Select `"2026-05-13"` in `"To"`.<br>4. Wait until the period data loads.<br>5. Navigate to another page, such as `"Home"`.<br>6. Open `/attendance/quick-entry` again from the menu. | 1. The page opens with `"From day to day"` selected.<br>2. `"From"` shows the first day of the current month.<br>3. `"To"` shows today's date.<br>4. The visible days match that default period. | From: `"2026-05-01"`<br>To: `"2026-05-13"` |

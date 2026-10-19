@@ -76,9 +76,9 @@
     },
     "EXCP-OT-REVIEW-READINESS-011": {
       "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss",
         "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
-        "src/app/core/services/attendance.service.ts",
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+        "src/app/core/services/attendance.service.ts"
       ],
       "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry/",
       "sourceFile": "test-cases/overtime/frontend/overtime-review-readiness-guard-test-cases.md",
@@ -86,9 +86,9 @@
     },
     "EXCP-QE-OT-DELETE-001": {
       "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss",
         "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
-        "src/app/core/services/attendance.service.ts",
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+        "src/app/core/services/attendance.service.ts"
       ],
       "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
       "sourceFile": "test-cases/quick-entry/frontend/quick-entry-overtime-delete-test-cases.md",
@@ -96,9 +96,9 @@
     },
     "EXCP-QE-OT-DELETE-002": {
       "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss",
         "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
-        "src/app/core/services/attendance.service.ts",
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+        "src/app/core/services/attendance.service.ts"
       ],
       "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
       "sourceFile": "test-cases/quick-entry/frontend/quick-entry-overtime-delete-test-cases.md",
@@ -106,9 +106,9 @@
     },
     "EXCP-QE-OT-DELETE-003": {
       "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss",
         "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
-        "src/app/core/services/attendance.service.ts",
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+        "src/app/core/services/attendance.service.ts"
       ],
       "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
       "sourceFile": "test-cases/quick-entry/frontend/quick-entry-overtime-delete-test-cases.md",
@@ -116,9 +116,9 @@
     },
     "EXCP-QE-OT-DELETE-004": {
       "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss",
         "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
-        "src/app/core/services/attendance.service.ts",
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+        "src/app/core/services/attendance.service.ts"
       ],
       "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
       "sourceFile": "test-cases/quick-entry/frontend/quick-entry-overtime-delete-test-cases.md",
@@ -126,9 +126,9 @@
     },
     "EXCP-QE-PENDING-LEAVE-005": {
       "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss",
         "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
-        "src/app/core/services/attendance.service.ts",
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+        "src/app/core/services/attendance.service.ts"
       ],
       "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
       "sourceFile": "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md",
@@ -136,9 +136,9 @@
     },
     "EXCP-QE-PENDING-LEAVE-006": {
       "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss",
         "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
-        "src/app/core/services/attendance.service.ts",
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+        "src/app/core/services/attendance.service.ts"
       ],
       "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
       "sourceFile": "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md",
@@ -146,9 +146,9 @@
     },
     "EXCP-QE-PENDING-LEAVE-009": {
       "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss",
         "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
-        "src/app/core/services/attendance.service.ts",
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+        "src/app/core/services/attendance.service.ts"
       ],
       "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
       "sourceFile": "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md",
@@ -156,9 +156,9 @@
     },
     "EXCP-QE-PENDING-LEAVE-012": {
       "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss",
         "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
-        "src/app/core/services/attendance.service.ts",
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+        "src/app/core/services/attendance.service.ts"
       ],
       "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
       "sourceFile": "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md",
@@ -166,9 +166,9 @@
     },
     "EXCP-QE-PENDING-LEAVE-013": {
       "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss",
         "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
-        "src/app/core/services/attendance.service.ts",
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+        "src/app/core/services/attendance.service.ts"
       ],
       "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
       "sourceFile": "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md",
@@ -176,9 +176,9 @@
     },
     "EXCP-QE-PENDING-LEAVE-015": {
       "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss",
         "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
-        "src/app/core/services/attendance.service.ts",
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+        "src/app/core/services/attendance.service.ts"
       ],
       "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
       "sourceFile": "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md",
@@ -186,9 +186,9 @@
     },
     "EXCP-QE-PENDING-LEAVE-017": {
       "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss",
         "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
-        "src/app/core/services/attendance.service.ts",
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+        "src/app/core/services/attendance.service.ts"
       ],
       "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
       "sourceFile": "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md",
@@ -196,9 +196,9 @@
     },
     "EXCP-QE-PENDING-LEAVE-018": {
       "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss",
         "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
-        "src/app/core/services/attendance.service.ts",
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+        "src/app/core/services/attendance.service.ts"
       ],
       "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
       "sourceFile": "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md",
@@ -206,8 +206,8 @@
     },
     "EXCP-QE-PROBLEM-DAYS-015": {
       "changedPaths": [
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts"
       ],
       "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
       "sourceFile": "test-cases/quick-entry/frontend/quick-entry-problem-days-navigator-test-cases.md",
@@ -215,8 +215,8 @@
     },
     "EXCP-QE-PROBLEM-DAYS-016": {
       "changedPaths": [
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts"
       ],
       "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
       "sourceFile": "test-cases/quick-entry/frontend/quick-entry-problem-days-navigator-test-cases.md",
@@ -224,8 +224,8 @@
     },
     "EXCP-QE-PROBLEM-DAYS-017": {
       "changedPaths": [
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts"
       ],
       "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
       "sourceFile": "test-cases/quick-entry/frontend/quick-entry-problem-days-navigator-test-cases.md",
@@ -233,8 +233,8 @@
     },
     "EXCP-QE-PROBLEM-DAYS-019": {
       "changedPaths": [
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts"
       ],
       "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
       "sourceFile": "test-cases/quick-entry/frontend/quick-entry-problem-days-navigator-test-cases.md",
@@ -242,8 +242,8 @@
     },
     "EXCP-QE-PROBLEM-DAYS-021": {
       "changedPaths": [
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
-        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts"
       ],
       "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
       "sourceFile": "test-cases/quick-entry/frontend/quick-entry-problem-days-navigator-test-cases.md",
