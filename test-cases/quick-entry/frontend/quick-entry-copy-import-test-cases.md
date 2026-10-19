@@ -17,6 +17,8 @@ Validate that JSON export/import in Quick Entry has proper environment-based acc
 - Production mode: Export available for all users, import restricted to admins only
 
 
+Note: the copy/import controls now sit inside the collapsed "More tools" section (row "Copy period data"); open it before running these cases.
+
 ## Test pages
 
 - `/attendance/quick-entry`

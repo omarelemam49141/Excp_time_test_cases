@@ -65,6 +65,189 @@
       "matchedRelatedPath": "src/app/features/attendance/components/working-timer/working-timer.component.ts",
       "sourceFile": "test-cases/attendance/frontend/end-work-overtime-choice-popup-test-cases.md",
       "firstSeen": "2026-10-19T12:06:55.817Z"
+    },
+    "EXCP-LEAVE-REGULAR-ADVANCE-011": {
+      "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
+      "sourceFile": "test-cases/leave-management/frontend/regular-leave-advance-notice-test-cases.md",
+      "firstSeen": "2026-10-19T13:03:31.128Z"
+    },
+    "EXCP-OT-REVIEW-READINESS-011": {
+      "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
+        "src/app/core/services/attendance.service.ts",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry/",
+      "sourceFile": "test-cases/overtime/frontend/overtime-review-readiness-guard-test-cases.md",
+      "firstSeen": "2026-10-19T13:03:31.128Z"
+    },
+    "EXCP-QE-OT-DELETE-001": {
+      "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
+        "src/app/core/services/attendance.service.ts",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-overtime-delete-test-cases.md",
+      "firstSeen": "2026-10-19T13:03:31.128Z"
+    },
+    "EXCP-QE-OT-DELETE-002": {
+      "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
+        "src/app/core/services/attendance.service.ts",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-overtime-delete-test-cases.md",
+      "firstSeen": "2026-10-19T13:03:31.128Z"
+    },
+    "EXCP-QE-OT-DELETE-003": {
+      "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
+        "src/app/core/services/attendance.service.ts",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-overtime-delete-test-cases.md",
+      "firstSeen": "2026-10-19T13:03:31.128Z"
+    },
+    "EXCP-QE-OT-DELETE-004": {
+      "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
+        "src/app/core/services/attendance.service.ts",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-overtime-delete-test-cases.md",
+      "firstSeen": "2026-10-19T13:03:31.128Z"
+    },
+    "EXCP-QE-PENDING-LEAVE-005": {
+      "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
+        "src/app/core/services/attendance.service.ts",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md",
+      "firstSeen": "2026-10-19T13:03:31.128Z"
+    },
+    "EXCP-QE-PENDING-LEAVE-006": {
+      "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
+        "src/app/core/services/attendance.service.ts",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md",
+      "firstSeen": "2026-10-19T13:03:31.128Z"
+    },
+    "EXCP-QE-PENDING-LEAVE-009": {
+      "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
+        "src/app/core/services/attendance.service.ts",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md",
+      "firstSeen": "2026-10-19T13:03:31.128Z"
+    },
+    "EXCP-QE-PENDING-LEAVE-012": {
+      "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
+        "src/app/core/services/attendance.service.ts",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md",
+      "firstSeen": "2026-10-19T13:03:31.128Z"
+    },
+    "EXCP-QE-PENDING-LEAVE-013": {
+      "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
+        "src/app/core/services/attendance.service.ts",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md",
+      "firstSeen": "2026-10-19T13:03:31.128Z"
+    },
+    "EXCP-QE-PENDING-LEAVE-015": {
+      "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
+        "src/app/core/services/attendance.service.ts",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md",
+      "firstSeen": "2026-10-19T13:03:31.128Z"
+    },
+    "EXCP-QE-PENDING-LEAVE-017": {
+      "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
+        "src/app/core/services/attendance.service.ts",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md",
+      "firstSeen": "2026-10-19T13:03:31.128Z"
+    },
+    "EXCP-QE-PENDING-LEAVE-018": {
+      "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
+        "src/app/core/services/attendance.service.ts",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-pending-leave-request-guard-test-cases.md",
+      "firstSeen": "2026-10-19T13:03:31.128Z"
+    },
+    "EXCP-QE-PROBLEM-DAYS-015": {
+      "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-problem-days-navigator-test-cases.md",
+      "firstSeen": "2026-10-19T13:03:31.128Z"
+    },
+    "EXCP-QE-PROBLEM-DAYS-016": {
+      "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-problem-days-navigator-test-cases.md",
+      "firstSeen": "2026-10-19T13:03:31.128Z"
+    },
+    "EXCP-QE-PROBLEM-DAYS-017": {
+      "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-problem-days-navigator-test-cases.md",
+      "firstSeen": "2026-10-19T13:03:31.128Z"
+    },
+    "EXCP-QE-PROBLEM-DAYS-019": {
+      "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-problem-days-navigator-test-cases.md",
+      "firstSeen": "2026-10-19T13:03:31.128Z"
+    },
+    "EXCP-QE-PROBLEM-DAYS-021": {
+      "changedPaths": [
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.ts",
+        "src/app/features/attendance/components/attendance-quick-entry/attendance-quick-entry.component.scss"
+      ],
+      "matchedRelatedPath": "src/app/features/attendance/components/attendance-quick-entry",
+      "sourceFile": "test-cases/quick-entry/frontend/quick-entry-problem-days-navigator-test-cases.md",
+      "firstSeen": "2026-10-19T13:03:31.128Z"
     }
   }
 }
