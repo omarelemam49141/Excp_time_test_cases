@@ -82,6 +82,7 @@ This index lists the private test-case definitions organized by project, feature
 
 - `overtime/backend/attendance-overtime-get-by-id-test-cases.md`
 - `overtime/backend/attendance-overtime-whatsapp-update-delete-test-cases.md`
+- `overtime/backend/cover-shortage-session-test-cases.md`
 - `overtime/backend/end-overtime-cross-midnight-reconciliation-test-cases.md`
 - `overtime/backend/hrsystem-attendance-overtime-whatsapp-update-delete-test-cases.md`
 - `overtime/backend/overtime-review-readiness-guard-test-cases.md`
@@ -90,6 +91,7 @@ This index lists the private test-case definitions organized by project, feature
 
 ### Overtime / frontend
 
+- `overtime/frontend/cover-shortage-session-ui-test-cases.md`
 - `overtime/frontend/attendance-overtime-ux-revamp-test-cases.md`
 - `overtime/frontend/cross-midnight-overtime-splitting-test-cases.md`
 - `overtime/frontend/overtime-review-readiness-guard-test-cases.md`
