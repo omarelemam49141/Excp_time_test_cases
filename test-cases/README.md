@@ -42,6 +42,7 @@ This index lists the private test-case definitions organized by project, feature
 - `company-structure/backend/company-structure-org-chart-test-cases.md`
 - `company-structure/backend/default-admin-hr-bootstrap-test-cases.md`
 - `company-structure/backend/company-structure-leader-permissions-test-cases.md`
+- `company-structure/backend/team-overtime-gap-test-cases.md`
 
 ### Company Structure / frontend
 
@@ -49,6 +50,7 @@ This index lists the private test-case definitions organized by project, feature
 - `company-structure/frontend/company-structure-org-chart-test-cases.md`
 - `company-structure/frontend/default-admin-hr-bootstrap-test-cases.md`
 - `company-structure/frontend/company-structure-leader-permissions-test-cases.md`
+- `company-structure/frontend/team-overtime-gap-test-cases.md`
 
 ### Deployment / backend
 
@@ -131,6 +133,7 @@ This index lists the private test-case definitions organized by project, feature
 
 ### Reports / backend
 
+- `reports/backend/accept-pending-hours-test-cases.md`
 - `reports/backend/bulk-employee-hours-report-api-test-cases.md`
 - `reports/backend/daily-attendance-dashboard-test-cases.md`
 - `reports/backend/users-daily-attendance-roster-test-cases.md`
@@ -140,16 +143,19 @@ This index lists the private test-case definitions organized by project, feature
 - `reports/frontend/admin-reports-layout-test-cases.md`
 - `reports/frontend/daily-attendance-dashboard-test-cases.md`
 - `reports/frontend/bulk-employee-hours-report-test-cases.md`
+- `reports/frontend/cover-shortage-from-overtime-test-cases.md`
 - `reports/frontend/employee-hours-report-refused-ot-shortage-test-cases.md`
 - `reports/frontend/employee-hours-tour-guide-test-cases.md`
 - `reports/frontend/users-daily-attendance-roster-test-cases.md`
 
 ### Request Routing / backend
 
+- `request-routing/backend/request-routing-per-type-test-cases.md`
 - `request-routing/backend/request-routing-settings-test-cases.md`
 
 ### Request Routing / frontend
 
+- `request-routing/frontend/request-routing-per-type-test-cases.md`
 - `request-routing/frontend/request-routing-settings-test-cases.md`
 
 ### Request Types / frontend
@@ -179,13 +185,11 @@ This index lists the private test-case definitions organized by project, feature
 
 - `system-work-schedule/backend/system-work-schedule-admin-settings-json-transfer-api-test-cases.md`
 - `system-work-schedule/backend/overtime-gap-home-vs-site-resolver-test-cases.md`
-- `system-work-schedule/backend/overtime-ask-after-gap-settings-test-cases.md`
 
 ### System Work Schedule / frontend
 
 - `system-work-schedule/frontend/system-work-schedule-admin-settings-json-transfer-test-cases.md`
 - `system-work-schedule/frontend/overtime-gap-home-vs-site-test-cases.md`
-- `system-work-schedule/frontend/overtime-ask-after-gap-admin-ui-test-cases.md`
 
 ### User Management / backend
 
