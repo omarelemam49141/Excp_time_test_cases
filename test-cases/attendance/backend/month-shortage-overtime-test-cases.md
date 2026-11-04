@@ -12,7 +12,7 @@
 
 ## Scope
 
-Working-month period used for the monthly overtime and coverage balances.
+Working-month period used for the monthly balance. The balance itself is covered in `test-cases/overtime/backend/automatic-shortage-test-cases.md`.
 
 ## Test scenarios
 
