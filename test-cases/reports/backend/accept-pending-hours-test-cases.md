@@ -15,7 +15,9 @@
 
 - Accepted balance hours are a preview only (never saved).
 - Pending hours chosen by the admin are real and saved: status changes, oldest first, the last row is split when needed.
-- Coverage is capped at the actual shortage; any excess is ignored and never becomes overtime.
+- Shortage is covered automatically from accepted overtime at 1x (the 1.5x weekday overtime first, then the 2x weekend overtime). Only the rest of the overtime is paid. The admin no longer picks cover hours.
+- Old approved cover entries still count as cover, and cover above the shortage never becomes overtime.
+- Pending hours accepted by the admin are overtime only.
 
 ## Test scenarios
 
@@ -24,7 +26,8 @@
 - Excess stays pending
 - Split boundary skips breaks
 - Preview cap on accepted overtime
-- Coverage cap
+- Old approved cover never becomes overtime
+- Automatic shortage cover from accepted overtime
 
 ## Test cases
 
@@ -43,12 +46,12 @@
 | ID | Key | Case | Type | Requires | Steps | Expected | Related code |
 |----|-----|------|------|----------|-------|----------|--------------|
 | TC-06 | EXCP-REPORT-ACCEPTED-PREVIEW-001 | Verify applying fewer accepted overtime hours is a preview and does not touch pending hours. | Main | - | 1. 2 h accepted and 30 min pending overtime.<br>2. Generate with 1 h to apply. | 1. Accepted overtime used is 1 h; the balance still shows 2 h.<br>2. Pending stays 30 min. | `src/Excp.HRSystem.Application/Services/Reports/EmployeeHoursReports/EmployeeHoursReportMetricsService.cs` |
-| TC-07 | EXCP-REPORT-ACCEPTED-PREVIEW-002 | Verify coverage above the actual shortage is ignored and never becomes overtime. | Edge | - | 1. 2 h shortage and 3 h accepted coverage. | 1. Shortage becomes 0.<br>2. Accepted overtime stays 0. | `src/Excp.HRSystem.Application/Services/Reports/EmployeeHoursReports/EmployeeHoursReportMetricsService.cs` |
+| TC-07 | EXCP-REPORT-ACCEPTED-PREVIEW-002 | Verify an old approved cover entry above the shortage never becomes overtime. | Edge | - | 1. The employee worked 6 h and is 2 h short.<br>2. The employee has an old approved cover entry of 3 h.<br>3. Generate the report. | 1. Accepted cover shows 3 h.<br>2. The shortage is 0.<br>3. Accepted overtime stays 0. | `src/Excp.HRSystem.Application/Services/Reports/EmployeeHoursReports/EmployeeHoursReportMetricsService.cs` |
 
-### Wave 3 — Cover shortage from the overtime balance
+### Wave 3 — Automatic shortage cover from accepted overtime
 
 | ID | Key | Case | Type | Requires | Steps | Expected | Related code |
 |----|-----|------|------|----------|-------|----------|--------------|
-| TC-08 | EXCP-REPORT-COVER-SHORTAGE-001 | Verify chosen weekday overtime hours cover shortage one to one, even in weighted mode. | Main | - | 1. 2 h shortage, 3 h accepted weekday overtime, weighted mode.<br>2. Choose 1 h from the 1.5x bucket. | 1. 1 h covers 1 h of shortage.<br>2. Effective shortage is 1 h and payable overtime is 2 h. | `src/Excp.HRSystem.Application/Services/Reports/EmployeeHoursReports/EmployeeHoursReportMetricsService.cs` |
-| TC-09 | EXCP-REPORT-COVER-SHORTAGE-002 | Verify coverage is capped to the bucket and to the remaining shortage. | Edge | EXCP-REPORT-COVER-SHORTAGE-001 | 1. 2 h shortage, 3 h overtime.<br>2. Choose 5 h. | 1. Only 2 h is covered, shortage is 0 and 1 h of overtime stays payable. | `src/Excp.HRSystem.Application/Services/Reports/EmployeeHoursReports/EmployeeHoursReportMetricsService.cs` |
-| TC-10 | EXCP-REPORT-COVER-SHORTAGE-003 | Verify the weekend bucket is chosen separately and nothing is added automatically. | Edge | EXCP-REPORT-COVER-SHORTAGE-001 | 1. Weekday and weekend overtime of 2 h each, 2 h shortage.<br>2. Choose 1 h from the 2.0x bucket only. | 1. Only the 2.0x bucket gives 1 h.<br>2. The other hour of shortage stays uncovered. | `src/Excp.HRSystem.Application/Services/Reports/EmployeeHoursReports/EmployeeHoursReportMetricsService.cs` |
+| TC-08 | EXCP-REPORT-COVER-SHORTAGE-001 | Verify approved weekday overtime covers the shortage automatically one hour for one hour, even in weighted mode. | Main | - | 1. The employee is 2 h short and has 3 h of approved weekday overtime (1.5x), weighted mode.<br>2. Generate the report without choosing any cover hours. | 1. 2 h of the 1.5x overtime cover the shortage and nothing comes from the 2x overtime.<br>2. The shortage left to pay is 0.<br>3. Payable overtime is 1 h. | `src/Excp.HRSystem.Application/Services/Reports/EmployeeHoursReports/EmployeeHoursReportMetricsService.cs` |
+| TC-09 | EXCP-REPORT-COVER-SHORTAGE-002 | Verify the automatic cover is capped to the available overtime and the shortage left stays. | Edge | - | 1. The employee is 4 h short and has 3 h of approved overtime.<br>2. Generate the report. | 1. All 3 h of overtime cover the shortage.<br>2. 1 h of shortage stays.<br>3. Payable overtime is 0. | `src/Excp.HRSystem.Application/Services/Reports/EmployeeHoursReports/EmployeeHoursReportMetricsService.cs` |
+| TC-10 | EXCP-REPORT-COVER-SHORTAGE-003 | Verify the shortage is taken from the 1.5x overtime before the 2x overtime. | Edge | - | 1. The employee is 2 h short and has 2 h of approved weekday overtime (1.5x) and 2 h of approved weekend overtime (2x).<br>2. Generate the report. | 1. The weekday overtime covers the whole 2 h shortage.<br>2. Nothing is taken from the weekend overtime.<br>3. The 2 h of weekend overtime stay payable at 2x. | `src/Excp.HRSystem.Application/Services/Reports/EmployeeHoursReports/EmployeeHoursReportMetricsService.cs` |
